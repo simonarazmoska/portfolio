@@ -1,0 +1,11 @@
+# Ignore artifacts:
+*.html
+*.png
+*.jpg
+
+build/*
+dist/*
+public/*
+node_modules/*
+package.json
+*.log
