@@ -1,10 +1,11 @@
+import { StyledButton } from "@/components/button";
 import { ArrowForward, Close } from "@mui/icons-material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { AppBar, Box, Divider, Drawer, IconButton, List, ListItem, ListItemButton, ListItemIcon, Toolbar, Typography } from "@mui/material";
 import { SyntheticEvent, useState } from "react";
-import { StyledButton } from "./button";
 
 export const Header = () => {
+  const [value, setValue] = useState<"design" | "photography">("design");
   const [drawerOpen, setDrawerOpen] = useState<boolean>(false);
 
   const handleDrawerToggle = () => {
@@ -12,10 +13,10 @@ export const Header = () => {
   };
 
   return (
-    <AppBar component="nav">
+    <AppBar component="nav" position="sticky">
       <Toolbar className="tw-bg-headerBackground tw-justify-between" style={{ margin: 0 }}>
         <StyledButton>
-          <Typography className={"tw-text-white"}>SIMONA RAZMOSKA</Typography>
+          <Typography className="tw-text-headerText tw-font-[500]">SIMONA RAZMOSKA</Typography>
         </StyledButton>
         <IconButton color="inherit" aria-label="open drawer" edge="start" onClick={() => handleDrawerToggle()}>
           <MenuIcon />
@@ -24,20 +25,20 @@ export const Header = () => {
           PaperProps={{ sx: { backgroundColor: "#151515" } }}
           open={drawerOpen}
           anchor="right"
-          hideBackdrop={true}
+          // hideBackdrop={true}
           onClose={() => handleDrawerToggle()}
         >
           <div className="tw-h-screen">
-            <div className="tw-px-6 tw-py-4">
+            <div className="tw-px-8 tw-py-4">
               <div className="tw-justify-end tw-flex">
                 <IconButton color="inherit" aria-label="open drawer" edge="start" onClick={() => handleDrawerToggle()}>
                   <Close style={{ color: "#FFFFFF" }} />
                 </IconButton>
               </div>
-              <p className="tw-underline tw-text-white tw-font-bold tw-text-4xl">HOME</p>
+              {buildItem("Home")}
             </div>
-            <div className="tw-px-6 tw-bg-headerBackground">
-              <p className="tw-text-white tw-text-4xl">Design</p>
+            <div className="tw-px-8 tw-bg-headerBackground">
+              <p className="tw-text-headerText tw-text-2xl">Design</p>
               <List className="">
                 {buildItem("Plantwell")}
                 {buildItem("ParkVolt")}
@@ -50,20 +51,22 @@ export const Header = () => {
           </div>
           <Box className="tw-pb-6">
             <Divider className="tw-bg-white" style={{ marginBottom: 10 }} />
-            <Box sx={{ display: "flex", flexDirection: "row", justifyContent: "space-evenly" }}>
-              <Box sx={{ display: "flex", flexDirection: "row", justifyContent: "space-evenly" }}>
-                <p className="tw-text-white tw-text-base">Email</p>
-                <ArrowForward style={{ color: "#FFFFFF" }} />
+            <Box className="tw-space-y-4">
+              <Box className="tw-flex tw-flex-row tw-justify-evenly tw-items-center tw-py-6 tw-px-2 tw-space-x-2">
+                <Box className="tw-flex tw-flex-row tw-justify-evenly tw-items-center tw-px-6">
+                  <p className="tw-text-white tw-text-base tw-px-2">Email</p>
+                  <ArrowForward style={{ color: "#FFFFFF" }} fontSize="small" />
               </Box>
 
-              <Box sx={{ display: "flex", flexDirection: "row", justifyContent: "space-evenly" }}>
-                <p className="tw-text-white tw-text-base">LinkedIn</p>
-                <ArrowForward style={{ color: "#FFFFFF" }} />
+                <Box className="tw-flex tw-flex-row tw-justify-evenly tw-items-center tw-px-6">
+                  <p className="tw-text-white tw-text-base tw-px-2">LinkedIn</p>
+                  <ArrowForward style={{ color: "#FFFFFF" }} fontSize="small" />
               </Box>
 
-              <Box sx={{ display: "flex", flexDirection: "row", justifyContent: "space-evenly" }}>
-                <p className="tw-text-white tw-text-base">Medium</p>
-                <ArrowForward style={{ color: "#FFFFFF" }} />
+                <Box className="tw-flex tw-flex-row tw-justify-evenly tw-items-center tw-px-6">
+                  <p className="tw-text-white tw-text-base tw-px-2">Medium</p>
+                  <ArrowForward style={{ color: "#FFFFFF" }} fontSize="small" />
+                </Box>
               </Box>
             </Box>
           </Box>
@@ -80,7 +83,7 @@ const buildItem = (text: string, url: string) => {
         <ListItemIcon>
           <ArrowForward style={{ color: "#FFFFFF" }} />
         </ListItemIcon>
-        <p className="tw-text-white tw-text-4xl">{text}</p>
+        <p className="tw-text-white tw-text-[32px] tw-leading-[38.73px]">{text}</p>
       </ListItemButton>
     </ListItem>
   );
