@@ -3,12 +3,13 @@ import { Box } from "@mui/material";
 
 export const Footer = () => {
   return (
-    <Box className="tw-text-white tw-px-12 tw-py-8">
+    <Box className="tw-text-white tw-px-12 tw-py-8 tw-space-x-8">
       <Box className="tw-flex tw-flex-row tw-justify-between">
-        <Box>
+        <Box className="tw-flex tw-flex-col tw-justify-between">
           <p className="tw-font-medium tw-text-headerText">SIMONA RAZMOSKA</p>
+          <p className="tw-text-white">&copy; 2024 Simona Razmoska. Product Designer.</p>
         </Box>
-        <Box className="tw-flex tw-flex- tw-space-x-6">
+        <Box className="tw-flex tw-flex-row tw-space-x-6">
           <Box className="tw-space-y-4">
             <p className="tw-font-[600] tw-text-headerText tw-text-[16px]">MAIN</p>
             <p className="tw-text-xl">Home</p>
@@ -34,8 +35,6 @@ export const Footer = () => {
           </Box>
         </Box>
       </Box>
-
-      <p className="tw-text-white">&copy; 2024 Simona Razmoska. Product Designer.</p>
     </Box>
   );
 };
