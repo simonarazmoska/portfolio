@@ -12,8 +12,8 @@ interface TextSectionProps {
 export const TextSection = ({ title, text, src, alt, maxHeight = 382, textFirst = true }: TextSectionProps) => {
   const TextBox = (
     <Box className="tw-space-y-6 tw-justify-between tw-text-white">
-      <p className="tw-text-4.5xl ">{title}</p>
-      <p className="tw-text-xl">{text}</p>
+      <p className="tw-text-4.5xl">{title}</p>
+      <p className="tw-text-xl tw-whitespace-pre-line">{text}</p>
     </Box>
   );
 

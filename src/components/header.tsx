@@ -1,8 +1,20 @@
-import { StyledButton } from "@/components/button";
 import { ArrowForward, Close } from "@mui/icons-material";
 import MenuIcon from "@mui/icons-material/Menu";
-import { AppBar, Box, Divider, Drawer, IconButton, List, ListItem, ListItemButton, ListItemIcon, Toolbar, Typography } from "@mui/material";
-import { SyntheticEvent, useState } from "react";
+import {
+  AppBar,
+  Box,
+  Button,
+  Divider,
+  Drawer,
+  IconButton,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemIcon,
+  Toolbar,
+  Typography
+} from "@mui/material";
+import { useState } from "react";
 
 export const Header = () => {
   const [value, setValue] = useState<"design" | "photography">("design");
@@ -15,9 +27,9 @@ export const Header = () => {
   return (
     <AppBar component="nav" position="sticky">
       <Toolbar className="tw-bg-headerBackground tw-justify-between" style={{ margin: 0 }}>
-        <StyledButton>
+        <Button href="/">
           <Typography className="tw-text-headerText tw-font-[500]">SIMONA RAZMOSKA</Typography>
-        </StyledButton>
+        </Button>
         <IconButton color="inherit" aria-label="open drawer" edge="start" onClick={() => handleDrawerToggle()}>
           <MenuIcon />
         </IconButton>
@@ -47,7 +59,6 @@ export const Header = () => {
                 {buildItem("Book Series")}
               </List>
             </div>
-
           </div>
           <Box className="tw-pb-6">
             <Divider className="tw-bg-white" style={{ marginBottom: 10 }} />
@@ -56,12 +67,12 @@ export const Header = () => {
                 <Box className="tw-flex tw-flex-row tw-justify-evenly tw-items-center tw-px-6">
                   <p className="tw-text-white tw-text-base tw-px-2">Email</p>
                   <ArrowForward style={{ color: "#FFFFFF" }} fontSize="small" />
-              </Box>
+                </Box>
 
                 <Box className="tw-flex tw-flex-row tw-justify-evenly tw-items-center tw-px-6">
                   <p className="tw-text-white tw-text-base tw-px-2">LinkedIn</p>
                   <ArrowForward style={{ color: "#FFFFFF" }} fontSize="small" />
-              </Box>
+                </Box>
 
                 <Box className="tw-flex tw-flex-row tw-justify-evenly tw-items-center tw-px-6">
                   <p className="tw-text-white tw-text-base tw-px-2">Medium</p>
