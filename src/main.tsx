@@ -1,11 +1,11 @@
+import "@/index.css";
+import { router } from "@/router";
+import { theme } from "@/theme";
 import { ThemeProvider } from "@emotion/react";
 import { CssBaseline } from "@mui/material";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { RouterProvider } from "react-router-dom";
-import "./index.css";
-import { router } from "./router";
-import { theme } from "./theme";
 
 import "@fontsource/inter/300.css";
 import "@fontsource/inter/400.css";

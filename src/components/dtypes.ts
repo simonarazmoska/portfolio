@@ -31,3 +31,12 @@ export interface PageData {
   section6: ImageSectionData;
   section7: HybridSectionData;
 }
+
+export interface CardProps {
+  title: string;
+  text: string;
+  imageSource: string;
+  imageAlt: string | undefined;
+  link: string;
+  backgroundOpacity: number;
+}

@@ -12,7 +12,7 @@ export const TemplatePage = ({ data }: { data: PageData }) => {
   return (
     <>
       <Header />
-      <Box className="tw-bg-headerBackground tw-h-full tw-space-y-20">
+      <Box className="tw-bg-nearblack tw-h-full tw-space-y-20">
         {/* Hero Section */}
         <Box>
           <Box className="tw-flex tw-flex-row tw-justify-evenly tw-items-center tw-px-12 tw-py-8">
