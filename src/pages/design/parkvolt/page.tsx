@@ -38,8 +38,9 @@ const data: PageData = {
     textColour: "tw-text-white"
   },
   section6: {
-    imgSrc: "/design/parkvolt/parkvolt_5_after.png",
-    imgAlt: "ParkVolt Image 5"
+    imgSrc: "",
+    imgAlt: "ParkVolt Image 5",
+    beforeAfterImages: ["/design/parkvolt/parkvolt_5_before.png", "/design/parkvolt/parkvolt_5_after.png"]
   },
   section7: {
     title: "Results",

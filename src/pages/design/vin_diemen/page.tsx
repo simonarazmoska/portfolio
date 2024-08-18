@@ -36,8 +36,9 @@ const data: PageData = {
     imgAlt: "Vin Diemen Image 4"
   },
   section6: {
-    imgSrc: "/design/vin_diemen/vin_diemen_5_after.png",
-    imgAlt: "Vin Diemen Image 5"
+    imgSrc: "",
+    imgAlt: "Vin Diemen Image 5",
+    beforeAfterImages: ["/design/vin_diemen/vin_diemen_5_before.png", "/design/vin_diemen/vin_diemen_5_after.png"]
   },
   section7: {
     title: "Results",

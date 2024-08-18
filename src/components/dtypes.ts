@@ -17,6 +17,7 @@ interface ImageSectionData {
   imgSrc: string;
   imgAlt: string;
   maxImageHeight?: number;
+  beforeAfterImages?: string[];
 }
 
 interface HybridSectionData {

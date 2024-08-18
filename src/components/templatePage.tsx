@@ -2,7 +2,7 @@ import { DesignProjectsSection } from "@/components/designProjectsSection";
 import { PageData } from "@/components/dtypes";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
-import { ImageSection } from "@/components/imageSection";
+import { BeforeAfterImageSection, ImageSection } from "@/components/imageSection";
 import { TextSection } from "@/components/textSection";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
@@ -98,11 +98,19 @@ export const TemplatePage = ({ data }: { data: PageData }) => {
             />
 
             {/* Image Section 3 (Image 4) */}
-            <ImageSection
-              src={data.section6.imgSrc}
-              alt={data.section6.imgAlt}
-              maxHeight={data.section6.maxImageHeight ? data.section6.maxImageHeight : 697}
-            />
+            {data.section6.beforeAfterImages ? (
+              <BeforeAfterImageSection
+                alt={data.section6.imgAlt}
+                maxHeight={data.section6.maxImageHeight ? data.section6.maxImageHeight : 697}
+                beforeAfterImages={data.section6.beforeAfterImages}
+              />
+            ) : (
+              <ImageSection
+                src={data.section6.imgSrc}
+                alt={data.section6.imgAlt}
+                maxHeight={data.section6.maxImageHeight ? data.section6.maxImageHeight : 697}
+              />
+            )}
 
             <TextSection
               title={data.section7.title}

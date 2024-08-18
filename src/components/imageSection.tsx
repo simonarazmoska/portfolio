@@ -1,4 +1,7 @@
 import { Box } from "@mui/material";
+import { useState } from "react";
+import ReactBeforeSliderComponent from "react-before-after-slider-component";
+import "react-before-after-slider-component/dist/build.css";
 
 interface ImageSectionProps {
   src: string;
@@ -10,6 +13,54 @@ export const ImageSection = ({ src, alt, maxHeight = 697 }: ImageSectionProps) =
   return (
     <Box className="tw-flex tw-flex-col tw-items-center">
       <img src={src} alt={alt} loading="lazy" style={{ maxHeight: maxHeight }} />
+    </Box>
+  );
+};
+
+const delimiterIconStyles = {
+  width: "40px",
+  height: "40px",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  backgroundColor: "transparent",
+  fontSize: "24px",
+  color: "black",
+  position: "relative"
+};
+
+interface BeforeAfterImageSectionProps {
+  beforeAfterImages: string[];
+  alt?: string;
+  maxHeight?: number;
+}
+export const BeforeAfterImageSection = ({ beforeAfterImages, alt, maxHeight = 697 }: BeforeAfterImageSectionProps) => {
+  const [sliderPosition, setSliderPosition] = useState<number>(50); // Default to the center
+
+  const handleMouseMove = (e) => {
+    const slider = e.currentTarget;
+    const rect = slider.getBoundingClientRect();
+    const offsetX = e.clientX - rect.left;
+    let position = (offsetX / rect.width) * 100;
+
+    // Ensure the position is within bounds (0% to 100%)
+    if (position < 0) position = 0;
+    if (position > 100) position = 100;
+
+    setSliderPosition(position);
+  };
+
+  return (
+    <Box className="tw-flex tw-flex-col tw-items-center tw-bg-[#F0F0F0]">
+      <div onMouseMove={handleMouseMove} style={{ width: "100%", margin: "0 auto" }}>
+        <ReactBeforeSliderComponent
+          currentPercentPosition={sliderPosition}
+          firstImage={{ imageUrl: beforeAfterImages[0], height: maxHeight }}
+          secondImage={{ imageUrl: beforeAfterImages[1], height: maxHeight }}
+          delimiterColor="#151515"
+          delimiterIconStyles={delimiterIconStyles}
+        />
+      </div>
     </Box>
   );
 };
