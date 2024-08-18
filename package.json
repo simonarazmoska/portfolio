@@ -21,8 +21,10 @@
     "@tabler/icons-react": "^3.10.0",
     "install": "^0.13.0",
     "react": "^18.2.0",
+    "react-before-after-slider-component": "^1.1.8",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.24.1"
+    "react-router-dom": "^6.24.1",
+    "styled-components": "^6.1.12"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
