@@ -2,8 +2,8 @@ import { Box } from "@mui/material";
 
 interface ImageSectionProps {
   src: string;
-  alt: string | undefined;
-  maxHeight: number | undefined;
+  alt?: string;
+  maxHeight?: number;
 }
 
 export const ImageSection = ({ src, alt, maxHeight = 697 }: ImageSectionProps) => {

@@ -2,6 +2,9 @@ import { PageData } from "@/components/dtypes";
 import { TemplatePage } from "@/components/templatePage";
 
 const data: PageData = {
+  link: "https://doctorwallet.com.au/",
+  background: "tw-bg-gradient-dr-wallet",
+  textColour: "tw-text-nearblack",
   hero: {
     title: "Dr. Wallet",
     subheading: "RESPONSIVE WEB DESIGN.",

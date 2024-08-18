@@ -2,6 +2,8 @@ import { PageData } from "@/components/dtypes";
 import { TemplatePage } from "@/components/templatePage";
 
 const data: PageData = {
+  link: "https://plantwellliving.com/",
+  background: "tw-bg-gradient-plantwell",
   hero: {
     title: "Plantwell",
     subheading: "WEBSITE DESIGN AND RE-PLATFORMING.",

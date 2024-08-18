@@ -2,6 +2,9 @@ import { PageData } from "@/components/dtypes";
 import { TemplatePage } from "@/components/templatePage";
 
 const data: PageData = {
+  link: "https://www.figma.com/proto/zeLmaCH58waa1FwKEh1Xlr/Designs?page-id=369%3A144161&node-id=425-144443&viewport=298%2C729%2C0.17&scaling=scale-down&starting-point-node-id=425%3A144443",
+  background: "tw-bg-[#E8E3DF]",
+  textColour: "tw-text-nearblack",
   hero: {
     title: "Vin Diemen",
     subheading: "WEB DESIGN & REBRAND.",

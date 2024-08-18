@@ -2,6 +2,9 @@ import { PageData } from "@/components/dtypes";
 import { TemplatePage } from "@/components/templatePage";
 
 const data: PageData = {
+  link: "https://medium.com/@simonarazmoska/custom-typography-and-layout-design-b6696483387e",
+  background: "tw-bg-gradient-book-series",
+  textColour: "tw-text-white",
   hero: {
     title: "Book Series",
     subheading: "BRANDING, TYPOGRAPHY AND LAYOUT.",
@@ -9,7 +12,7 @@ const data: PageData = {
     imgAlt: "Book Series Hero"
   },
   section1: {
-    text: "Plantwell is a new brand under the Sanitarium umbrella, aimed at offering a fresh and innovative approach to wellness products. I had the privilege of designing the website from the ground up, a project that involved re-platforming to a headless CMS. This transition was crucial to ensure flexibility, improved performance, and better content management capabilities."
+    text: "The Book Series is a collection of three gelato recipe books, each featuring a captivating cover design. Additionally, the project included creating a double-page contents spread, an internal page spread, and a series of dynamic web page banners to promote the books."
   },
   section2: {
     imgSrc: "/design/book_series/book_series_1.png",

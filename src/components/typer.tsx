@@ -16,7 +16,7 @@ import styled, { keyframes } from "styled-components";
 interface TyperProps {
   heading: string;
   dataText: string[];
-  cursorColor: string | undefined;
+  cursorColor?: string;
 }
 
 export const Typer = ({ heading = "", dataText, cursorColor }: TyperProps) => {

@@ -66,26 +66,50 @@ export const Header = () => {
             <Divider className="tw-bg-white" style={{ marginBottom: 10 }} />
             <Box className="tw-space-y-4">
               <Box className="tw-flex tw-flex-row tw-justify-evenly tw-items-center tw-py-6 tw-px-2 tw-space-x-2">
-                <Link href="mailto:simona.razmoska@hotmail.com" className="tw-flex tw-flex-row tw-justify-evenly tw-items-center tw-px-6">
+                <Link
+                  underline="hover"
+                  href="mailto:simona.razmoska@hotmail.com"
+                  className="tw-flex tw-flex-row tw-justify-evenly tw-items-center tw-px-6"
+                  sx={{
+                    textDecorationColor: "white",
+                    "&:hover": {
+                      textDecorationColor: "white"
+                    }
+                  }}
+                >
                   <p className="tw-text-white tw-text-base tw-px-2">Email</p>
                   <ArrowForward style={{ color: "#FFFFFF" }} fontSize="small" />
                 </Link>
 
                 <Link
+                  underline="hover"
                   href="https://au.linkedin.com/in/simona-razmoska"
                   className="tw-flex tw-flex-row tw-justify-evenly tw-items-center tw-px-6"
                   rel="noopener noreferrer"
                   target="_blank"
+                  sx={{
+                    textDecorationColor: "white",
+                    "&:hover": {
+                      textDecorationColor: "white"
+                    }
+                  }}
                 >
                   <p className="tw-text-white tw-text-base tw-px-2">LinkedIn</p>
                   <ArrowForward style={{ color: "#FFFFFF" }} fontSize="small" />
                 </Link>
 
                 <Link
+                  underline="hover"
                   href="https://medium.com/@simonarazmoska"
                   className="tw-flex tw-flex-row tw-justify-evenly tw-items-center tw-px-6"
                   rel="noopener noreferrer"
                   target="_blank"
+                  sx={{
+                    textDecorationColor: "white",
+                    "&:hover": {
+                      textDecorationColor: "white"
+                    }
+                  }}
                 >
                   <p className="tw-text-white tw-text-base tw-px-2">Medium</p>
                   <ArrowForward style={{ color: "#FFFFFF" }} fontSize="small" />
@@ -107,7 +131,7 @@ const buildItem = (text: string, url: string) => {
   };
   return (
     <ListItem disablePadding>
-      <ListItemButton onClick={handleClick}>
+      <ListItemButton disableRipple onClick={handleClick}>
         <ListItemIcon>
           <ArrowForward style={{ color: "#FFFFFF" }} />
         </ListItemIcon>

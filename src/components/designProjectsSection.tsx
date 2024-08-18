@@ -45,8 +45,8 @@ export const DesignProjectsSection = ({
   textColour = "white",
   cardBackgroundOpacity = 1
 }: {
-  textColour: string;
-  cardBackgroundOpacity: number;
+  textColour?: string;
+  cardBackgroundOpacity?: number;
 }) => {
   return (
     <Box className="tw-px-12 tw-py-8 tw-space-y-16">

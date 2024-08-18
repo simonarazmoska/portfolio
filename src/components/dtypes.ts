@@ -3,10 +3,12 @@ interface HeroData {
   subheading: string;
   imgSrc: string;
   imgAlt: string;
+  textColour?: string;
 }
 
 interface TextSectionData {
   text: string;
+  textColour?: string;
 }
 
 interface ImageSectionData {
@@ -19,9 +21,11 @@ interface HybridSectionData {
   text: string;
   imgSrc: string;
   imgAlt: string;
+  textColour?: string;
 }
 
 export interface PageData {
+  link?: string;
   hero: HeroData;
   section1: TextSectionData;
   section2: ImageSectionData;
@@ -30,6 +34,8 @@ export interface PageData {
   section5: HybridSectionData;
   section6: ImageSectionData;
   section7: HybridSectionData;
+  background?: string;
+  textColour?: string;
 }
 
 export interface CardProps {

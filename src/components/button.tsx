@@ -33,7 +33,14 @@ export const StyledButton = ({ children, ...props }) => {
   };
 
   return (
-    <_StyledButton disableRipple className={props.className} onClick={handleClick} isClicked={isClicked} style={props.style}>
+    <_StyledButton
+      disableRipple
+      color="inherit"
+      className={props.className}
+      onClick={handleClick}
+      isClicked={isClicked}
+      style={props.style}
+    >
       {children}
     </_StyledButton>
   );
