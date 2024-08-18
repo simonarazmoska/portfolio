@@ -1,5 +1,5 @@
 import { ArrowForward } from "@mui/icons-material";
-import { Box } from "@mui/material";
+import { Box, Link } from "@mui/material";
 
 export const Footer = () => {
   return (
@@ -20,18 +20,52 @@ export const Footer = () => {
             <Box className="tw-flex tw-flex-row tw-items-center tw-px-6">
               <p className="tw-font-[600] tw-text-lavender tw-text-[16px]">CONTACT</p>
             </Box>
-            <Box className="tw-flex tw-flex-row tw-items-center tw-px-6">
-              <p className="tw-text-xl">Email</p>
+            <Link
+              underline="hover"
+              href="mailto:simona.razmoska@hotmail.com"
+              className="tw-flex tw-flex-row tw-items-center tw-px-6"
+              sx={{
+                textDecorationColor: "white",
+                "&:hover": {
+                  textDecorationColor: "white"
+                }
+              }}
+            >
+              <p className="tw-text-white tw-text-xl">Email</p>
               <ArrowForward style={{ color: "#FFFFFF" }} fontSize="small" />
-            </Box>
-            <Box className="tw-flex tw-flex-row tw-items-center tw-px-6">
-              <p className="tw-text-xl">LinkedIn</p>
+            </Link>
+            <Link
+              underline="hover"
+              href="https://au.linkedin.com/in/simona-razmoska"
+              className="tw-flex tw-flex-row tw-items-center tw-px-6"
+              rel="noopener noreferrer"
+              target="_blank"
+              sx={{
+                textDecorationColor: "white",
+                "&:hover": {
+                  textDecorationColor: "white"
+                }
+              }}
+            >
+              <p className="tw-text-white tw-text-xl">LinkedIn</p>
               <ArrowForward style={{ color: "#FFFFFF" }} fontSize="small" />
-            </Box>
-            <Box className="tw-flex tw-flex-row tw-items-center tw-px-6">
-              <p className="tw-text-xl">Medium</p>
+            </Link>
+            <Link
+              underline="hover"
+              href="https://medium.com/@simonarazmoska"
+              className="tw-flex tw-flex-row tw-items-center tw-px-6"
+              rel="noopener noreferrer"
+              target="_blank"
+              sx={{
+                textDecorationColor: "white",
+                "&:hover": {
+                  textDecorationColor: "white"
+                }
+              }}
+            >
+              <p className="tw-text-white tw-text-xl">Medium</p>
               <ArrowForward style={{ color: "#FFFFFF" }} fontSize="small" />
-            </Box>
+            </Link>
           </Box>
         </Box>
       </Box>

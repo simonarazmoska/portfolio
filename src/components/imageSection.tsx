@@ -1,4 +1,5 @@
 import { Box } from "@mui/material";
+import clsx from "clsx";
 import { useState } from "react";
 import ReactBeforeSliderComponent from "react-before-after-slider-component";
 import "react-before-after-slider-component/dist/build.css";
@@ -31,10 +32,16 @@ const delimiterIconStyles = {
 
 interface BeforeAfterImageSectionProps {
   beforeAfterImages: string[];
+  beforeAfterBackground?: string;
   alt?: string;
   maxHeight?: number;
 }
-export const BeforeAfterImageSection = ({ beforeAfterImages, alt, maxHeight = 697 }: BeforeAfterImageSectionProps) => {
+export const BeforeAfterImageSection = ({
+  beforeAfterImages,
+  beforeAfterBackground,
+  alt,
+  maxHeight = 697
+}: BeforeAfterImageSectionProps) => {
   const [sliderPosition, setSliderPosition] = useState<number>(50); // Default to the center
 
   const handleMouseMove = (e) => {
@@ -51,7 +58,7 @@ export const BeforeAfterImageSection = ({ beforeAfterImages, alt, maxHeight = 69
   };
 
   return (
-    <Box className="tw-flex tw-flex-col tw-items-center tw-bg-[#F0F0F0]">
+    <Box className={clsx("tw-flex tw-flex-col tw-items-center", beforeAfterBackground ? beforeAfterBackground : "")}>
       <div onMouseMove={handleMouseMove} style={{ width: "100%", margin: "0 auto" }}>
         <ReactBeforeSliderComponent
           currentPercentPosition={sliderPosition}

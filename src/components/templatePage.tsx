@@ -103,6 +103,7 @@ export const TemplatePage = ({ data }: { data: PageData }) => {
                 alt={data.section6.imgAlt}
                 maxHeight={data.section6.maxImageHeight ? data.section6.maxImageHeight : 697}
                 beforeAfterImages={data.section6.beforeAfterImages}
+                beforeAfterBackground={data.section6.beforeAfterBackground}
               />
             ) : (
               <ImageSection
