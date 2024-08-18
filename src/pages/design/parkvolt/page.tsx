@@ -38,7 +38,7 @@ const data: PageData = {
     textColour: "tw-text-white"
   },
   section6: {
-    imgSrc: "/design/parkvolt/parkvolt_5.png",
+    imgSrc: "/design/parkvolt/parkvolt_5_after.png",
     imgAlt: "ParkVolt Image 5"
   },
   section7: {

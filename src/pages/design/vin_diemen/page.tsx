@@ -9,7 +9,8 @@ const data: PageData = {
     title: "Vin Diemen",
     subheading: "WEB DESIGN & REBRAND.",
     imgSrc: "/design/vin_diemen/vin_diemen_hero.png",
-    imgAlt: "Vin Diemen Hero"
+    imgAlt: "Vin Diemen Hero",
+    viewText: "View prototype"
   },
   section1: {
     text: "Vin Diemen is a prestigious wine-tasting event that showcases the finest wine and food from the Tasmanian region. The website redesign focuses to better reflect the event's upscale nature."
@@ -35,7 +36,7 @@ const data: PageData = {
     imgAlt: "Vin Diemen Image 4"
   },
   section6: {
-    imgSrc: "/design/vin_diemen/vin_diemen_5.png",
+    imgSrc: "/design/vin_diemen/vin_diemen_5_after.png",
     imgAlt: "Vin Diemen Image 5"
   },
   section7: {

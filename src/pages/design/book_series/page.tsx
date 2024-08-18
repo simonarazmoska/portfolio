@@ -9,14 +9,16 @@ const data: PageData = {
     title: "Book Series",
     subheading: "BRANDING, TYPOGRAPHY AND LAYOUT.",
     imgSrc: "/design/book_series/book_series_hero.png",
-    imgAlt: "Book Series Hero"
+    imgAlt: "Book Series Hero",
+    viewText: "Read more"
   },
   section1: {
     text: "The Book Series is a collection of three gelato recipe books, each featuring a captivating cover design. Additionally, the project included creating a double-page contents spread, an internal page spread, and a series of dynamic web page banners to promote the books."
   },
   section2: {
     imgSrc: "/design/book_series/book_series_1.png",
-    imgAlt: "Book Series Image 1"
+    imgAlt: "Book Series Image 1",
+    maxImageHeight: 1035
   },
   section3: {
     title: "Problem",
@@ -26,7 +28,8 @@ const data: PageData = {
   },
   section4: {
     imgSrc: "/design/book_series/book_series_3.png",
-    imgAlt: "Book Series Image 3"
+    imgAlt: "Book Series Image 3",
+    maxImageHeight: 1035
   },
   section5: {
     title: "Process",
@@ -36,7 +39,8 @@ const data: PageData = {
   },
   section6: {
     imgSrc: "/design/book_series/book_series_5.png",
-    imgAlt: "Book Series Image 5"
+    imgAlt: "Book Series Image 5",
+    maxImageHeight: 1035
   },
   section7: {
     title: "Results",

@@ -3,7 +3,9 @@ interface HeroData {
   subheading: string;
   imgSrc: string;
   imgAlt: string;
+  maxImageHeight?: number;
   textColour?: string;
+  viewText?: string;
 }
 
 interface TextSectionData {
@@ -14,6 +16,7 @@ interface TextSectionData {
 interface ImageSectionData {
   imgSrc: string;
   imgAlt: string;
+  maxImageHeight?: number;
 }
 
 interface HybridSectionData {
@@ -21,6 +24,7 @@ interface HybridSectionData {
   text: string;
   imgSrc: string;
   imgAlt: string;
+  maxImageHeight?: number;
   textColour?: string;
 }
 

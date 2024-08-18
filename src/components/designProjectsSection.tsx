@@ -49,7 +49,7 @@ export const DesignProjectsSection = ({
   cardBackgroundOpacity?: number;
 }) => {
   return (
-    <Box className="tw-px-12 tw-py-8 tw-space-y-16">
+    <Box className="tw-px-12 tw-py-8 tw-space-y-16 tw-pt-24">
       <Box className="tw-flex tw-flex-row tw-justify-center">
         <p className={`tw-text-${textColour} tw-font-medium tw-text-4.5xl`}>Design Projects</p>
       </Box>
