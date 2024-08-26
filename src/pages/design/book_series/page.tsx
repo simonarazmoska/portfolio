@@ -22,7 +22,7 @@ const data: PageData = {
   },
   section3: {
     title: "Problem",
-    text: "One of the primary challenges of this project was ensuring accessibility. To address this, I conducted thorough accessibility audits to identify and rectify potential issues. Another significant aspect was building a comprehensive design system from scratch. This system was designed with scalability in mind, ensuring it could accommodate future brands and evolving requirements.",
+    text: "The primary challenge was to develop the branding from the ground up, as there was no existing visual identity to build upon. The brief called for a bold and engaging design that would capture the essence of the gelato recipes and appeal to a wide audience.",
     imgSrc: "/design/book_series/book_series_2.png",
     imgAlt: "Book Series Image 2"
   },
@@ -33,7 +33,7 @@ const data: PageData = {
   },
   section5: {
     title: "Process",
-    text: "The project was a collaborative effort, involving close work with another designer to build robust and reusable components. Additionally, I worked closely with stakeholders, aligning with their processes and ensuring their requirements were met. Collaboration with the Sanitarium brand department was also vital to ensure that all design elements adhered to brand guidelines and maintained consistency.",
+    text: "The process began with extensive research to understand the target audience and the unique characteristics of the gelato recipes. A moodboard was created to explore different visual styles and themes. The design work involved linking the recipes and ingredients to the visual aspects, using vibrant colours and custom typography to create a cohesive and dynamic look.",
     imgSrc: "/design/book_series/book_series_4.png",
     imgAlt: "Book Series Image 4"
   },
@@ -44,7 +44,7 @@ const data: PageData = {
   },
   section7: {
     title: "Results",
-    text: "The outcome was a website that is not only on brand but also scalable for future brands under the Sanitarium umbrella. The reusable components and the comprehensive design system we developed have laid a strong foundation for future projects, ensuring efficiency and consistency across all platforms.",
+    text: "The outcome is a strong layout with custom typography and bold branding that effectively conveys the delicious and playful nature of the gelato recipes. The book covers, contents spread, internal page spread, and web banners all work together to create an engaging and visually appealing presentation that stands out in the market.",
     imgSrc: "/design/book_series/book_series_6.png",
     imgAlt: "Book Series Image 6"
   }
