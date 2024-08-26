@@ -4,7 +4,7 @@ import { TemplatePage } from "@/components/templatePage";
 const data: PageData = {
   link: "https://medium.com/@simonarazmoska/custom-typography-and-layout-design-b6696483387e",
   background: "tw-bg-gradient-book-series",
-  textColour: "tw-text-white",
+  textColour: "tw-text-near-black",
   hero: {
     title: "Book Series",
     subheading: "BRANDING, TYPOGRAPHY AND LAYOUT.",

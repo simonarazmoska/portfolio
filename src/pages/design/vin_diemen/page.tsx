@@ -2,7 +2,7 @@ import { PageData } from "@/components/dtypes";
 import { TemplatePage } from "@/components/templatePage";
 
 const data: PageData = {
-  link: "https://www.figma.com/proto/zeLmaCH58waa1FwKEh1Xlr/Designs?page-id=369%3A144161&node-id=425-144443&viewport=298%2C729%2C0.17&scaling=scale-down&starting-point-node-id=425%3A144443",
+  link: "https://medium.com/@simonarazmoska/pointing-the-spotlight-on-user-experience-iterations-to-improve-vin-diemens-website-11185b5d2480",
   background: "tw-bg-[#E8E3DF]",
   textColour: "tw-text-nearblack",
   hero: {
@@ -10,7 +10,7 @@ const data: PageData = {
     subheading: "WEB DESIGN & REBRAND.",
     imgSrc: "/design/vin_diemen/vin_diemen_hero.png",
     imgAlt: "Vin Diemen Hero",
-    viewText: "View prototype"
+    viewText: "Read more"
   },
   section1: {
     text: "Vin Diemen is a prestigious wine-tasting event that showcases the finest wine and food from the Tasmanian region. The website redesign focuses to better reflect the event's upscale nature."
