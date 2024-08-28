@@ -2,6 +2,7 @@ import { PageData } from "@/components/dtypes";
 import { TemplatePage } from "@/components/templatePage";
 
 const data: PageData = {
+  link: "https://medium.com/@simonarazmoska/parkvolt-transforming-an-ev-charging-app-into-a-luxury-experience-8b7d265a19a7",
   background: "tw-bg-gradient-parkvolt",
   textColour: "tw-text-nearblack",
   hero: {
@@ -9,7 +10,8 @@ const data: PageData = {
     subheading: "MOBILE APP DESIGN AND BRANDING.",
     imgSrc: "/design/parkvolt/parkvolt_hero.png",
     imgAlt: "ParkVolt Hero",
-    textColour: "tw-text-nearblack"
+    textColour: "tw-text-nearblack",
+    viewText: "Read more"
   },
   section1: {
     text: "ParkVolt is an EV charging company dedicated to providing convenient and efficient charging solutions for electric vehicle users. They envisioned an app that would enable users to locate and reserve nearby charging stations, navigate to their chosen locations, and efficiently charge their vehicles.",

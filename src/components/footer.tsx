@@ -1,12 +1,16 @@
 import { ArrowForward } from "@mui/icons-material";
-import { Box, Link } from "@mui/material";
+import { Box, Button, Link, Typography } from "@mui/material";
 
 export const Footer = () => {
   return (
     <Box className="tw-text-white tw-px-12 tw-py-8 tw-space-x-8 tw-bg-nearblack tw-border-t-[1px] tw-border-white tw-border-opacity-50">
       <Box className="tw-flex tw-flex-row tw-justify-between">
         <Box className="tw-flex tw-flex-col tw-justify-between">
-          <p className="tw-font-medium tw-text-lavender">SIMONA RAZMOSKA</p>
+          <Box>
+            <Button href="/">
+              <Typography className="tw-font-medium tw-text-lavender">SIMONA RAZMOSKA</Typography>
+            </Button>
+          </Box>
           <p className="tw-text-white">&copy; 2024 Simona Razmoska. Product Designer.</p>
         </Box>
         <Box className="tw-flex tw-flex-row tw-space-x-6">
