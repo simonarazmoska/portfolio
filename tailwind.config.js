@@ -7,7 +7,7 @@ export default {
     },
     extend: {
       colors: {
-        lavender: "#EAD8FC",
+        lavender: "#B9C3E7",
         nearblack: "#151515"
       },
       fontSize: {

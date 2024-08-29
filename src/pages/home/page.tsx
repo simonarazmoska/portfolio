@@ -15,29 +15,21 @@ export const HomePage = () => {
         {/* Text Box */}
         <Box className="tw-max-w-[891px] tw-justify-between tw-space-y-14">
           <p className="tw-text-4.5xl">
-            Hi, I'm Simona - a
-            <strong>
-              <i> Product Designer </i>
-            </strong>
-            with a unique visual perspective thanks to my photography experience.
+            Hi, I'm Simona.
+            <Typer type="typewriter" dataText={ABOUT_ME_TEXT_GROUPS} />
           </p>
           <p className="tw-text-[32px]">
-            Currently shaping products at{" "}
+            I have a unique visual perspective thanks to my photography experience. Currently shaping products at{" "}
             <Link color="inherit" href="https://www.mudbath.com.au" className="tw-underline" rel="noopener noreferrer" target="_blank">
               Mudbath
             </Link>
             .
           </p>
-
-          <Box className="tw-space-y-4">
-            <p className="tw-text-xl">ABOUT ME</p>
-            <Typer type="typewriter" dataText={ABOUT_ME_TEXT_GROUPS} />
-          </Box>
         </Box>
 
         {/* Image */}
         <Box className="tw-flex tw-flex-col tw-justify-center tw-items-center tw-space-y-3">
-          <img src={"/home/sepia_photo.png"} alt="Me" loading="lazy" height={528} width={396} style={{ borderRadius: 6 }} />
+          <img src={"/home/sepia_photo.png"} alt="Me" loading="lazy" height={528} width={396} style={{ borderRadius: 100 }} />
           {/* <Box className="tw-px-8 tw-py-2 tw-space-x-2 tw-flex tw-flex-row tw-items-center">
             <p className="tw-text-2xl ">Get in touch</p>
             <ArrowForwardIcon />
