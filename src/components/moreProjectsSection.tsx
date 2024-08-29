@@ -96,7 +96,7 @@ const cards: CardProps[] = [
 
 export const MoreProjectsSection = () => {
   return (
-    <Box className="tw-px-12 tw-py-8 tw-space-y-16">
+    <Box className="tw-px-12 tw-py-24 tw-space-y-16">
       <Box className="tw-flex tw-flex-col tw-justify-center tw-items-center tw-space-y-6">
         <p className="tw-text-nearblack tw-font-medium tw-text-4.5xl">More Projects</p>
         <p className="tw-text-nearblack tw-text-xl tw-w-[638px] tw-text-center">
