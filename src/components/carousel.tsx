@@ -8,7 +8,7 @@ export const CardCarousel = ({
   cards,
   CarouselItemComponent,
   cardBackgroundOpacity,
-  cardZoom = false
+  cardZoom = true
 }: {
   cards: CardProps[];
   CarouselItemComponent: FC;
@@ -62,7 +62,7 @@ export const CardCarousel = ({
           height: 50,
           width: 50,
           backgroundColor: "#FFFFFF",
-          borderRadius: 6,
+          borderRadius: 100,
           position: "absolute",
           top: "50%",
           transform: "translateX(0%) translateY(-50%)",
@@ -85,7 +85,7 @@ export const CardCarousel = ({
           height: 50,
           width: 50,
           backgroundColor: "#FFFFFF",
-          borderRadius: 6,
+          borderRadius: 100,
           position: "absolute",
           right: 0,
           top: "50%",

@@ -9,7 +9,7 @@ export const theme = createTheme({
       main: "#FFFFFF"
     },
     lavender: {
-      main: "#EAD8FC"
+      main: "#B9C3E7"
     }
   }
 });
