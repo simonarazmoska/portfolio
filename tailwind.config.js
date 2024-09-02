@@ -8,7 +8,9 @@ export default {
     extend: {
       colors: {
         lavender: "#B9C3E7",
-        nearblack: "#151515"
+        nearblack: "#151515",
+        burgundy: "#440000",
+        yellow: "#F9E371"
       },
       fontSize: {
         "4.5xl": "2.5rem",

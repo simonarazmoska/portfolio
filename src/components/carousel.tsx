@@ -59,9 +59,9 @@ export const CardCarousel = ({
       <IconButton
         disableRipple
         style={{
-          height: 50,
-          width: 50,
-          backgroundColor: "#FFFFFF",
+          height: 55,
+          width: 47,
+          backgroundColor: "#B9C3E7",
           borderRadius: 100,
           position: "absolute",
           top: "50%",
@@ -71,9 +71,10 @@ export const CardCarousel = ({
         onClick={handlePrev}
         disabled={startIndex === 0}
         sx={{
-          color: "#151515",
+          color: "#440000",
           "&.Mui-disabled": {
-            color: "#C5C6C7"
+            color: "#440000",
+            opacity: "0.5"
           }
         }}
       >
@@ -82,9 +83,9 @@ export const CardCarousel = ({
       <IconButton
         disableRipple
         style={{
-          height: 50,
-          width: 50,
-          backgroundColor: "#FFFFFF",
+          height: 55,
+          width: 47,
+          backgroundColor: "#B9C3E7",
           borderRadius: 100,
           position: "absolute",
           right: 0,
@@ -94,9 +95,10 @@ export const CardCarousel = ({
         onClick={handleNext}
         disabled={startIndex >= cards.length - cardsToShow}
         sx={{
-          color: "#151515",
+          color: "#440000",
           "&.Mui-disabled": {
-            color: "#C5C6C7"
+            color: "#440000",
+            opacity: "0.5"
           }
         }}
       >

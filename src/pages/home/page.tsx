@@ -5,7 +5,13 @@ import { MoreProjectsSection } from "@/components/moreProjectsSection";
 import { Typer } from "@/components/typer";
 import { Box, Link } from "@mui/material";
 
-const ABOUT_ME_TEXT_GROUPS = ["Figma guru.", "Learning web development.", "Sydney-based.", "Mobile & web apps are my jam."];
+const ABOUT_ME_TEXT_GROUPS = [
+  "Product Designer.",
+  "Figma guru.",
+  "Learning web development.",
+  "Sydney-based.",
+  "Mobile & web apps are my jam."
+];
 
 export const HomePage = () => {
   return (
@@ -13,9 +19,9 @@ export const HomePage = () => {
       <Header />
       <Box className="tw-max-h-[780px] tw-flex tw-flex-row tw-items-center tw-justify-center tw-px-8 tw-py-16">
         {/* Text Box */}
-        <Box className="tw-max-w-[891px] tw-justify-between tw-space-y-14">
-          <p className="tw-text-4.5xl">
-            Hi, I'm Simona.
+        <Box className="tw-max-w-[780px] tw-justify-between tw-space-y-14">
+          <p className="tw-text-[64px]">
+            Hi, I'm Simona
             <Typer type="typewriter" dataText={ABOUT_ME_TEXT_GROUPS} />
           </p>
           <p className="tw-text-[32px]">

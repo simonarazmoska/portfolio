@@ -49,9 +49,13 @@ export const DesignProjectsSection = ({
   cardBackgroundOpacity?: number;
 }) => {
   return (
-    <Box className="tw-px-12 tw-py-8 tw-space-y-16 tw-pt-24">
-      <Box className="tw-flex tw-flex-row tw-justify-center">
-        <p className={`tw-text-${textColour} tw-font-medium tw-text-4.5xl`}>Design Projects</p>
+    <Box className="tw-px-12 tw-py-32 tw-space-y-16 tw-pt-24 tw-background-color: tw-bg-burgundy">
+      <Box className="tw-flex tw-flex-col tw-justify-center tw-items-center tw-space-y-6">
+        <p className={`tw-text-yellow tw-font-bold tw-text-4.5xl`}>Design Projects</p>
+        <p className={`tw-text-white tw-text-xl tw-w-[838px] tw-text-center`}>
+          The following projects showcase work from my time at Mudbath and Arcade Dev House. Each project is uniquely crafted to deliver
+          seamless, user-friendly experiences.
+        </p>
       </Box>
       <Box>
         <CardCarousel cards={cards} CarouselItemComponent={CarouselItem} cardBackgroundOpacity={cardBackgroundOpacity} cardZoom={true} />
