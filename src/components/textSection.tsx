@@ -7,6 +7,7 @@ interface TextSectionProps {
   src: string;
   alt?: string;
   maxHeight?: number;
+  maxWidth?: number;
   textFirst: boolean;
   textColour?: string;
 }
@@ -17,6 +18,7 @@ export const TextSection = ({
   src,
   alt,
   maxHeight = 382,
+  maxWidth = undefined,
   textFirst = true,
   textColour = "tw-text-white"
 }: TextSectionProps) => {
@@ -27,7 +29,7 @@ export const TextSection = ({
     </Box>
   );
 
-  const ImageBox = <img src={src} alt={alt} loading="lazy" style={{ maxHeight: maxHeight }} />;
+  const ImageBox = <img src={src} alt={alt} loading="lazy" style={{ maxHeight: maxHeight, maxWidth: maxWidth }} />;
 
   if (textFirst) {
     return (

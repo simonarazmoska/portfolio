@@ -10,6 +10,12 @@ export const theme = createTheme({
     },
     lavender: {
       main: "#B9C3E7"
+    },
+    black: {
+      main: "#231F21"
+    },
+    oldyellow: {
+      main: "#B9C3E7"
     }
   }
 });

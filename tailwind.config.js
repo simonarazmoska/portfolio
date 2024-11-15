@@ -1,5 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  prefix: "tw-",
+  plugins: [],
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     fontFamily: {
@@ -9,8 +11,8 @@ export default {
       colors: {
         lavender: "#B9C3E7",
         nearblack: "#151515",
-        burgundy: "#440000",
-        yellow: "#F9E371"
+        black: "#231F21",
+        oldyellow: "#B9C3E7"
       },
       fontSize: {
         "4.5xl": "2.5rem",
@@ -28,7 +30,5 @@ export default {
         "gradient-plantwell": "linear-gradient(to bottom, #39762D 0%, #39762D 31%, #315929 69%, #221F21 100%)"
       }
     }
-  },
-  plugins: [],
-  prefix: "tw-"
+  }
 };

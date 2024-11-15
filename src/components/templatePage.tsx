@@ -125,7 +125,7 @@ export const TemplatePage = ({ data }: { data: PageData }) => {
           </Box>
         </Box>
       </Box>
-      <Box className="tw-bg-nearblack tw-space-y-[104px]">
+      <Box className="tw-bg-nearblack tw-space-y-0">
         <DesignProjectsSection />
         <Footer />
       </Box>

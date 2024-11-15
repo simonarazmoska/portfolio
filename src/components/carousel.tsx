@@ -15,7 +15,7 @@ export const CardCarousel = ({
   cardBackgroundOpacity: number;
   cardZoom: boolean;
 }) => {
-  const cardPadding = 64; // pixels
+  const cardPadding = 32; // pixels
   const [startIndex, setStartIndex] = useState<number>(0);
   const cardsToShow = 2;
   const cardWidth = 100 / cardsToShow - (cardPadding / window.innerWidth) * 100;
@@ -71,9 +71,9 @@ export const CardCarousel = ({
         onClick={handlePrev}
         disabled={startIndex === 0}
         sx={{
-          color: "#440000",
+          color: "#231F21",
           "&.Mui-disabled": {
-            color: "#440000",
+            color: "#231F21",
             opacity: "0.5"
           }
         }}
@@ -95,9 +95,9 @@ export const CardCarousel = ({
         onClick={handleNext}
         disabled={startIndex >= cards.length - cardsToShow}
         sx={{
-          color: "#440000",
+          color: "#231F21",
           "&.Mui-disabled": {
-            color: "#440000",
+            color: "#231F21",
             opacity: "0.5"
           }
         }}

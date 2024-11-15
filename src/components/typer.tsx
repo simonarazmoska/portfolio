@@ -50,7 +50,7 @@ export const Typer = ({ heading = "", dataText, cursorColor }: TyperProps) => {
   return (
     <div>
       {/* {heading}&nbsp; */}
-      <span className="tw-font-bold tw-italic tw-text-burgundy tw-text-[64px]">{text}</span>
+      <span className="tw-font-bold tw-italic tw-text-black tw-text-[48px]">{text}</span>
       <Cursor cursorColor={cursorColor}></Cursor>
     </div>
   );

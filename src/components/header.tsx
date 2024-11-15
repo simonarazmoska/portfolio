@@ -27,32 +27,34 @@ export const Header = () => {
   };
 
   return (
-    <AppBar component="nav" position="sticky">
-      <Toolbar className="tw-bg-nearblack tw-justify-between" style={{ margin: 0 }}>
+    <AppBar component="nav" position="sticky" color="inherit">
+      <Toolbar className="tw-bg-black tw-bg-opacity-100 tw-justify-between" style={{ margin: 0 }}>
         <Button href="/">
-          <Typography className="tw-text-lavender tw-font-[500]">SIMONA RAZMOSKA</Typography>
+          <Typography className="tw-text-lavender tw-font-[500]">SIMONA</Typography>
         </Button>
-        <IconButton color="inherit" aria-label="open drawer" edge="start" onClick={() => handleDrawerToggle()}>
+        <IconButton color="lavender" aria-label="open drawer" edge="start" onClick={() => handleDrawerToggle()}>
           <MenuIcon />
         </IconButton>
         <Drawer
-          PaperProps={{ sx: { backgroundColor: "#151515" } }}
+          PaperProps={{
+            sx: { backgroundColor: "#231F21", width: "520px" }
+          }}
           open={drawerOpen}
           anchor="right"
           // hideBackdrop={true}
           onClose={() => handleDrawerToggle()}
         >
           <div className="tw-h-screen">
-            <div className="tw-px-8 tw-py-4">
+            <div className="tw-px-8 tw-py-4 tw-pb-12">
               <div className="tw-justify-end tw-flex">
                 <IconButton color="inherit" aria-label="open drawer" edge="start" onClick={() => handleDrawerToggle()}>
-                  <Close style={{ color: "#FFFFFF" }} />
+                  <Close style={{ color: "#B9C3E7" }} />
                 </IconButton>
               </div>
               {buildItem("Home", "/")}
             </div>
-            <div className="tw-px-8 tw-bg-nearblack">
-              <p className="tw-text-lavender tw-text-2xl">Design</p>
+            <div className="tw-px-8 tw-bg-black">
+              <p className="tw-text-lavender tw-font-semibold tw-text-2xl">DESIGN</p>
               <List className="">
                 {buildItem("Plantwell", "/design/plantwell")}
                 {buildItem("ParkVolt", "/design/parkvolt")}
@@ -63,7 +65,7 @@ export const Header = () => {
             </div>
           </div>
           <Box className="tw-pb-6">
-            <Divider className="tw-bg-white" style={{ marginBottom: 10 }} />
+            <Divider className="tw-bg-lavender" style={{ marginBottom: 12 }} />
             <Box className="tw-space-y-4">
               <Box className="tw-flex tw-flex-row tw-justify-evenly tw-items-center tw-py-6 tw-px-2 tw-space-x-2">
                 <Link
@@ -71,14 +73,14 @@ export const Header = () => {
                   href="mailto:simona.razmoska@hotmail.com"
                   className="tw-flex tw-flex-row tw-justify-evenly tw-items-center tw-px-6"
                   sx={{
-                    textDecorationColor: "white",
+                    textDecorationColor: "lavender",
                     "&:hover": {
-                      textDecorationColor: "white"
+                      textDecorationColor: "lavender"
                     }
                   }}
                 >
-                  <p className="tw-text-white tw-text-base tw-px-2">Email</p>
-                  <ArrowForward style={{ color: "#FFFFFF" }} fontSize="small" />
+                  <p className="tw-text-lavender tw-text-base tw-px-2">Email</p>
+                  <ArrowForward style={{ color: "#B9C3E7" }} fontSize="small" />
                 </Link>
 
                 <Link
@@ -88,14 +90,14 @@ export const Header = () => {
                   rel="noopener noreferrer"
                   target="_blank"
                   sx={{
-                    textDecorationColor: "white",
+                    textDecorationColor: "lavender",
                     "&:hover": {
-                      textDecorationColor: "white"
+                      textDecorationColor: "lavender"
                     }
                   }}
                 >
-                  <p className="tw-text-white tw-text-base tw-px-2">LinkedIn</p>
-                  <ArrowForward style={{ color: "#FFFFFF" }} fontSize="small" />
+                  <p className="tw-text-lavender tw-text-base tw-px-2">LinkedIn</p>
+                  <ArrowForward style={{ color: "#B9C3E7" }} fontSize="small" />
                 </Link>
 
                 <Link
@@ -105,14 +107,14 @@ export const Header = () => {
                   rel="noopener noreferrer"
                   target="_blank"
                   sx={{
-                    textDecorationColor: "white",
+                    textDecorationColor: "lavender",
                     "&:hover": {
-                      textDecorationColor: "white"
+                      textDecorationColor: "lavender"
                     }
                   }}
                 >
-                  <p className="tw-text-white tw-text-base tw-px-2">Medium</p>
-                  <ArrowForward style={{ color: "#FFFFFF" }} fontSize="small" />
+                  <p className="tw-text-lavender tw-text-base tw-px-2">Medium</p>
+                  <ArrowForward style={{ color: "#B9C3E7" }} fontSize="small" />
                 </Link>
               </Box>
             </Box>
@@ -133,7 +135,7 @@ const buildItem = (text: string, url: string) => {
     <ListItem disablePadding>
       <ListItemButton disableRipple onClick={handleClick}>
         <ListItemIcon>
-          <ArrowForward style={{ color: "#FFFFFF" }} />
+          <ArrowForward style={{ color: "#ffffff" }} />
         </ListItemIcon>
         <p className="tw-text-white tw-text-[32px] tw-leading-[38.73px]">{text}</p>
       </ListItemButton>

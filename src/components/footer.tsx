@@ -1,17 +1,16 @@
-import { ArrowForward } from "@mui/icons-material";
 import { Box, Button, Link, Typography } from "@mui/material";
 
 export const Footer = () => {
   return (
-    <Box className="tw-text-white tw-px-12 tw-py-8 tw-space-x-8 tw-bg-nearblack tw-border-t-[1px] tw-border-white tw-border-opacity-50">
+    <Box className="tw-text-black tw-px-12 tw-py-8 tw-space-x-8 tw-bg-black tw-border-t-[0px]">
       <Box className="tw-flex tw-flex-row tw-justify-between">
         <Box className="tw-flex tw-flex-col tw-justify-between">
           <Box>
             <Button href="/">
-              <Typography className="tw-font-medium tw-text-lavender">SIMONA RAZMOSKA</Typography>
+              <Typography className="tw-font-bold tw-text-lavender">SIMONA RAZMOSKA</Typography>
             </Button>
           </Box>
-          <p className="tw-text-white">&copy; 2024 Simona Razmoska. Product Designer.</p>
+          <p className="tw-text-white">&copy; 2024 Simona Razmoska. Product Designer (UX/UI).</p>
         </Box>
         <Box className="tw-flex tw-flex-row tw-space-x-6">
           {/* <Box className="tw-space-y-4">
@@ -36,7 +35,6 @@ export const Footer = () => {
               }}
             >
               <p className="tw-text-white tw-text-xl">Email</p>
-              <ArrowForward style={{ color: "#FFFFFF" }} fontSize="small" />
             </Link>
             <Link
               underline="hover"
@@ -52,7 +50,6 @@ export const Footer = () => {
               }}
             >
               <p className="tw-text-white tw-text-xl">LinkedIn</p>
-              <ArrowForward style={{ color: "#FFFFFF" }} fontSize="small" />
             </Link>
             <Link
               underline="hover"
@@ -68,7 +65,6 @@ export const Footer = () => {
               }}
             >
               <p className="tw-text-white tw-text-xl">Medium</p>
-              <ArrowForward style={{ color: "#FFFFFF" }} fontSize="small" />
             </Link>
           </Box>
         </Box>

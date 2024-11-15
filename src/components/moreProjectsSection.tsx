@@ -96,14 +96,14 @@ const cards: CardProps[] = [
 
 export const MoreProjectsSection = () => {
   return (
-    <Box className="tw-px-12 tw-py-24 tw-space-y-16">
+    <Box className="tw-px-12 tw-py-32 tw-space-y-16 tw-background-color: tw-bg-black">
       <Box className="tw-flex tw-flex-col tw-justify-center tw-items-center tw-space-y-6">
-        <p className="tw-text-nearblack tw-font-medium tw-text-4.5xl">More Projects</p>
-        <p className="tw-text-nearblack tw-text-xl tw-w-[638px] tw-text-center">
+        <p className="tw-text-oldyellow tw-font-bold tw-text-4.5xl">More Projects</p>
+        <p className="tw-text-white tw-text-xl tw-w-[638px] tw-text-center">
           Some of my work is confidential. I would love the opportunity to share this with you in conversation.
         </p>
       </Box>
-      <CardCarousel cards={cards} CarouselItemComponent={CarouselItem} cardBackgroundOpacity={0.5} />
+      <CardCarousel cards={cards} CarouselItemComponent={CarouselItem} cardBackgroundOpacity={1} />
     </Box>
   );
 };
@@ -119,8 +119,8 @@ const CarouselItem = ({ card, backgroundOpacity = 1 }: CardProps) => {
   const CardFront = () => {
     return (
       <Box
-        className={`tw-h-[601px] tw-flex tw-flex-col tw-justify-center tw-bg-lavender tw-px-8 tw-py-16 tw-space-y-12 tw-border-r-6`}
-        sx={{ backgroundColor: alpha(theme.palette.lavender.main, backgroundOpacity) }}
+        className={`tw-h-[601px] tw-flex tw-flex-col tw-justify-center tw-bg-oldyellow tw-px-8 tw-py-16 tw-space-y-12 tw-border-r-100`}
+        sx={{ backgroundColor: alpha(theme.palette.white.main, backgroundOpacity) }}
       >
         <Box height={501}>
           <CardMedia component="img" height={264} width={140} image={card.imageSource} alt={card.imageAlt} />
@@ -128,7 +128,7 @@ const CarouselItem = ({ card, backgroundOpacity = 1 }: CardProps) => {
         <CardContent className="tw-flex tw-flex-col tw-items-center tw-space-y-6">
           <p className="tw-flex tw-text-center tw-font-medium tw-text-4.5xl tw-text-nearblack">{card.title}</p>
           <Box className="tw-px-6 tw-py-2 tw-space-y-2">
-            <Box className="tw-flex tw-items-center tw-text-xl tw-leading-6 tw-space-x-1">
+            <Box className="tw-flex tw-items-center tw-text-black tw-font-semibold tw-text-xl tw-leading-6 tw-space-x-1">
               <p>Read More</p>
               <ArrowForward fontSize="small" />
             </Box>
@@ -141,15 +141,15 @@ const CarouselItem = ({ card, backgroundOpacity = 1 }: CardProps) => {
   const CardBack = () => {
     return (
       <Box
-        className={`tw-bg-lavender tw-px-8 tw-py-16 tw-space-y-16 tw-border-r-6`}
+        className={`tw-bg-oldyellow tw-px-12 tw-py-12 tw-space-y-16 tw-border-r-100`}
         sx={{ backgroundColor: alpha(theme.palette.white.main, backgroundOpacity) }}
       >
         <CardContent className="tw-flex tw-flex-col">
-          <Box className="tw-space-y-4">
+          <Box className="tw-space-y-8">
             {card.text.map((item, index) => (
               <Box key={index} display="flex" alignItems="start">
                 {item.dotpoint && <ArrowForward fontSize="small" />}
-                <Box ml={item.dotpoint ? 1 : 0} className="tw-text-base tw-leading-[18px]">
+                <Box ml={item.dotpoint ? 1 : 0} className="tw-text-base tw-leading-[24px]">
                   {item.text}
                 </Box>
               </Box>
