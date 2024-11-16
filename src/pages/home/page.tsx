@@ -26,7 +26,9 @@ export const HomePage = () => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          textAlign: "center"
+          textAlign: "center",
+          borderRadius: "0px",
+          borderBottom: "0.5px solid #575757"
         }}
       >
         New website ETA early 2025 — Learning to code along the way!

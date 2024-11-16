@@ -5,11 +5,6 @@ import { Box, Card, CardActionArea, CardContent, CardMedia } from "@mui/material
 import { alpha, useTheme } from "@mui/material/styles";
 import { useState } from "react";
 
-interface MoreProjectsCardProps extends CardProps {
-  imageWidth: string;
-  imageHeight: string;
-}
-
 const cards: CardProps[] = [
   {
     title: "Sanitarium",
@@ -96,7 +91,7 @@ const cards: CardProps[] = [
 
 export const MoreProjectsSection = () => {
   return (
-    <Box className="tw-px-12 tw-py-32 tw-space-y-16 tw-background-color: tw-bg-black">
+    <Box className="tw-px-12 tw-py-32 tw-space-y-16 tw-bg-black">
       <Box className="tw-flex tw-flex-col tw-justify-center tw-items-center tw-space-y-6">
         <p className="tw-text-oldyellow tw-font-bold tw-text-4.5xl">More Projects</p>
         <p className="tw-text-white tw-text-xl tw-w-[638px] tw-text-center">
@@ -119,11 +114,11 @@ const CarouselItem = ({ card, backgroundOpacity = 1 }: CardProps) => {
   const CardFront = () => {
     return (
       <Box
-        className={`tw-h-[601px] tw-flex tw-flex-col tw-justify-center tw-bg-oldyellow tw-px-8 tw-py-16 tw-space-y-12 tw-border-r-100`}
+        className={`tw-h-[601px] tw-flex tw-flex-col tw-justify-center tw-px-8 tw-py-32 tw-space-y-12 tw-border-r-100`}
         sx={{ backgroundColor: alpha(theme.palette.white.main, backgroundOpacity) }}
       >
         <Box height={501}>
-          <CardMedia component="img" height={264} width={140} image={card.imageSource} alt={card.imageAlt} />
+          <CardMedia component="img" height={501} width={140} image={card.imageSource} alt={card.imageAlt} />
         </Box>
         <CardContent className="tw-flex tw-flex-col tw-items-center tw-space-y-6">
           <p className="tw-flex tw-text-center tw-font-medium tw-text-4.5xl tw-text-nearblack">{card.title}</p>

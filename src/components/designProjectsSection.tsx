@@ -72,11 +72,11 @@ const CarouselItem = ({ card, backgroundOpacity = 1 }: CardProps) => {
     <Card className="tw-w-[565px]">
       <CardActionArea disableRipple href={card.link}>
         <Box
-          className={`tw-h-[713px] tw-bg-lavender tw-px-8 tw-py-16 tw-space-y-16 tw-border-r-6`}
-          sx={{ backgroundColor: alpha(theme.palette.lavender.main, backgroundOpacity) }}
+          className={`tw-h-[650px] tw-bg-lavender tw-px-8 tw-py-16 tw-space-y-8 tw-border-r-6`}
+          sx={{ backgroundColor: alpha(theme.palette.white.main, backgroundOpacity) }}
         >
           <CardMedia component="img" height={319} image={card.imageSource} alt={card.imageAlt} />
-          <CardContent className="tw-flex tw-flex-col tw-items-center tw-space-y-12 tw-max-h-[90px]">
+          <CardContent className="tw-flex tw-flex-col tw-items-center tw-space-y-8 tw-max-h-[90px]">
             <p className="tw-font-medium tw-text-4xl tw-text-nearblack">{card.title}</p>
             <p className="tw-text-s20lh22 tw-text-nearblack">{card.text}</p>
             <Box className="tw-flex tw-items-center tw-text-black tw-font-semibold tw-text-xl tw-leading-6 tw-space-x-1">

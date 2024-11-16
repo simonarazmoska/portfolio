@@ -17,7 +17,7 @@ export const CardCarousel = ({
 }) => {
   const cardPadding = 32; // pixels
   const [startIndex, setStartIndex] = useState<number>(0);
-  const cardsToShow = 2;
+  const cardsToShow = 2.5;
   const cardWidth = 100 / cardsToShow - (cardPadding / window.innerWidth) * 100;
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
