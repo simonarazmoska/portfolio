@@ -6,6 +6,14 @@ import { alpha, useTheme } from "@mui/material/styles";
 
 const cards: CardProps[] = [
   {
+    title: "Up&Go",
+    text: "Website re-design and re-platforming.",
+    imageSource: "/design/up&go/up-and-go_hero.png",
+    imageAlt: "Up&Go",
+    link: "/design/up-and-go"
+  },
+
+  {
     title: "Plantwell",
     text: "Website design and re-platforming.",
     imageSource: "/design/plantwell/plantwell_hero.png",

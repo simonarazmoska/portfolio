@@ -12,7 +12,8 @@ export default {
         lavender: "#B9C3E7",
         nearblack: "#151515",
         black: "#231F21",
-        oldyellow: "#B9C3E7"
+        oldyellow: "#B9C3E7",
+        saniblue: "#064BB1"
       },
       fontSize: {
         "4.5xl": "2.5rem",

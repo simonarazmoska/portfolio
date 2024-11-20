@@ -56,6 +56,7 @@ export const Header = () => {
             <div className="tw-px-8 tw-bg-black">
               <p className="tw-text-lavender tw-font-semibold tw-text-2xl">DESIGN</p>
               <List className="">
+                {buildItem("Up & Go", "/design/up-and-go")}
                 {buildItem("Plantwell", "/design/plantwell")}
                 {buildItem("ParkVolt", "/design/parkvolt")}
                 {buildItem("Dr. Wallet", "/design/drwallet")}
