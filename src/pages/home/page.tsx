@@ -31,7 +31,10 @@ export const HomePage = () => {
           borderBottom: "0.5px solid #575757"
         }}
       >
-        New website ETA early 2025 — Learning to code along the way!
+        New website ETA early 2025 — Learning to code along the way,
+        <Link color="inherit" href="https://medium.com/@simonarazmoska" className="tw-underline" rel="noopener noreferrer" target="_blank">
+          follow my journey here.
+        </Link>
       </Alert>
 
       <Header />
