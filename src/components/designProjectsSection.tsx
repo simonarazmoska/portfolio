@@ -33,20 +33,6 @@ const cards: CardProps[] = [
     imageSource: "/design/dr_wallet/dr_wallet_hero.png",
     imageAlt: "Dr. Wallet",
     link: "/design/drwallet"
-  },
-  {
-    title: "Vin Diemen",
-    text: "Web design & rebrand.",
-    imageSource: "/design/vin_diemen/vin_diemen_hero.png",
-    imageAlt: "Vin Diemen",
-    link: "/design/vin-diemen"
-  },
-  {
-    title: "Book Series",
-    text: "Branding, typographgy & layout.",
-    imageSource: "/design/book_series/book_series_1.png",
-    imageAlt: "Book Series",
-    link: "/design/book-series"
   }
 ];
 
@@ -58,12 +44,12 @@ export const DesignProjectsSection = ({
   cardBackgroundOpacity?: number;
 }) => {
   return (
-    <Box className="tw-px-12 tw-py-32 tw-space-y-16 tw-pt-24 tw-background-color: tw-bg-black">
+    <Box className="tw-px-12 tw-py-32 tw-space-y-16 tw-pt-24 tw-background-color: tw-bg-white">
       <Box className="tw-flex tw-flex-col tw-justify-center tw-items-center tw-space-y-6">
-        <p className={`tw-text-oldyellow tw-font-bold tw-text-4.5xl`}>Design Projects</p>
-        <p className={`tw-text-white tw-text-xl tw-w-[838px] tw-text-center`}>
-          The following projects showcase work from my time at Mudbath and Arcade Dev House. Each project is uniquely crafted to deliver
-          seamless, user-friendly experiences.
+        <p className={`tw-text-black tw-font-bold tw-text-4.5xl`}>Design Projects</p>
+        <p className={`tw-text-black tw-text-xl tw-w-[838px] tw-text-center`}>
+          I bring a unique creative perspective to every project thanks to my eight years of photography experience. Some of my design work
+          is confidential. I would love the opportunity to share these with you in conversation.
         </p>
       </Box>
       <Box>
@@ -77,10 +63,10 @@ const CarouselItem = ({ card, backgroundOpacity = 1 }: CardProps) => {
   const theme = useTheme();
 
   return (
-    <Card className="tw-w-[565px]">
+    <Card className="tw-w-[650px]">
       <CardActionArea disableRipple href={card.link}>
         <Box
-          className={`tw-h-[650px] tw-bg-lavender tw-px-8 tw-py-16 tw-space-y-8 tw-border-r-6`}
+          className={`tw-h-[900px] tw-bg-lavender tw-px-8 tw-py-16 tw-space-y-8 tw-border-r-6`}
           sx={{ backgroundColor: alpha(theme.palette.white.main, backgroundOpacity) }}
         >
           <CardMedia component="img" height={319} image={card.imageSource} alt={card.imageAlt} />

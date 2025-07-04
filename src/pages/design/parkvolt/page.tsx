@@ -22,8 +22,8 @@ const data: PageData = {
     imgAlt: "ParkVolt Image 1"
   },
   section3: {
-    title: "Problem",
-    text: `The project required a comprehensive redesign to shift the brand's image from "eco-friendly" to "luxury." This transformation involved significant UX improvements to make the app more intuitive. Key enhancements included refining the information architecture to emphasise hierarchy importance and adding a dark mode feature for improved accessibility.`,
+    title: "The Challenge",
+    text: "The existing mobile app required a redesign to improve accessibility, enhance the overall user experience, and align with an updated brand direction. Key challenges included an unclear information hierarchy, lack of accessibility features like dark mode, and outdated branding that no longer reflected the shift from “eco-friendly” to a more “luxury”-oriented positioning in line with new business goals.",
     imgSrc: "/design/parkvolt/parkvolt_2.png",
     imgAlt: "ParkVolt Image 2",
     textColour: "tw-text-nearblack"
@@ -33,8 +33,8 @@ const data: PageData = {
     imgAlt: "ParkVolt Image 3"
   },
   section5: {
-    title: "Process",
-    text: "To identify areas for improvement, I conducted thorough audits of the existing app. Additionally, a competitor analysis was performed to determine how ParkVolt could distinguish itself in the market. Collaboration with product owners was essential in refining and enhancing existing features, ensuring the app met both user needs and business objectives.",
+    title: "The Process",
+    text: "Began with an initial stakeholder workshop to uncover problem areas, align on business goals, and understand user needs. Conducted competitive and market analysis to position ParkVolt effectively within the luxury mobility space, identifying opportunities for differentiation. Performed a comprehensive audit of the existing mobile app, revealing issues with content hierarchy and navigation that impacted usability. This informed key areas of improvement, including clearer structure and more intuitive user flows. Introduced dark mode to enhance accessibility and updated the overall UI to reflect a more premium, modern aesthetic - shifting the brand from functional to luxury with a clean, refined interface. Collaborated closely with product owners and stakeholders to refine existing features, ensuring enhancements aligned with both user expectations and evolving business objectives.",
     imgSrc: "/design/parkvolt/parkvolt_4.png",
     imgAlt: "ParkVolt Image 4",
     textColour: "tw-text-white"
@@ -45,10 +45,10 @@ const data: PageData = {
     beforeAfterImages: ["/design/parkvolt/parkvolt_5_before.png", "/design/parkvolt/parkvolt_5_after.png"]
   },
   section7: {
-    title: "Results",
-    text: "The result is an intuitive mobile app that empowers users to effortlessly locate and reserve nearby charging stations, navigate to their chosen location, and efficiently charge their vehicles. The rebranding to a luxury feel aligns better with ParkVolt's customer demographic, positioning the company as a premium choice in the EV charging market.",
-    imgSrc: "/design/parkvolt/parkvolt_6.png",
-    imgAlt: "ParkVolt Image 6",
+    title: "The Outcome",
+    text: "The result is an intuitive mobile app that empowers users to effortlessly locate and reserve nearby charging stations, navigate to their chosen location, and efficiently charge their vehicles. Rebranding to a “luxury” brand aligns with ParkVolt's customer demographic, positioning the company as a premium choice in the EV charging market.",
+    imgSrc: "/design/parkvolt/parkvolt_5.png",
+    imgAlt: "ParkVolt Image 5",
     textColour: "tw-text-white"
   }
 };

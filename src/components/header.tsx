@@ -60,8 +60,6 @@ export const Header = () => {
                 {buildItem("Plantwell", "/design/plantwell")}
                 {buildItem("ParkVolt", "/design/parkvolt")}
                 {buildItem("Dr. Wallet", "/design/drwallet")}
-                {buildItem("Vin Diemen", "/design/vin-diemen")}
-                {buildItem("Book Series", "/design/book-series")}
               </List>
             </div>
           </div>
