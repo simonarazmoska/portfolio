@@ -24,9 +24,6 @@ export const HomePage = () => {
         }}
       >
         New website coming soon - Learning to code along the way!
-        <Link color="inherit" href="https://medium.com/@simonarazmoska" className="tw-underline" rel="noopener noreferrer" target="_blank">
-          follow my journey here.
-        </Link>
       </Alert>
 
       <Header />

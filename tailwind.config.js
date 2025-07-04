@@ -25,7 +25,6 @@ export default {
         ]
       },
       backgroundImage: {
-        "gradient-book-series": "linear-gradient(to bottom, #E67FB6 12%, #F15A3B 32%, #F08E37 57%, #F3C41C 75%, #ACABD5 93%)",
         "gradient-dr-wallet": "linear-gradient(to bottom, #FFFFFF 0%, #E6F2FF 100%)",
         "gradient-parkvolt": "linear-gradient(to bottom, #F7D849 49%, #27282C 49%)",
         "gradient-plantwell": "linear-gradient(to bottom, #39762D 0%, #39762D 31%, #315929 69%, #221F21 100%)"
