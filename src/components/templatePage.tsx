@@ -61,8 +61,8 @@ export const TemplatePage = ({ data }: { data: PageData }) => {
           </p>
         </Box>
 
-        <Box className="tw-flex tw-flex-col tw-items-center">
-          <Box className="tw-w-[1440px] tw-flex tw-flex-col tw-items-start tw-justify-center tw-space-y-[104px]">
+        <Box className="tw-flex tw-flex-col tw-items-center tw-mx-48">
+          <Box className="tw-w-full tw-h-auto tw-flex tw-flex-col tw-items-start tw-justify-center tw-space-y-[160px]">
             {/* Image Section 1 (Image 1) */}
             <ImageSection
               src={data.section2.imgSrc}

@@ -12,5 +12,10 @@
   },
   "files.exclude": {
     "**/node_modules": true
+  },
+
+  "github.copilot.chat.codeGeneration.useInstructionFiles": true,
+  "chat.instructionsFilesLocations": {
+    ".instructions": true
   }
 }
