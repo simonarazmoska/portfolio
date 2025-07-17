@@ -23,6 +23,7 @@ interface ImageSectionData {
 
 interface HybridSectionData {
   title: string;
+  subheading: string;
   text: string;
   imgSrc: string;
   imgAlt: string;
@@ -36,16 +37,17 @@ export interface PageData {
   section1: TextSectionData;
   section2: ImageSectionData;
   section3: HybridSectionData;
-  section4: ImageSectionData;
+  section4: HybridSectionData;
   section5: HybridSectionData;
   section6: ImageSectionData;
-  section7: HybridSectionData;
+  section7: ImageSectionData;
   background?: string;
   textColour?: string;
 }
 
 export interface CardProps {
   title: string;
+  subheading: string;
   text: string;
   imageSource: string;
   imageAlt: string | undefined;

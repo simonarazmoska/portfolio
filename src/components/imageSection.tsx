@@ -12,8 +12,8 @@ interface ImageSectionProps {
 
 export const ImageSection = ({ src, alt, maxHeight = 697 }: ImageSectionProps) => {
   return (
-    <Box className="tw-flex tw-flex-col tw-items-center">
-      <img src={src} alt={alt} loading="lazy" style={{ maxHeight: maxHeight }} />
+    <Box className="tw-w-full tw-flex tw-justify-center">
+      <img src={src} alt={alt} loading="lazy" style={{ maxHeight }} className="tw-h-auto tw-object-contain" />
     </Box>
   );
 };

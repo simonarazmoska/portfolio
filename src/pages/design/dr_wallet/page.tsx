@@ -20,17 +20,23 @@ const data: PageData = {
   },
   section3: {
     title: "The Challenge",
+    subheading: "TODO",
     text: "The primary challenge was to present the mobile app’s extensive feature set clearly and concisely, with a thoughtful hierarchy that effectively guided users to the app’s key value points. Additionally, Dr. Wallet lacked a cohesive brand identity, making it difficult to differentiate itself in a competitive market and engage meaningfully with its target audience.",
     imgSrc: "/design/dr_wallet/dr_wallet_2.png",
     imgAlt: "Dr Wallet Image 2"
   },
   section4: {
+    title: "The Process",
+    subheading: "TODO",
+    text: "Conducted initial stakeholder alignment sessions to identify key features and ensure the website aligned with their vision and business goals. Developed a comprehensive sitemap to establish clear site structure and navigation. Built the website from the ground up, creating all essential components to deliver a seamless and intuitive user experience. Crafted targeted UX writing tailored for a marketing-focused site, ensuring messaging was clear, engaging, and aligned with brand voice. Maintained ongoing collaboration through regular review and feedback sessions with stakeholders to refine and enhance the product throughout development.",
+
     imgSrc: "/design/dr_wallet/dr_wallet_3.png",
     imgAlt: "Dr Wallet Image 3"
   },
   section5: {
-    title: "The Process",
-    text: "Conducted initial stakeholder alignment sessions to identify key features and ensure the website aligned with their vision and business goals. Developed a comprehensive sitemap to establish clear site structure and navigation. Built the website from the ground up, creating all essential components to deliver a seamless and intuitive user experience. Crafted targeted UX writing tailored for a marketing-focused site, ensuring messaging was clear, engaging, and aligned with brand voice. Maintained ongoing collaboration through regular review and feedback sessions with stakeholders to refine and enhance the product throughout development.",
+    title: "The Outcome",
+    subheading: "TODO",
+    text: "A strategic design focused on creating a clear, intuitive information architecture that prioritised key features and value propositions, guiding users seamlessly through the site. The brand identity was refreshed to establish a unique, cohesive presence that resonates within the market. Visual hierarchy, concise messaging, and engaging design elements were used to highlight the app’s strengths, resulting in improved user understanding and stronger brand recognition.",
     imgSrc: "/design/dr_wallet/dr_wallet_4.png",
     imgAlt: "Dr Wallet Image 4"
   },
@@ -39,8 +45,6 @@ const data: PageData = {
     imgAlt: "Dr Wallet Image 5"
   },
   section7: {
-    title: "The Outcome",
-    text: "A strategic design focused on creating a clear, intuitive information architecture that prioritised key features and value propositions, guiding users seamlessly through the site. The brand identity was refreshed to establish a unique, cohesive presence that resonates within the market. Visual hierarchy, concise messaging, and engaging design elements were used to highlight the app’s strengths, resulting in improved user understanding and stronger brand recognition.",
     imgSrc: "/design/dr_wallet/dr_wallet_6.png",
     imgAlt: "Dr Wallet Image 6"
   }
