@@ -1,48 +1,10 @@
-import { Box } from "@mui/material";
 import clsx from "clsx";
 
 interface TextSectionProps {
-  title: string;
   text: string;
-  src: string;
-  alt?: string;
-  maxHeight?: number;
-  maxWidth?: number;
-  textFirst: boolean;
   textColour?: string;
 }
 
-export const TextSection = ({
-  title,
-  text,
-  src,
-  alt,
-  maxHeight = 382,
-  maxWidth = undefined,
-  textFirst = true,
-  textColour = "tw-text-white"
-}: TextSectionProps) => {
-  const TextBox = (
-    <Box className={clsx("tw-w-[687px] tw-space-y-6", textColour)}>
-      <p className="tw-text-4.5xl">{title}</p>
-      <p className="tw-text-xl tw-whitespace-pre-line">{text}</p>
-    </Box>
-  );
-
-  const ImageBox = <img src={src} alt={alt} loading="lazy" style={{ maxHeight: maxHeight, maxWidth: maxWidth }} />;
-
-  if (textFirst) {
-    return (
-      <Box className="tw-w-[1440px] tw-flex tw-flex-row tw-items-center tw-justify-between tw-px-8 tw-py-12">
-        {TextBox}
-        {ImageBox}
-      </Box>
-    );
-  }
-  return (
-    <Box className="tw-w-[1440px] tw-flex tw-flex-row tw-items-center tw-justify-between tw-px-8 tw-py-12">
-      {ImageBox}
-      {TextBox}
-    </Box>
-  );
+export const TextSection = ({ text, textColour = "tw-text-white" }: TextSectionProps) => {
+  return <p className={clsx("tw-text-lg tw-px-0 tw-py-4 m:tw-py-6 md:tw-py-12", textColour)}>{text}</p>;
 };
