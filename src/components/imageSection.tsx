@@ -42,16 +42,19 @@ export const BeforeAfterImageSection = ({
   alt,
   maxHeight = 697
 }: BeforeAfterImageSectionProps) => {
+  // TODO Overlay images over iPad slider is limited to the true width of the images.
   const [sliderPosition, setSliderPosition] = useState<number>(50); // Default to the center
 
-  const handleMouseMove = (e: { currentTarget: any; clientX: number }) => {
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     const slider = e.currentTarget;
     const rect = slider.getBoundingClientRect();
-    const offsetX = e.clientX - rect.left;
-    let position = (offsetX / rect.width) * 100;
-    position = Math.max(0, Math.min(100, position)); // Clamp the position between 0 and 100
-
-    setSliderPosition(position);
+    // Only update if mouse is inside the slider area
+    if (e.clientX >= rect.left && e.clientX <= rect.right && e.clientY >= rect.top && e.clientY <= rect.bottom) {
+      const offsetX = e.clientX - rect.left;
+      let position = (offsetX / rect.width) * 100;
+      position = Math.max(0, Math.min(100, position)); // Clamp the position between 0 and 100
+      setSliderPosition(position);
+    }
   };
 
   const ReactBeforeSliderStyle = (

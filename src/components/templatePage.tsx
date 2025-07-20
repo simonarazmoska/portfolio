@@ -1,7 +1,5 @@
 import { DesignProjectsSection } from "@/components/designProjectsSection";
 import { PageData } from "@/components/dtypes";
-import { Footer } from "@/components/footer";
-import { Header } from "@/components/header";
 import { HybridSection } from "@/components/hybridSection";
 import { BeforeAfterImageSection, ImageSection } from "@/components/imageSection";
 import { TextSection } from "@/components/textSection";
@@ -18,28 +16,19 @@ const HeroSection = ({ data }: { data: PageData }) => {
         <Box className="tw-space-y-14">
           <Box className="tw-space-y-2">
             <Box className="tw-space-y-4">
-              <p
-                className={clsx("tw-text-3xl md:tw-text-5xl tw-font-bold", data.hero.textColour ? data.hero.textColour : defaultTextColour)}
-              >
+              <p className={clsx("tw-text-h1 tw-font-black", data.hero.textColour ? data.hero.textColour : defaultTextColour)}>
                 {data.hero.title}
               </p>
             </Box>
-            <p
-              className={clsx(
-                "tw-text-base md:tw-text-xl tw-whitespace-pre-line",
-                data.hero.textColour ? data.hero.textColour : defaultTextColour
-              )}
-            >
-              {data.hero.subHeading}
-            </p>
+            <p className={clsx("tw-text-h2", data.hero.textColour ? data.hero.textColour : defaultTextColour)}>{data.hero.subHeading}</p>
 
             <TextSection text={data.section1.text} textColour={data.section1.textColour ? data.section1.textColour : defaultTextColour} />
           </Box>
           {data.link ? (
             <Box className="tw-px-8 tw-py-2 tw-space-x-2 tw-flex tw-flex-row tw-items-center">
-              <p className={clsx("tw-text-xl", data.hero.textColour ? data.hero.textColour : defaultTextColour)}>
+              <p className={clsx("tw-text-body", data.hero.textColour ? data.hero.textColour : defaultTextColour)}>
                 <Link underline="hover" color="inherit" href={data.link} rel="noopener noreferrer" target="_blank">
-                  {data.hero.viewText ? data.hero.viewText : "View live website"}
+                  {data.hero.viewText ? data.hero.viewText : "View the live website"}
                 </Link>
               </p>
               <ArrowForwardIcon className={clsx(data.hero.textColour ? data.hero.textColour : defaultTextColour)} />
@@ -64,12 +53,11 @@ export const TemplatePage = ({ data }: { data: PageData }) => {
   const defaultTextColour = data.textColour ? data.textColour : "tw-text-white";
   return (
     <>
-      <Header />
       <Box className={clsx("tw-h-full", data.background ? data.background : "tw-bg-textMain")}>
         {/* Hero Section */}
         <HeroSection data={data} />
 
-        <Box className="tw-flex tw-flex-col tw-items-center tw-px-1 md:tw-px-3">
+        <Box data-header-bg="dark" className="tw-flex tw-flex-col tw-items-center tw-px-1 md:tw-px-3">
           <Box className="tw-w-full tw-h-auto tw-object-contain tw-flex tw-flex-col tw-items-center tw-justify-center tw-space-y-[6rem] md:tw-space-y-[10rem]">
             {/* Image Section 2 (Image 1) */}
             <ImageSection src={data.section2.imgSrc} alt={data.section2.imgAlt} />
@@ -121,9 +109,8 @@ export const TemplatePage = ({ data }: { data: PageData }) => {
           </Box>
         </Box>
       </Box>
-      <Box className="tw-bg-textMain tw-space-y-0">
+      <Box data-header-bg="light" className="tw-bg-textMain tw-space-y-0">
         <DesignProjectsSection />
-        <Footer />
       </Box>
     </>
   );

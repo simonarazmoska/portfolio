@@ -32,7 +32,7 @@ const cards: CardProps[] = [
     text: "Responsive web design.",
     imageSource: "/design/dr_wallet/dr_wallet_hero.png",
     imageAlt: "Dr. Wallet",
-    link: "/design/drwallet"
+    link: "/design/dr-wallet"
   }
 ];
 

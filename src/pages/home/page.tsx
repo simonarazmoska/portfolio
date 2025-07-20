@@ -1,32 +1,12 @@
 import { DesignProjectsSection } from "@/components/designProjectsSection";
-import { Footer } from "@/components/footer";
-import { Header } from "@/components/header";
 import { Typer } from "@/components/typer";
-import { Alert, Box, Link } from "@mui/material";
+import { Box, Link } from "@mui/material";
 
 const ABOUT_ME_TEXT_GROUPS = ["Product Designer.", "Figma guru.", "Learning web development.", "Sydney-based.", "Photography enthusiast."];
 
 export const HomePage = () => {
   return (
     <Box className="tw-bg-secondary">
-      <Alert
-        icon={false}
-        sx={{
-          backgroundColor: "#231F21",
-          color: "#ffffff",
-          fontWeight: "regular",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          textAlign: "center",
-          borderRadius: "0px",
-          borderBottom: "0.5px solid #575757"
-        }}
-      >
-        New website coming soon - Learning to code along the way!
-      </Alert>
-
-      <Header />
       <Box className="tw-max-h-[780px] tw-flex tw-flex-row tw-items-center tw-justify-center tw-px-8 tw-py-16">
         {/* Text Box */}
         <Box className="tw-max-w-[780px] tw-justify-between tw-space-y-14">
@@ -63,8 +43,6 @@ export const HomePage = () => {
         </Box>
       </Box>
       <DesignProjectsSection textColour="textMain" cardBackgroundOpacity={0.5} />
-
-      <Footer />
     </Box>
   );
 };
