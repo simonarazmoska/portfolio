@@ -30,7 +30,7 @@ const HeroSection = ({ data }: { data: PageData }) => {
                 data.hero.textColour ? data.hero.textColour : defaultTextColour
               )}
             >
-              {data.hero.subheading}
+              {data.hero.subHeading}
             </p>
 
             <TextSection text={data.section1.text} textColour={data.section1.textColour ? data.section1.textColour : defaultTextColour} />
@@ -65,18 +65,18 @@ export const TemplatePage = ({ data }: { data: PageData }) => {
   return (
     <>
       <Header />
-      <Box className={clsx("tw-h-full", data.background ? data.background : "tw-bg-nearblack")}>
+      <Box className={clsx("tw-h-full", data.background ? data.background : "tw-bg-textMain")}>
         {/* Hero Section */}
         <HeroSection data={data} />
 
         <Box className="tw-flex tw-flex-col tw-items-center tw-px-1 md:tw-px-3">
-          <Box className="tw-w-full tw-h-auto tw-object-contain tw-flex tw-flex-col tw-items-start tw-justify-center tw-space-y-[6rem] md:tw-space-y-[10rem]">
+          <Box className="tw-w-full tw-h-auto tw-object-contain tw-flex tw-flex-col tw-items-center tw-justify-center tw-space-y-[6rem] md:tw-space-y-[10rem]">
             {/* Image Section 2 (Image 1) */}
             <ImageSection src={data.section2.imgSrc} alt={data.section2.imgAlt} />
 
             <HybridSection
               title={data.section3.title}
-              subheading={data.section3.subheading}
+              subHeading={data.section3.subHeading}
               text={data.section3.text}
               src={data.section3.imgSrc}
               alt={data.section3.imgAlt}
@@ -86,7 +86,7 @@ export const TemplatePage = ({ data }: { data: PageData }) => {
 
             <HybridSection
               title={data.section4.title}
-              subheading={data.section4.subheading}
+              subHeading={data.section4.subHeading}
               text={data.section4.text}
               src={data.section4.imgSrc}
               alt={data.section4.imgAlt}
@@ -96,7 +96,7 @@ export const TemplatePage = ({ data }: { data: PageData }) => {
 
             <HybridSection
               title={data.section5.title}
-              subheading={data.section5.subheading}
+              subHeading={data.section5.subHeading}
               text={data.section5.text}
               src={data.section5.imgSrc}
               alt={data.section5.imgAlt}
@@ -121,7 +121,7 @@ export const TemplatePage = ({ data }: { data: PageData }) => {
           </Box>
         </Box>
       </Box>
-      <Box className="tw-bg-nearblack tw-space-y-0">
+      <Box className="tw-bg-textMain tw-space-y-0">
         <DesignProjectsSection />
         <Footer />
       </Box>

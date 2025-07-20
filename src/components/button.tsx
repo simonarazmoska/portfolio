@@ -2,7 +2,18 @@ import { Button } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { useState } from "react";
 
-const _StyledButton = styled(Button)(({ theme, isClicked }) => ({
+interface StyledButtonProps {
+  children: React.ReactNode;
+  className?: string;
+  style?: React.CSSProperties;
+}
+
+interface StyledMuiButtonProps {
+  theme: any;
+  isClicked: boolean;
+}
+
+const _StyledButton = styled(Button)<{ isClicked: boolean }>(({ theme, isClicked }: StyledMuiButtonProps) => ({
   padding: "8px 24px",
   backgroundColor: "transparent",
 
@@ -25,7 +36,7 @@ const _StyledButton = styled(Button)(({ theme, isClicked }) => ({
   })
 }));
 
-export const StyledButton = ({ children, ...props }) => {
+export const StyledButton = ({ children, className, style }: StyledButtonProps) => {
   const [isClicked, setIsClicked] = useState(false);
 
   const handleClick = () => {
@@ -33,14 +44,7 @@ export const StyledButton = ({ children, ...props }) => {
   };
 
   return (
-    <_StyledButton
-      disableRipple
-      color="inherit"
-      className={props.className}
-      onClick={handleClick}
-      isClicked={isClicked}
-      style={props.style}
-    >
+    <_StyledButton disableRipple color="inherit" className={className} onClick={handleClick} isClicked={isClicked} style={style}>
       {children}
     </_StyledButton>
   );

@@ -30,10 +30,10 @@ export const Header = () => {
     <AppBar component="nav" position="sticky" color="inherit">
       <Toolbar className="tw-bg-black tw-bg-opacity-100 tw-justify-between" style={{ margin: 0 }}>
         <Button href="/">
-          <Typography className="tw-text-lavender tw-font-[500]">SIMONA</Typography>
+          <Typography className="tw-text-primary tw-font-[500]">SIMONA</Typography>
         </Button>
-        <IconButton color="lavender" aria-label="open drawer" edge="start" onClick={() => handleDrawerToggle()}>
-          <MenuIcon />
+        <IconButton color="inherit" aria-label="open drawer" edge="start" onClick={() => handleDrawerToggle()}>
+          <MenuIcon style={{ color: "#FFFFFF" }} />
         </IconButton>
         <Drawer
           PaperProps={{
@@ -48,13 +48,13 @@ export const Header = () => {
             <div className="tw-px-8 tw-py-4 tw-pb-12">
               <div className="tw-justify-end tw-flex">
                 <IconButton color="inherit" aria-label="open drawer" edge="start" onClick={() => handleDrawerToggle()}>
-                  <Close style={{ color: "#B9C3E7" }} />
+                  <Close style={{ color: "white" }} />
                 </IconButton>
               </div>
               {buildItem("Home", "/")}
             </div>
             <div className="tw-px-8 tw-bg-black">
-              <p className="tw-text-lavender tw-font-semibold tw-text-2xl">DESIGN</p>
+              <p className="tw-text-secondary tw-font-semibold tw-text-2xl">DESIGN</p>
               <List className="">
                 {buildItem("Up & Go", "/design/up-and-go")}
                 {buildItem("Plantwell", "/design/plantwell")}
@@ -64,7 +64,7 @@ export const Header = () => {
             </div>
           </div>
           <Box className="tw-pb-6">
-            <Divider className="tw-bg-lavender" style={{ marginBottom: 12 }} />
+            <Divider className="tw-bg-primary" style={{ marginBottom: 12 }} />
             <Box className="tw-space-y-4">
               <Box className="tw-flex tw-flex-row tw-justify-evenly tw-items-center tw-py-6 tw-px-2 tw-space-x-2">
                 <Link
@@ -72,14 +72,14 @@ export const Header = () => {
                   href="mailto:simona.razmoska@hotmail.com"
                   className="tw-flex tw-flex-row tw-justify-evenly tw-items-center tw-px-6"
                   sx={{
-                    textDecorationColor: "lavender",
+                    textDecorationColor: "primary",
                     "&:hover": {
-                      textDecorationColor: "lavender"
+                      textDecorationColor: "primary"
                     }
                   }}
                 >
-                  <p className="tw-text-lavender tw-text-base tw-px-2">Email</p>
-                  <ArrowForward style={{ color: "#B9C3E7" }} fontSize="small" />
+                  <p className="tw-text-primary tw-text-base tw-px-2">Email</p>
+                  <ArrowForward style={{ color: "#FFFFFF" }} fontSize="small" />
                 </Link>
 
                 <Link
@@ -89,14 +89,14 @@ export const Header = () => {
                   rel="noopener noreferrer"
                   target="_blank"
                   sx={{
-                    textDecorationColor: "lavender",
+                    textDecorationColor: "primary",
                     "&:hover": {
-                      textDecorationColor: "lavender"
+                      textDecorationColor: "primary"
                     }
                   }}
                 >
-                  <p className="tw-text-lavender tw-text-base tw-px-2">LinkedIn</p>
-                  <ArrowForward style={{ color: "#B9C3E7" }} fontSize="small" />
+                  <p className="tw-text-primary tw-text-base tw-px-2">LinkedIn</p>
+                  <ArrowForward style={{ color: "#FFFFFF" }} fontSize="small" />
                 </Link>
 
                 <Link
@@ -106,14 +106,14 @@ export const Header = () => {
                   rel="noopener noreferrer"
                   target="_blank"
                   sx={{
-                    textDecorationColor: "lavender",
+                    textDecorationColor: "primary",
                     "&:hover": {
-                      textDecorationColor: "lavender"
+                      textDecorationColor: "primary"
                     }
                   }}
                 >
-                  <p className="tw-text-lavender tw-text-base tw-px-2">Medium</p>
-                  <ArrowForward style={{ color: "#B9C3E7" }} fontSize="small" />
+                  <p className="tw-text-primary tw-text-base tw-px-2">Medium</p>
+                  <ArrowForward style={{ color: "#FFFFFF" }} fontSize="small" />
                 </Link>
               </Box>
             </Box>

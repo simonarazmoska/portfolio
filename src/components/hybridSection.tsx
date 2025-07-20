@@ -3,7 +3,7 @@ import clsx from "clsx";
 
 interface HybridSectionProps {
   title: string;
-  subheading: string;
+  subHeading: string;
   text: string;
   src: string;
   alt?: string;
@@ -15,7 +15,7 @@ interface HybridSectionProps {
 
 export const HybridSection = ({
   title,
-  subheading,
+  subHeading,
   text,
   src,
   alt,
@@ -26,8 +26,8 @@ export const HybridSection = ({
 }: HybridSectionProps) => {
   const TextBox = (
     <Box className={clsx("tw-w-full md:tw-w-1/2 tw-space-y-6", textColour)}>
-      <p className="tw-text-3xl md:tw-text-4.5xl">{title}</p>
-      <p className="tw-text-3xl md:tw-text-4.5xl">{subheading}</p>
+      <p className="tw-text-3xl md:tw-text-4xl tw-text-h1">{title}</p>
+      <p className="tw-text-3xl md:tw-text-4xl tw-text-h2">{subHeading}</p>
       <p className="tw-text-base md:tw-text-xl tw-whitespace-pre-line">{text}</p>
     </Box>
   );

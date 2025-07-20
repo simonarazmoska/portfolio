@@ -27,7 +27,7 @@ const delimiterIconStyles = {
   backgroundColor: "transparent",
   fontSize: "24px",
   color: "black",
-  position: "relative"
+  position: "relative" as "relative"
 };
 
 interface BeforeAfterImageSectionProps {
@@ -44,26 +44,36 @@ export const BeforeAfterImageSection = ({
 }: BeforeAfterImageSectionProps) => {
   const [sliderPosition, setSliderPosition] = useState<number>(50); // Default to the center
 
-  const handleMouseMove = (e) => {
+  const handleMouseMove = (e: { currentTarget: any; clientX: number }) => {
     const slider = e.currentTarget;
     const rect = slider.getBoundingClientRect();
     const offsetX = e.clientX - rect.left;
     let position = (offsetX / rect.width) * 100;
-
-    // Ensure the position is within bounds (0% to 100%)
-    if (position < 0) position = 0;
-    if (position > 100) position = 100;
+    position = Math.max(0, Math.min(100, position)); // Clamp the position between 0 and 100
 
     setSliderPosition(position);
   };
 
+  const ReactBeforeSliderStyle = (
+    <style>
+      {`
+      .before-after-slider-component img {
+        max-height: ${maxHeight}px;
+        object-fit: contain;
+        width: 100%;
+      }
+    `}
+    </style>
+  );
+
   return (
-    <Box className={clsx("tw-flex tw-flex-col tw-items-center", beforeAfterBackground ? beforeAfterBackground : "")}>
-      <div onMouseMove={handleMouseMove} style={{ width: "100%", margin: "0 auto" }}>
+    <Box className={clsx(beforeAfterBackground ? beforeAfterBackground : "")}>
+      {ReactBeforeSliderStyle}
+      <div onMouseMove={handleMouseMove} style={{ margin: "0 auto" }} className="before-after-slider-component">
         <ReactBeforeSliderComponent
           currentPercentPosition={sliderPosition}
-          firstImage={{ imageUrl: beforeAfterImages[0], height: maxHeight }}
-          secondImage={{ imageUrl: beforeAfterImages[1], height: maxHeight }}
+          firstImage={{ imageUrl: beforeAfterImages[0] }}
+          secondImage={{ imageUrl: beforeAfterImages[1] }}
           delimiterColor="#151515"
           delimiterIconStyles={delimiterIconStyles}
         />

@@ -13,13 +13,30 @@ THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH RE
 import { useEffect, useState } from "react";
 import styled, { keyframes } from "styled-components";
 
+const blink = keyframes`
+  50% {
+    border-color: transparent;
+  }
+`;
+
+interface CursorProps {
+  cursorColor?: string;
+}
+
+const Cursor = styled.span<CursorProps>`
+  margin-left: 2px;
+  border-left: 4px solid ${(props) => props.cursorColor || "black"};
+  animation: ${blink} 0.7s steps(1) infinite;
+  line-height: 1;
+  font-size: 3rem;
+`;
+
 interface TyperProps {
-  heading: string;
   dataText: string[];
   cursorColor?: string;
 }
 
-export const Typer = ({ heading = "", dataText, cursorColor }: TyperProps) => {
+export const Typer = ({ dataText, cursorColor }: TyperProps) => {
   const [text, setText] = useState<string>("");
   const [isDeleting, setIsDeleting] = useState<boolean>(false);
   const [loopNum, setLoopNum] = useState<number>(0);
@@ -49,23 +66,8 @@ export const Typer = ({ heading = "", dataText, cursorColor }: TyperProps) => {
 
   return (
     <div>
-      {/* {heading}&nbsp; */}
       <span className="tw-font-bold tw-italic tw-text-black tw-text-[48px]">{text}</span>
       <Cursor cursorColor={cursorColor}></Cursor>
     </div>
   );
 };
-
-const blink = keyframes`
-  50% {
-    border-color: transparent;
-  }
-`;
-
-const Cursor = styled.span`
-  margin-left: 2px;
-  border-left: 4px solid ${(props) => props.cursorColor};
-  animation: ${blink} 0.7s steps(1) infinite;
-  line-height: 1;
-  font-size: 3rem;
-`;

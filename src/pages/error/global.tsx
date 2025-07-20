@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 
 export const GlobalErrorPage = () => {
   return (
-    <Box className="tw-bg-nearblackcreen tw-text-white tw-flex tw-flex-col tw-justify-center tw-items-center">
-      <p className="tw-text-4.5xl tw-font-bold tw-mb-4">ERROR</p>
+    <Box className="tw-bg-textMain tw-text-white tw-flex tw-flex-col tw-justify-center tw-items-center">
+      <p className="tw-text-4xl tw-font-bold tw-mb-4">ERROR</p>
       <p className="tw-text-xl tw-font-bold tw-mb-4">Oops! Something went wrong.</p>
       <StyledButton style={{ textTransform: "none" }}>
         <Link to="/" className="tw-text-white tw-flex tw-flex-row tw-items-center tw-space-x-2">

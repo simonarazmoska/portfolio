@@ -8,7 +8,7 @@ const ABOUT_ME_TEXT_GROUPS = ["Product Designer.", "Figma guru.", "Learning web 
 
 export const HomePage = () => {
   return (
-    <Box className="tw-bg-lavender">
+    <Box className="tw-bg-secondary">
       <Alert
         icon={false}
         sx={{
@@ -32,7 +32,7 @@ export const HomePage = () => {
         <Box className="tw-max-w-[780px] tw-justify-between tw-space-y-14">
           <p className="tw-text-[48px]">
             Hi, I'm Simona
-            <Typer type="typewriter" dataText={ABOUT_ME_TEXT_GROUPS} />
+            <Typer dataText={ABOUT_ME_TEXT_GROUPS} />
           </p>
           <p className="tw-text-[32px]">
             Product Designer (UX/UI) with a unique visual perspective thanks to my{" "}
@@ -62,7 +62,7 @@ export const HomePage = () => {
           </Box> */}
         </Box>
       </Box>
-      <DesignProjectsSection textColour="nearblack" cardBackgroundOpacity={0.5} />
+      <DesignProjectsSection textColour="textMain" cardBackgroundOpacity={0.5} />
 
       <Footer />
     </Box>

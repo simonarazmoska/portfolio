@@ -1,8 +1,8 @@
-import { CardProps } from "@/dtypes";
+import { CardProps } from "@/components/dtypes";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { IconButton } from "@mui/material";
-import { FC, useState } from "react";
+import { useState } from "react";
 
 export const CardCarousel = ({
   cards,
@@ -11,7 +11,7 @@ export const CardCarousel = ({
   cardZoom = true
 }: {
   cards: CardProps[];
-  CarouselItemComponent: FC;
+  CarouselItemComponent: React.ComponentType<{ card: CardProps; backgroundOpacity: number }>;
   cardBackgroundOpacity: number;
   cardZoom: boolean;
 }) => {

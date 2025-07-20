@@ -1,6 +1,6 @@
 interface HeroData {
   title: string;
-  subheading: string;
+  subHeading: string;
   imgSrc: string;
   imgAlt: string;
   maxImageHeight?: number;
@@ -23,7 +23,7 @@ interface ImageSectionData {
 
 interface HybridSectionData {
   title: string;
-  subheading: string;
+  subHeading: string;
   text: string;
   imgSrc: string;
   imgAlt: string;
@@ -47,10 +47,9 @@ export interface PageData {
 
 export interface CardProps {
   title: string;
-  subheading: string;
+  subHeading?: string;
   text: string;
   imageSource: string;
-  imageAlt: string | undefined;
+  imageAlt?: string;
   link: string;
-  backgroundOpacity: number;
 }
