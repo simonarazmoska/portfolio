@@ -1,16 +1,12 @@
 interface HeroData {
   title: string;
   subHeading: string;
+  blurb: string;
   imgSrc: string;
   imgAlt: string;
   maxImageHeight?: number;
   textColour?: string;
   viewText?: string;
-}
-
-interface TextSectionData {
-  text: string;
-  textColour?: string;
 }
 
 interface ImageSectionData {
@@ -34,13 +30,12 @@ interface HybridSectionData {
 export interface PageData {
   link?: string;
   hero: HeroData;
-  section1: TextSectionData;
-  section2: ImageSectionData;
+  section1: ImageSectionData;
+  section2: HybridSectionData;
   section3: HybridSectionData;
   section4: HybridSectionData;
-  section5: HybridSectionData;
+  section5: ImageSectionData;
   section6: ImageSectionData;
-  section7: ImageSectionData;
   background?: string;
   textColour?: string;
 }
