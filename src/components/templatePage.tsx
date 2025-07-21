@@ -11,7 +11,7 @@ const HeroSection = ({ data }: { data: PageData }) => {
   const textColour = data.textColour ? data.textColour : "tw-text-white";
 
   return (
-    <Box className="tw-space-y-20">
+    <Box className={clsx("tw-space-y-20", data.background ? data.background : "")}>
       <Box className="tw-flex tw-flex-col md:tw-flex-row tw-justify-between tw-items-center tw-px-1 md:tw-px-3 tw-py-1 md:tw-py-3 tw-gap-3">
         <Box className="tw-space-y-14">
           <Box className="tw-space-y-2">
@@ -49,9 +49,11 @@ const HeroSection = ({ data }: { data: PageData }) => {
 
 export const TemplatePage = ({ data }: { data: PageData }) => {
   const defaultTextColour = data.textColour ? data.textColour : "tw-text-white";
+  const isLightTextColour = defaultTextColour === "tw-text-white";
+
   return (
     <>
-      <Box className={clsx("tw-h-full", data.background ? data.background : "tw-bg-textMain")}>
+      <Box data-header-bg={isLightTextColour ? "dark" : "light"} className={"tw-h-full"}>
         {/* Hero Section */}
         <HeroSection data={data} />
 

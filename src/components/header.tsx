@@ -3,7 +3,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 import {
   AppBar,
   Box,
-  Button,
   Divider,
   Drawer,
   IconButton,
@@ -18,25 +17,35 @@ import {
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-export const Header = ({ backgroundColor, isOverWhite }: { backgroundColor: string; isOverWhite: boolean }) => {
+interface HeaderProps {
+  backgroundColor: string;
+  isOverWhite: boolean;
+  textClassOverride?: string; // Optional prop to override the text class
+}
+
+export const Header = ({ backgroundColor, isOverWhite, textClassOverride }: HeaderProps) => {
   const [drawerOpen, setDrawerOpen] = useState<boolean>(false);
 
   const handleDrawerToggle = () => {
     setDrawerOpen((prevState) => !prevState);
   };
 
-  // If isOverWhite, header is transparent and text/icons are dark. Else, header uses backgroundColor and text/icons are white.
+  // If a textClassOverride is provided, use it. Otherwise, use the default logic.
   const appBarBg = isOverWhite ? "transparent" : backgroundColor;
-  const textClass = isOverWhite ? "tw-text-secondary tw-font-title" : "tw-text-primary tw-font-title tw-text-white";
+  const textClass = textClassOverride
+    ? textClassOverride
+    : isOverWhite
+      ? "tw-text-secondary tw-font-title"
+      : "tw-text-primary tw-font-title tw-text-white";
   const iconColor = isOverWhite ? "#231F21" : "#FFFFFF";
 
   return (
     <>
       <AppBar component="nav" position="sticky" sx={{ backgroundColor: appBarBg }} elevation={0}>
         <Toolbar className="tw-justify-between tw-bg-transparent" style={{ margin: 0 }}>
-          <Button href="/">
+          <Link href="/" underline="none" className="tw-cursor-pointer tw-px-4 tw-py-2 tw-flex tw-items-center">
             <Typography className={textClass}>SIMONA</Typography>
-          </Button>
+          </Link>
           <IconButton color="inherit" aria-label="open drawer" edge="start" onClick={handleDrawerToggle}>
             <MenuIcon style={{ color: iconColor }} />
           </IconButton>

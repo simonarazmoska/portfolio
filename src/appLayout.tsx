@@ -1,5 +1,6 @@
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
+import { theme } from "@/theme";
 import { useEffect, useRef, useState } from "react";
 
 export const AppLayout = ({ backgroundColor, children }: { backgroundColor: string; children: React.ReactNode }) => {
@@ -7,35 +8,35 @@ export const AppLayout = ({ backgroundColor, children }: { backgroundColor: stri
   const debounceTimeout = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
+    // Compute headerOnLight on page load and on scroll
+    const computeHeaderOnLight = () => {
+      const sentinelsArr = Array.from(document.querySelectorAll("[data-header-bg]"));
+      let found: Element | null = null;
+      let minDist = Infinity;
+      sentinelsArr.forEach((el) => {
+        const rect = (el as Element).getBoundingClientRect();
+        const dist = Math.abs(rect.top - 64);
+        if (rect.top <= 64 && dist < minDist) {
+          found = el;
+          minDist = dist;
+        }
+      });
+      if (found) {
+        setHeaderOnLight((found as Element).getAttribute("data-header-bg") === "light");
+      } else {
+        setHeaderOnLight(false);
+      }
+    };
+
     const handleScroll = () => {
       if (debounceTimeout.current) {
         clearTimeout(debounceTimeout.current);
       }
-
-      debounceTimeout.current = setTimeout(() => {
-        const sentinelsArr = Array.from(document.querySelectorAll("[data-header-bg]"));
-        let found: Element | null = null;
-        let minDist = Infinity;
-        sentinelsArr.forEach((el) => {
-          const rect = (el as Element).getBoundingClientRect();
-          // Find the section whose top is closest to (but not above) the header's bottom (64px)
-          const dist = Math.abs(rect.top - 64);
-          if (rect.top <= 64 && dist < minDist) {
-            found = el;
-            minDist = dist;
-          }
-        });
-
-        if (found) {
-          setHeaderOnLight((found as Element).getAttribute("data-header-bg") === "light");
-        } else {
-          setHeaderOnLight(false); // fallback: use dark mode if nothing covers the header
-        }
-      }, 30); // Debounce for performance
+      debounceTimeout.current = setTimeout(computeHeaderOnLight, 30);
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll(); // Initial check
+    computeHeaderOnLight(); // Initial check on mount
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -63,7 +64,14 @@ export const AppLayout = ({ backgroundColor, children }: { backgroundColor: stri
       >
         New website coming soon - Learning to code along the way!
       </Alert> */}
-      <Header backgroundColor="transparent" isOverWhite={headerOnLight} />
+      {/* Set textClassOverride to black text only if background is white or yellow */}
+      <Header
+        backgroundColor={backgroundColor}
+        isOverWhite={headerOnLight}
+        textClassOverride={
+          [theme.palette.white.main, theme.palette.parkvoltYellow.main].includes(backgroundColor) ? "tw-text-textMain" : undefined
+        }
+      />
       {children}
       <Footer />
     </>
