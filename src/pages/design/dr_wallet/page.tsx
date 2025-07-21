@@ -3,7 +3,7 @@ import { TemplatePage } from "@/components/templatePage";
 
 const data: PageData = {
   link: "https://doctorwallet.com.au/",
-  background: "tw-bg-gradient-dr-wallet",
+  background: "tw-bg-drWalletNavy",
   textColour: "tw-text-textMain",
   hero: {
     title: "Dr. Wallet",

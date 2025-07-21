@@ -25,7 +25,7 @@ export const router = createBrowserRouter([
   {
     path: "design/dr-wallet",
     element: (
-      <AppLayout backgroundColor={theme.palette.drNavy.main}>
+      <AppLayout backgroundColor={theme.palette.drWalletNavy.main}>
         <DrWalletPage />
       </AppLayout>
     ),
@@ -38,7 +38,7 @@ export const router = createBrowserRouter([
   {
     path: "design/parkvolt",
     element: (
-      <AppLayout backgroundColor={theme.palette.parkYellow.main}>
+      <AppLayout backgroundColor={theme.palette.parkvoltYellow.main}>
         <ParkVoltPage />
       </AppLayout>
     ),
@@ -51,7 +51,7 @@ export const router = createBrowserRouter([
   {
     path: "design/plantwell",
     element: (
-      <AppLayout backgroundColor={theme.palette.plantGreen.main}>
+      <AppLayout backgroundColor={theme.palette.plantwellGreen.main}>
         <PlantwellPage />
       </AppLayout>
     ),
@@ -64,7 +64,7 @@ export const router = createBrowserRouter([
   {
     path: "design/up-and-go",
     element: (
-      <AppLayout backgroundColor={theme.palette.saniBlue.main}>
+      <AppLayout backgroundColor={theme.palette.sanitariumBlue.main}>
         <UpAndGoPage />
       </AppLayout>
     ),

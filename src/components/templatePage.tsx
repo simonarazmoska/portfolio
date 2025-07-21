@@ -55,7 +55,7 @@ export const TemplatePage = ({ data }: { data: PageData }) => {
         {/* Hero Section */}
         <HeroSection data={data} />
 
-        <Box data-header-bg="dark" className="tw-flex tw-flex-col tw-items-center tw-px-1 md:tw-px-3">
+        <Box className="tw-flex tw-flex-col tw-items-center tw-px-1 md:tw-px-3">
           <Box className="tw-w-full tw-h-auto tw-object-contain tw-flex tw-flex-col tw-items-center tw-justify-center tw-space-y-[6rem] md:tw-space-y-[10rem]">
             {/* Section 1 */}
             <ImageSection src={data.section1.imgSrc} alt={data.section1.imgAlt} />

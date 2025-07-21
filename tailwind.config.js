@@ -12,10 +12,10 @@ export default {
         secondary: "#B9C3E7",
         textMain: "#2B1E1A",
 
-        drNavy: "#050726",
-        parkYellow: "#FAD853",
-        plantGreen: "#39762D",
-        saniBlue: "#1250D6"
+        drWalletNavy: "#050726",
+        parkvoltYellow: "#FAD853",
+        plantwellGreen: "#39762D",
+        sanitariumBlue: "#1250D6"
       },
       fontSize: {
         mainheading: [

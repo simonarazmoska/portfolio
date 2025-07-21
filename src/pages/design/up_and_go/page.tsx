@@ -3,7 +3,7 @@ import { TemplatePage } from "@/components/templatePage";
 
 const data: PageData = {
   link: "https://upandgo.com.au/",
-  background: "tw-bg-saniBlue",
+  background: "tw-bg-sanitariumBlue",
   textColour: "tw-text-white",
   hero: {
     title: "UP&GO",

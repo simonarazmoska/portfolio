@@ -3,7 +3,7 @@ import { TemplatePage } from "@/components/templatePage";
 
 const data: PageData = {
   link: "https://medium.com/@simonarazmoska/parkvolt-transforming-an-ev-charging-app-into-a-luxury-experience-8b7d265a19a7",
-  background: "tw-bg-gradient-parkvolt",
+  background: "tw-bg-parkvoltYellow",
   textColour: "tw-text-textMain",
   hero: {
     title: "ParkVolt",
