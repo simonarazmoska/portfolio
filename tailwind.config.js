@@ -9,16 +9,21 @@ export default {
     extend: {
       colors: {
         primary: "#FFFFFF",
-        secondary: "#B9C3E7",
+        secondary: "#D8532F",
+        tertiary: {
+          light: "#E0785B",
+          dark: "#B14021"
+        },
         textMain: "#2B1E1A",
-
-        drWalletNavy: "#050726",
-        parkvoltYellow: "#FAD853",
-        plantwellGreen: "#39762D",
-        sanitariumBlue: "#1250D6"
+        orange: "#D8532F",
+        // Design Product Colours
+        navy: { drWallet: "#050726" },
+        yellow: { parkvolt: "#FAD853" },
+        green: { plantwell: "#39762D" },
+        blue: { sanitarium: "#1250D6" }
       },
       fontSize: {
-        mainheading: [
+        mainHeading: [
           "21.875rem",
           {
             lineHeight: "0.94",

@@ -3,7 +3,7 @@ import { TemplatePage } from "@/components/templatePage";
 
 const data: PageData = {
   link: "https://plantwellliving.com/",
-  background: "tw-bg-plantwellGreen",
+  background: "tw-bg-green-plantwell",
   hero: {
     title: "Plantwell",
     subHeading: "WEBSITE DESIGN AND RE-PLATFORMING.",

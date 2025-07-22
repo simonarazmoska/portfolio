@@ -12,7 +12,7 @@ export const router = createBrowserRouter([
   {
     path: "/",
     element: (
-      <AppLayout backgroundColor={theme.palette.black.main}>
+      <AppLayout backgroundColor={theme.palette.orange.main}>
         <HomePage />
       </AppLayout>
     ),

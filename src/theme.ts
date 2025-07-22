@@ -27,17 +27,52 @@ declare module "@mui/material/styles" {
 
 export const theme = createTheme({
   typography: {
-    fontFamily: ["Inter"].join(",")
+    fontFamily: ["Inter", "sans-serif"].join(","),
+    mainHeading: {
+      fontSize: "21.875rem",
+      lineHeight: 0.94,
+      letterSpacing: "-0.07em",
+      fontWeight: 800
+    },
+    h1: {
+      fontSize: "6.25rem",
+      lineHeight: 1.004,
+      letterSpacing: "-0.06em",
+      fontWeight: 900
+    },
+    h2: {
+      fontSize: "2rem",
+      lineHeight: "normal",
+      letterSpacing: "-0.06em",
+      fontWeight: 700
+    },
+    title: {
+      fontSize: "1.25rem",
+      lineHeight: 0.24,
+      letterSpacing: "0",
+      fontWeight: 700
+    },
+    body: {
+      fontSize: "1.125rem",
+      lineHeight: "normal",
+      letterSpacing: "0",
+      fontWeight: 400
+    }
   },
   palette: {
     white: { main: "#FFFFFF" },
+    primary: { main: "#FFFFFF" },
+    secondary: { main: "#B9C3E7" },
+    tertiary: {
+      light: "#E0785B",
+      dark: "#B14021"
+    },
+    textMain: { main: "#2B1E1A" },
     orange: { main: "#D8532F" },
     black: { main: "#2B1E1A" },
     drWalletNavy: { main: "#050726" },
     parkvoltYellow: { main: "#FAD853" },
     plantwellGreen: { main: "#39762D" },
-    sanitariumBlue: { main: "#1250D6" },
-    secondary: { main: "#B9C3E7" },
-    textMain: { main: "#2B1E1A" }
+    sanitariumBlue: { main: "#1250D6" }
   }
 } as ThemeOptions);
