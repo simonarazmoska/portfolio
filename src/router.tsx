@@ -1,5 +1,6 @@
 import { AppLayout } from "@/appLayout";
 import { DrWalletPage } from "@/pages/design/dr_wallet/page";
+import { DesignHomePage } from "@/pages/design/main";
 import { ParkVoltPage } from "@/pages/design/parkvolt/page";
 import { PlantwellPage } from "@/pages/design/plantwell/page";
 import { UpAndGoPage } from "@/pages/design/up_and_go/page";
@@ -14,6 +15,19 @@ export const router = createBrowserRouter([
     element: (
       <AppLayout backgroundColor={theme.palette.orange.main}>
         <HomePage />
+      </AppLayout>
+    ),
+    errorElement: (
+      <AppLayout backgroundColor={theme.palette.black.main}>
+        <GlobalErrorPage />
+      </AppLayout>
+    )
+  },
+  {
+    path: "design",
+    element: (
+      <AppLayout backgroundColor={theme.palette.textMain.main}>
+        <DesignHomePage />
       </AppLayout>
     ),
     errorElement: (
