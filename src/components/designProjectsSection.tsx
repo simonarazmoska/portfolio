@@ -8,7 +8,7 @@ const cards: CardProps[] = [
   {
     title: "Up&Go",
     text: "Website re-design and re-platforming.",
-    imageSource: "/design/up-and-go/up-and-go_hero.png",
+    imageSource: "/design/up-and-go/hero.png",
     imageAlt: "Up&Go",
     link: "/design/up-and-go"
   },
@@ -16,21 +16,21 @@ const cards: CardProps[] = [
   {
     title: "Plantwell",
     text: "Website design and re-platforming.",
-    imageSource: "/design/plantwell/plantwell_hero.png",
+    imageSource: "/design/plantwell/hero.png",
     imageAlt: "Plantwell",
     link: "/design/plantwell"
   },
   {
     title: "ParkVolt",
     text: "Mobile app design & branding.",
-    imageSource: "/design/parkvolt/parkvolt_hero.png",
+    imageSource: "/design/parkvolt/hero.png",
     imageAlt: "ParkVolt",
     link: "/design/parkvolt"
   },
   {
     title: "Dr. Wallet",
     text: "Responsive web design.",
-    imageSource: "/design/dr_wallet/dr_wallet_hero.png",
+    imageSource: "/design/dr-wallet/hero.png",
     imageAlt: "Dr. Wallet",
     link: "/design/dr-wallet"
   }
