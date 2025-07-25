@@ -1,11 +1,13 @@
 import { AppLayout } from "@/appLayout";
+import { AboutPage } from "@/pages/about/page";
 import { DrWalletPage } from "@/pages/design/dr_wallet/page";
-import { DesignHomePage } from "@/pages/design/main";
+import { DesignLandingPage } from "@/pages/design/landing/page";
 import { ParkVoltPage } from "@/pages/design/parkvolt/page";
 import { PlantwellPage } from "@/pages/design/plantwell/page";
 import { UpAndGoPage } from "@/pages/design/up_and_go/page";
 import { GlobalErrorPage } from "@/pages/error/global";
 import { HomePage } from "@/pages/home/page";
+import { PhotographyLandingPage } from "@/pages/photography/landing/page";
 import { theme } from "@/theme";
 import { createBrowserRouter } from "react-router-dom";
 
@@ -27,7 +29,7 @@ export const router = createBrowserRouter([
     path: "design",
     element: (
       <AppLayout backgroundColor={theme.palette.textMain.main}>
-        <DesignHomePage />
+        <DesignLandingPage />
       </AppLayout>
     ),
     errorElement: (
@@ -80,6 +82,33 @@ export const router = createBrowserRouter([
     element: (
       <AppLayout backgroundColor={theme.palette.sanitariumBlue.main}>
         <UpAndGoPage />
+      </AppLayout>
+    ),
+    errorElement: (
+      <AppLayout backgroundColor={theme.palette.black.main}>
+        <GlobalErrorPage />
+      </AppLayout>
+    )
+  },
+  {
+    path: "photography",
+    element: (
+      <AppLayout backgroundColor={theme.palette.textMain.main}>
+        <PhotographyLandingPage />
+      </AppLayout>
+    ),
+    errorElement: (
+      <AppLayout backgroundColor={theme.palette.black.main}>
+        <GlobalErrorPage />
+      </AppLayout>
+    )
+  },
+  //  TODO photography pages
+  {
+    path: "about",
+    element: (
+      <AppLayout backgroundColor={theme.palette.textMain.main}>
+        <AboutPage />
       </AppLayout>
     ),
     errorElement: (

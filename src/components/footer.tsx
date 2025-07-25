@@ -4,7 +4,7 @@ import { Box, Link, Typography } from "@mui/material";
 export const Footer = () => {
   return (
     <Box className="tw-bg-textMain tw-flex tw-justify-center">
-      <Box className="tw-w-[1440px] tw-flex tw-flex-col tw-px-24 tw-py-20 tw-gap-[90px] tw-justify-center tw-items-star">
+      <Box className="tw-w-full tw-flex tw-flex-col tw-px-24 tw-py-20 tw-gap-[90px] tw-justify-center tw-items-star">
         <Box className="tw-flex tw-flex-col tw-gap-12">
           <Typography variant="h1" className="tw-text-secondary">
             Contact
@@ -12,9 +12,11 @@ export const Footer = () => {
         </Box>
         <Box className="tw-flex tw-flex-col tw-gap-[90px] tw-items-start tw-pt-12 tw-pb-6 tw-border-t-[1px] tw-border-primary tw-w-full">
           <Box className="tw-flex tw-flex-row tw-justify-between tw-items-end tw-w-full">
-            <FooterColumn mainText="GET IN TOUCH" linkText="Email" linkUrl="mailto:simona.razmoska@hotmail.com" />
-            <FooterColumn mainText="FIND ME ON" linkText="LinkedIn" linkUrl="https://www.linkedin.com/in/simona-razmoska/" />
-            <FooterColumn mainText="READ MORE" linkText="Medium" linkUrl="https://medium.com/@simonarazmoska" />
+            <Box className="tw-flex tw-flex-row tw-justify-start tw-gap-36">
+              <FooterColumn mainText="GET IN TOUCH" linkText="Email" linkUrl="mailto:simona.razmoska@hotmail.com" />
+              <FooterColumn mainText="FIND ME ON" linkText="LinkedIn" linkUrl="https://www.linkedin.com/in/simona-razmoska/" />
+              <FooterColumn mainText="READ MORE" linkText="Medium" linkUrl="https://medium.com/@simonarazmoska" />
+            </Box>
             <Box>
               <Typography variant="body" className="tw-text-primary">
                 &copy; 2025 Simona Razmoska

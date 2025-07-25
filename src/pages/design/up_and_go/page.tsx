@@ -10,7 +10,7 @@ const data: PageData = {
     subHeading: "WEBSITE RE-DESIGN AND RE-PLATFORMING.",
     blurb:
       "Up&Go is one of Sanitarium’s most recognised brands. As part of Sanitarium’s broader replatforming initiative, the goal was to redesign and relaunch the Up&Go website to a headless CMS platform.The project focused on maintaining a strong emphasis on brand identity, scalability and consistency by building upon the newly created design system.",
-    imgSrc: "/design/up-and-go/hero.png",
+    imgSrc: "/design/up-and-go/hero.svg",
     imgAlt: "Up & Go Hero",
     viewText: "View the live website"
   },

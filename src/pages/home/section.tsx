@@ -1,16 +1,17 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Link, Typography } from "@mui/material";
 
 interface SectionProps {
   title: string;
   content: string;
   imageSrc: string;
   imageAlt: string;
-  imageTextColor?: string;
+  imageTextColor: string;
+  imageUrl: string;
 }
 
-export const Section = ({ title, content, imageSrc, imageAlt, imageTextColor }: SectionProps) => {
+export const Section = ({ title, content, imageSrc, imageAlt, imageTextColor, imageUrl }: SectionProps) => {
   return (
-    <Box className="tw-bg-white tw-flex tw-justify-center">
+    <Box className="tw-bg-white tw-flex tw-justify-center tw-mb-[96px]">
       <Box className="tw-w-[1440px]">
         {/* Text Section */}
         <Box className="tw-flex tw-flex-col tw-gap-20 tw-px-12 tw-pt-20">
@@ -23,9 +24,9 @@ export const Section = ({ title, content, imageSrc, imageAlt, imageTextColor }: 
 
         {/* Image Section */}
         <Box className="tw-flex tw-flex-col tw-gap-20 tw-px-12 tw-pt-10">
-          <Box>
+          <Link href={imageUrl} underline="none" className="tw-cursor-pointer tw-gap-1 tw-py-2 tw-flex tw-justify-center tw-items-center">
             <img src={imageSrc} alt={imageAlt} loading="lazy" style={{ maxHeight: "745px" }} className="tw-h-auto tw-object-contain" />
-          </Box>
+          </Link>
         </Box>
       </Box>
     </Box>

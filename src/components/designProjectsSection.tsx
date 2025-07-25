@@ -8,7 +8,7 @@ const cards: CardProps[] = [
   {
     title: "Up&Go",
     text: "Website re-design and re-platforming.",
-    imageSource: "/design/up-and-go/hero.png",
+    imageSource: "/design/up-and-go/card.png",
     imageAlt: "Up&Go",
     link: "/design/up-and-go"
   },
