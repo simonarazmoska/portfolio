@@ -1,4 +1,4 @@
-import { LandingHeroSection } from "@/components/landingHero";
+import { ContentBlock } from "@/components/ContentBlock";
 import { Box, Typography } from "@mui/material";
 
 const data = {
@@ -23,7 +23,13 @@ const data = {
 export const AboutPage = () => {
   return (
     <Box>
-      <LandingHeroSection title={data.title} subtitle={data.subtitle} blurb={data.blurb} />
+      <ContentBlock
+        title={data.title}
+        subtitle={data.subtitle}
+        blurb={data.blurb}
+        titleTextColour="tw-text-secondary"
+        subtitleTextColour="tw-text-primary"
+      />
     </Box>
   );
 };

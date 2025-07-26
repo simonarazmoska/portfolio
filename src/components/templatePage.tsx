@@ -1,10 +1,10 @@
 import { DesignProjectsSection } from "@/components/designProjectsSection";
-import { PageData } from "@/components/dtypes";
+import { OverviewColumnData, OverviewSectionData, PageData } from "@/components/dtypes";
 import { HybridSection } from "@/components/hybridSection";
 import { BeforeAfterImageSection, ImageSection } from "@/components/imageSection";
 import { TextSection } from "@/components/textSection";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import { Box, Link } from "@mui/material";
+import { Box, Link, Typography } from "@mui/material";
 import clsx from "clsx";
 
 const HeroSection = ({ data }: { data: PageData }) => {
@@ -57,6 +57,10 @@ export const TemplatePage = ({ data }: { data: PageData }) => {
         {/* Hero Section */}
         <HeroSection data={data} />
 
+        {/* Overview Section */}
+        <OverviewSection columns={data.overview.columns} imageSrc={data.overview.imageSrc} imageAlt={data.overview.imageAlt} />
+
+        {/* Content */}
         <Box className="tw-flex tw-flex-col tw-items-center tw-px-1 md:tw-px-3">
           <Box className="tw-w-full tw-h-auto tw-object-contain tw-flex tw-flex-col tw-items-center tw-justify-center tw-space-y-[6rem] md:tw-space-y-[10rem]">
             {/* Section 1 */}
@@ -116,5 +120,47 @@ export const TemplatePage = ({ data }: { data: PageData }) => {
         <DesignProjectsSection />
       </Box>
     </>
+  );
+};
+
+const OverviewSection = ({ columns, imageSrc, imageAlt }: OverviewSectionData) => {
+  return (
+    <Box className="tw-bg-primary">
+      <Box className="tw-flex tw-flex-col tw-items-center tw-gap-24 tw-px-8 tw-py-24">
+        {/* Overviews */}
+        <Box className="tw-w-full tw-flex tw-flex-row tw-justify-center tw-border-b-[1px] tw-pb-8 tw-border-blue-sanitarium">
+          <Box className="tw-flex tw-flex-row tw-justify-between tw-items-start tw-w-full">
+            {columns.map((column, idx) => (
+              <TextColumnSection key={column.title + idx} title={column.title} contentArray={column.contentArray} />
+            ))}
+          </Box>
+        </Box>
+
+        {/* Image */}
+        <img
+          src={imageSrc}
+          alt={imageAlt}
+          // style={{ height: "725px", width: "500px" }}
+          className="tw-h-full tw-object-cover"
+          // className="tw-w-full tw-h-auto tw-object-cover"
+          loading="lazy"
+        />
+      </Box>
+    </Box>
+  );
+};
+
+const TextColumnSection = ({ title, contentArray }: OverviewColumnData) => {
+  return (
+    <Box className="tw-w-[344px] tw-flex tw-flex-col tw-text-textMain tw-gap-4">
+      <Typography variant="title">{title}</Typography>
+      <Box className="tw-flex tw-flex-col tw-gap-2">
+        {contentArray.map((item, idx) => (
+          <Typography key={idx} variant="body">
+            {item}
+          </Typography>
+        ))}
+      </Box>
+    </Box>
   );
 };

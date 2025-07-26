@@ -9,6 +9,17 @@ interface HeroData {
   viewText?: string;
 }
 
+export interface OverviewColumnData {
+  title: string;
+  contentArray: string[];
+}
+
+export interface OverviewSectionData {
+  columns: OverviewColumnData[];
+  imageSrc: string;
+  imageAlt: string;
+}
+
 interface ImageSectionData {
   imgSrc: string;
   imgAlt: string;
@@ -30,6 +41,7 @@ interface HybridSectionData {
 export interface PageData {
   link?: string;
   hero: HeroData;
+  overview: OverviewSectionData;
   section1: ImageSectionData;
   section2: HybridSectionData;
   section3: HybridSectionData;

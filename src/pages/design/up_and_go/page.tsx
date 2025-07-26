@@ -14,6 +14,16 @@ const data: PageData = {
     imgAlt: "Up & Go Hero",
     viewText: "View the live website"
   },
+  overview: {
+    columns: [
+      { title: "SCOPE", contentArray: ["Website redesign", "CMS replatforming", "Brand integration", "DLS management"] },
+      { title: "TIMELINE", contentArray: ["3 month engagement", "2024"] },
+      { title: "TOOLS", contentArray: ["Figma", "Contentstack", "Miro"] },
+      { title: "TEAM", contentArray: ["UX Designer", "Product Manager", "Lead Engineer", "Sanitarium MarTech Manager", "Up&Go brand team"] }
+    ],
+    imageSrc: "/design/up-and-go/1.png",
+    imageAlt: "Design Hero"
+  },
   section1: {
     imgSrc: "/design/up-and-go/1.png",
     imgAlt: "Up&Go Image 1"

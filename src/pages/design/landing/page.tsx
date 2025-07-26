@@ -1,4 +1,4 @@
-import { LandingHeroSection } from "@/components/landingHero";
+import { ContentBlock } from "@/components/ContentBlock";
 import { Box, Link, Typography } from "@mui/material";
 import { useState } from "react";
 
@@ -19,14 +19,23 @@ const data = {
       </Typography>
     </Box>
   ),
-  imageSrc: "/design/landing/hero.png",
+  imageSrc: "/design/up-and-go/hero.svg",
   imageAlt: "up-and-go-hero"
 };
 
 export const DesignLandingPage = () => {
   return (
     <Box>
-      <LandingHeroSection title={data.title} subtitle={data.subtitle} blurb={data.blurb} />
+      <ContentBlock
+        title={data.title}
+        subtitle={data.subtitle}
+        blurb={data.blurb}
+        imageSrc={data.imageSrc}
+        imageAlt={data.imageAlt}
+        titleTextColour="tw-text-secondary"
+        subtitleTextColour="tw-text-primary"
+      />
+      {/* Sections */}
       <DesignImageSection src={"/design/up-and-go/1.png"} alt={"Up&Go"} url={"/design/up-and-go"} />
       <DesignImageSection src={"/design/plantwell/5.png"} alt={"PlantWell"} url={"/design/plantwell"} />
       <DesignImageSection src={"/design/parkvolt/hero.png"} alt={"ParkVolt"} url={"/design/parkvolt"} />
