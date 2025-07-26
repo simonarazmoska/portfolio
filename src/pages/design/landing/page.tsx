@@ -19,8 +19,8 @@ const data = {
       </Typography>
     </Box>
   ),
-  imageSrc: "/design/up-and-go/hero.svg",
-  imageAlt: "up-and-go-hero"
+  imgSrc: "/design/up-and-go/hero.svg",
+  imgAlt: "up-and-go-hero"
 };
 
 export const DesignLandingPage = () => {
@@ -30,10 +30,11 @@ export const DesignLandingPage = () => {
         title={data.title}
         subtitle={data.subtitle}
         blurb={data.blurb}
-        imageSrc={data.imageSrc}
-        imageAlt={data.imageAlt}
+        imgSrc={data.imgSrc}
+        imgAlt={data.imgAlt}
         titleTextColour="tw-text-secondary"
         subtitleTextColour="tw-text-primary"
+        backgroundColour="tw-bg-textMain"
       />
       {/* Sections */}
       <DesignImageSection src={"/design/up-and-go/1.png"} alt={"Up&Go"} url={"/design/up-and-go"} />

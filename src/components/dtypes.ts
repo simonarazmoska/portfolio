@@ -1,12 +1,13 @@
 interface HeroData {
   title: string;
-  subHeading: string;
-  blurb: string;
+  subtitle: string;
+  blurb: React.ReactNode;
   imgSrc: string;
   imgAlt: string;
-  maxImageHeight?: number;
-  textColour?: string;
-  viewText?: string;
+  titleTextColour: string;
+  subtitleTextColour: string;
+  // maxImageHeight?: number;
+  backgroundColour: string;
 }
 
 export interface OverviewColumnData {
@@ -16,8 +17,8 @@ export interface OverviewColumnData {
 
 export interface OverviewSectionData {
   columns: OverviewColumnData[];
-  imageSrc: string;
-  imageAlt: string;
+  imgSrc: string;
+  imgAlt: string;
 }
 
 interface ImageSectionData {
@@ -57,6 +58,6 @@ export interface CardProps {
   subHeading?: string;
   text: string;
   imageSource: string;
-  imageAlt?: string;
+  imgAlt?: string;
   link: string;
 }

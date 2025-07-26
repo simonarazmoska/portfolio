@@ -1,51 +1,9 @@
+import { ContentBlock } from "@/components/ContentBlock";
 import { DesignProjectsSection } from "@/components/designProjectsSection";
 import { OverviewColumnData, OverviewSectionData, PageData } from "@/components/dtypes";
 import { HybridSection } from "@/components/hybridSection";
 import { BeforeAfterImageSection, ImageSection } from "@/components/imageSection";
-import { TextSection } from "@/components/textSection";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import { Box, Link, Typography } from "@mui/material";
-import clsx from "clsx";
-
-const HeroSection = ({ data }: { data: PageData }) => {
-  const textColour = data.textColour ? data.textColour : "tw-text-white";
-
-  return (
-    <Box className={clsx("tw-space-y-20", data.background ? data.background : "")}>
-      <Box className="tw-flex tw-flex-col md:tw-flex-row tw-justify-between tw-items-center tw-px-1 md:tw-px-3 tw-py-1 md:tw-py-3 tw-gap-3">
-        <Box className="tw-space-y-14">
-          <Box className="tw-space-y-2">
-            <Box className="tw-space-y-4">
-              <p className={clsx("tw-text-h1 tw-font-black", textColour)}>{data.hero.title}</p>
-            </Box>
-            <p className={clsx("tw-text-h2", textColour)}>{data.hero.subHeading}</p>
-
-            <TextSection text={data.hero.blurb} textColour={textColour} />
-          </Box>
-          {data.link ? (
-            <Box className="tw-px-8 tw-py-2 tw-space-x-2 tw-flex tw-flex-row tw-items-center">
-              <p className={clsx("tw-text-body", textColour)}>
-                <Link underline="hover" color="inherit" href={data.link} rel="noopener noreferrer" target="_blank">
-                  {data.hero.viewText ? data.hero.viewText : "View the live website"}
-                </Link>
-              </p>
-              <ArrowForwardIcon className={textColour} />
-            </Box>
-          ) : (
-            <></>
-          )}
-        </Box>
-        <img
-          src={data.hero.imgSrc}
-          alt={data.hero.imgAlt}
-          loading="lazy"
-          className="tw-max-w-full tw-h-auto tw-object-contain"
-          style={{ maxHeight: data.hero.maxImageHeight ? data.hero.maxImageHeight : 518 }}
-        />
-      </Box>
-    </Box>
-  );
-};
+import { Box, Typography } from "@mui/material";
 
 export const TemplatePage = ({ data }: { data: PageData }) => {
   const defaultTextColour = data.textColour ? data.textColour : "tw-text-white";
@@ -55,10 +13,19 @@ export const TemplatePage = ({ data }: { data: PageData }) => {
     <>
       <Box data-header-bg={isLightTextColour ? "dark" : "light"} className={"tw-h-full"}>
         {/* Hero Section */}
-        <HeroSection data={data} />
+        <ContentBlock
+          title={data.hero.title}
+          subtitle={data.hero.subtitle}
+          blurb={data.hero.blurb}
+          imgSrc={data.hero.imgSrc}
+          imgAlt={data.hero.imgAlt}
+          titleTextColour={data.hero.titleTextColour}
+          subtitleTextColour={data.hero.subtitleTextColour}
+          backgroundColour={data.hero.backgroundColour}
+        />
 
         {/* Overview Section */}
-        <OverviewSection columns={data.overview.columns} imageSrc={data.overview.imageSrc} imageAlt={data.overview.imageAlt} />
+        <OverviewSection columns={data.overview.columns} imgSrc={data.overview.imgSrc} imgAlt={data.overview.imgAlt} />
 
         {/* Content */}
         <Box className="tw-flex tw-flex-col tw-items-center tw-px-1 md:tw-px-3">
@@ -123,7 +90,7 @@ export const TemplatePage = ({ data }: { data: PageData }) => {
   );
 };
 
-const OverviewSection = ({ columns, imageSrc, imageAlt }: OverviewSectionData) => {
+const OverviewSection = ({ columns, imgSrc, imgAlt }: OverviewSectionData) => {
   return (
     <Box className="tw-bg-primary">
       <Box className="tw-flex tw-flex-col tw-items-center tw-gap-24 tw-px-8 tw-py-24">
@@ -138,8 +105,8 @@ const OverviewSection = ({ columns, imageSrc, imageAlt }: OverviewSectionData) =
 
         {/* Image */}
         <img
-          src={imageSrc}
-          alt={imageAlt}
+          src={imgSrc}
+          alt={imgAlt}
           // style={{ height: "725px", width: "500px" }}
           className="tw-h-full tw-object-cover"
           // className="tw-w-full tw-h-auto tw-object-cover"

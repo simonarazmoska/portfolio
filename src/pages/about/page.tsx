@@ -16,8 +16,8 @@ const data = {
       </Typography>
     </Box>
   ),
-  imageSrc: "/design/up-and-go/hero.png",
-  imageAlt: "placeholder" // TODO
+  imgSrc: "/design/up-and-go/hero.png",
+  imgAlt: "placeholder" // TODO
 };
 
 export const AboutPage = () => {
@@ -29,6 +29,7 @@ export const AboutPage = () => {
         blurb={data.blurb}
         titleTextColour="tw-text-secondary"
         subtitleTextColour="tw-text-primary"
+        backgroundColour="tw-bg-textMain"
       />
     </Box>
   );

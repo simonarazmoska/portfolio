@@ -16,8 +16,8 @@ const data = {
       </Typography>
     </Box>
   ),
-  imageSrc: "/photography/landing/hero.png",
-  imageAlt: "photography-hero"
+  imgSrc: "/photography/landing/hero.png",
+  imgAlt: "photography-hero"
 };
 
 export const PhotographyLandingPage = () => {
@@ -27,10 +27,11 @@ export const PhotographyLandingPage = () => {
         title={data.title}
         subtitle={data.subtitle}
         blurb={data.blurb}
-        imageSrc={data.imageSrc}
-        imageAlt={data.imageAlt}
+        imgSrc={data.imgSrc}
+        imgAlt={data.imgAlt}
         titleTextColour="tw-text-secondary"
         subtitleTextColour="tw-text-primary"
+        backgroundColour="tw-bg-textMain"
       />
     </Box>
   );

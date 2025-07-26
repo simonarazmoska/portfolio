@@ -9,7 +9,7 @@ const cards: CardProps[] = [
     title: "Up&Go",
     text: "Website re-design and re-platforming.",
     imageSource: "/design/up-and-go/card.png",
-    imageAlt: "Up&Go",
+    imgAlt: "Up&Go",
     link: "/design/up-and-go"
   },
 
@@ -17,21 +17,21 @@ const cards: CardProps[] = [
     title: "Plantwell",
     text: "Website design and re-platforming.",
     imageSource: "/design/plantwell/hero.png",
-    imageAlt: "Plantwell",
+    imgAlt: "Plantwell",
     link: "/design/plantwell"
   },
   {
     title: "ParkVolt",
     text: "Mobile app design & branding.",
     imageSource: "/design/parkvolt/hero.png",
-    imageAlt: "ParkVolt",
+    imgAlt: "ParkVolt",
     link: "/design/parkvolt"
   },
   {
     title: "Dr. Wallet",
     text: "Responsive web design.",
     imageSource: "/design/dr-wallet/hero.png",
-    imageAlt: "Dr. Wallet",
+    imgAlt: "Dr. Wallet",
     link: "/design/dr-wallet"
   }
 ];
@@ -69,7 +69,7 @@ const CarouselItem = ({ card, backgroundOpacity = 1 }: { card: CardProps; backgr
           className={`tw-h-[900px] tw-px-8 tw-py-16 tw-space-y-8 tw-border-r-6`}
           sx={{ backgroundColor: alpha(theme.palette.white.main, backgroundOpacity) }}
         >
-          <CardMedia component="img" height={319} image={card.imageSource} alt={card.imageAlt} />
+          <CardMedia component="img" height={319} image={card.imageSource} alt={card.imgAlt} />
           <CardContent className="tw-flex tw-flex-col tw-items-center tw-space-y-8 tw-max-h-[90px]">
             <p className="tw-font-medium tw-text-textMain">{card.title}</p>
             <p className="tw-text-textMain">{card.text}</p>

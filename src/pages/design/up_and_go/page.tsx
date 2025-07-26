@@ -1,5 +1,40 @@
 import { PageData } from "@/components/dtypes";
 import { TemplatePage } from "@/components/templatePage";
+import { Icon } from "@iconify/react";
+import { Box, Link, List, ListItem, Typography } from "@mui/material";
+
+const heroBlurb = (
+  <Box className="tw-flex tw-flex-col tw-gap-6 tw-text-primary">
+    <Box className="tw-flex tw-flex-col tw-gap-6">
+      <Typography variant="body">
+        Up&Go is one of Sanitarium’s most recognised brands. As part of a broader digital transformation, the website was redesigned and
+        replatformed to a headless CMS - with a focus on maintaining brand identity, improving performance, and ensuring scalability.
+      </Typography>
+      <Typography variant="body" className="tw-font-bold" component="span">
+        Key contributions:
+      </Typography>
+      <List sx={{ pl: 3, listStyleType: "disc" }}>
+        <ListItem sx={{ display: "list-item", py: 0 }}>
+          <Typography variant="body">End-to-end UX and UI design</Typography>
+        </ListItem>
+        <ListItem sx={{ display: "list-item", py: 0 }}>
+          <Typography variant="body">Worked cross-functionally with product, developers and internal stakeholders</Typography>
+        </ListItem>
+        <ListItem sx={{ display: "list-item", py: 0 }}>
+          <Typography variant="body">Extended and adapted the Plantwell design system to suit Up&amp;Go’s needs</Typography>
+        </ListItem>
+      </List>
+    </Box>
+    <Link href="https://upandgo.com.au/" underline="none" className="tw-cursor-pointer tw-gap-1 tw-py-2 tw-flex tw-items-center">
+      <Typography variant="body" className="tw-text-primary">
+        {/* TODO set font to semi-bold, 18 */}
+        See the live site
+      </Typography>
+      <Icon icon="material-symbols:arrow-forward" className="tw-text-primary" />
+      {/* TODO thickness of arrow */}
+    </Link>
+  </Box>
+);
 
 const data: PageData = {
   link: "https://upandgo.com.au/",
@@ -7,12 +42,13 @@ const data: PageData = {
   textColour: "tw-text-white",
   hero: {
     title: "UP&GO",
-    subHeading: "WEBSITE RE-DESIGN AND RE-PLATFORMING.",
-    blurb:
-      "Up&Go is one of Sanitarium’s most recognised brands. As part of Sanitarium’s broader replatforming initiative, the goal was to redesign and relaunch the Up&Go website to a headless CMS platform.The project focused on maintaining a strong emphasis on brand identity, scalability and consistency by building upon the newly created design system.",
+    subtitle: "Website redesign and re-platforming",
+    blurb: heroBlurb,
     imgSrc: "/design/up-and-go/hero.svg",
     imgAlt: "Up & Go Hero",
-    viewText: "View the live website"
+    titleTextColour: "tw-text-primary",
+    subtitleTextColour: "tw-text-primary",
+    backgroundColour: "tw-bg-blue-sanitarium"
   },
   overview: {
     columns: [
@@ -21,8 +57,8 @@ const data: PageData = {
       { title: "TOOLS", contentArray: ["Figma", "Contentstack", "Miro"] },
       { title: "TEAM", contentArray: ["UX Designer", "Product Manager", "Lead Engineer", "Sanitarium MarTech Manager", "Up&Go brand team"] }
     ],
-    imageSrc: "/design/up-and-go/1.png",
-    imageAlt: "Design Hero"
+    imgSrc: "/design/up-and-go/1.png",
+    imgAlt: "Design Hero"
   },
   section1: {
     imgSrc: "/design/up-and-go/1.png",
