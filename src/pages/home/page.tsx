@@ -6,7 +6,7 @@ const HomePageContent = {
   design: {
     title: "Design Work",
     content:
-      "I’m a UX/UI designer with 4 years of end-to-end product experience across industries like mining, health, EdTech, eCommerce, and travel. I’ve worked with brands including Sanitarium, Intrepid, Michael Hill, Scenic, and Sandvik. Some of my work is confidential, but I’d love to walk you through it in person.",
+      "I'm a UX/UI designer with 4 years of end-to-end product experience across industries like mining, health, EdTech, eCommerce, and travel. I've worked with brands including Sanitarium, Intrepid, Michael Hill, Scenic, and Sandvik. Some of my work is confidential, but I'd love to walk you through it in person.",
     imgSrc: "/home/design-background.svg",
     imgAlt: "Design Portfolio",
     imageTextColor: "text.primary",

@@ -1,4 +1,4 @@
-import { StyledButton } from "@/components/button";
+import { StyledButton } from "@/components/Button";
 import { ArrowForward } from "@mui/icons-material";
 import { Box } from "@mui/material";
 import { Link } from "react-router-dom";

@@ -25,7 +25,7 @@ export const ContentBlock = ({
   showTextFirst = true
 }: ContentBlockProps) => {
   const TextSection = (
-    <Box className="tw-h-full tw-w-[725px] tw-flex tw-flex-col tw-justify-between tw-pb-20">
+    <Box className="tw-h-full tw-w-[1085px] tw-flex tw-flex-col tw-justify-between tw-pb-20">
       {/* Header */}
       <Box>
         <Typography variant="h1" className={titleTextColour}>
@@ -45,7 +45,7 @@ export const ContentBlock = ({
     <img
       src={imgSrc}
       alt={imgAlt}
-      // style={{ height: "725px", width: "500px" }}
+      style={{ maxHeight: "1056px" }}
       className="tw-h-full tw-object-cover"
       // className="tw-w-full tw-h-auto tw-object-cover"
       loading="lazy"

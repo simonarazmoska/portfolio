@@ -7,15 +7,15 @@ const data = {
   subtitle: "Product (UX/UI) Design",
   blurb: (
     <Box>
-      <Typography variant="body1" className="tw-text-primary" paragraph>
-        I’ve spent the last four years designing and refining digital products end to end, across the full UX/UI lifecycle.
+      <Typography variant="body" className="tw-text-primary" paragraph>
+        I've spent the last four years designing and refining digital products end to end, across the full UX/UI lifecycle.
       </Typography>
-      <Typography variant="body1" className="tw-text-primary" paragraph>
+      <Typography variant="body" className="tw-text-primary" paragraph>
         My experience spans industries like mining, health, EdTech, eCommerce, and travel - working with brands such as Sanitarium,
         Intrepid, Michael Hill, Scenic, and Sandvik.
       </Typography>
-      <Typography variant="body1" className="tw-text-primary">
-        Some of my design work is confidential, I’d love the chance to walk you through it in conversation.
+      <Typography variant="body" className="tw-text-primary">
+        Some of my design work is confidential, I'd love the chance to walk you through it in conversation.
       </Typography>
     </Box>
   ),
@@ -37,10 +37,10 @@ export const DesignLandingPage = () => {
         backgroundColour="tw-bg-textMain"
       />
       {/* Sections */}
-      <DesignImageSection src={"/design/up-and-go/1.png"} alt={"Up&Go"} url={"/design/up-and-go"} />
-      <DesignImageSection src={"/design/plantwell/5.png"} alt={"PlantWell"} url={"/design/plantwell"} />
-      <DesignImageSection src={"/design/parkvolt/hero.png"} alt={"ParkVolt"} url={"/design/parkvolt"} />
-      <DesignImageSection src={"/design/dr-wallet/4.png"} alt={"Dr. Wallet"} url={"/design/dr-wallet"} />
+      <DesignImageSection src={"/design/up-and-go/1.svg"} alt={"Up&Go"} url={"/design/up-and-go"} />
+      <DesignImageSection src={"/design/plantwell/5.svg"} alt={"PlantWell"} url={"/design/plantwell"} />
+      <DesignImageSection src={"/design/parkvolt/hero.svg"} alt={"ParkVolt"} url={"/design/parkvolt"} />
+      <DesignImageSection src={"/design/dr-wallet/4.svg"} alt={"Dr. Wallet"} url={"/design/dr-wallet"} />
     </Box>
   );
 };
