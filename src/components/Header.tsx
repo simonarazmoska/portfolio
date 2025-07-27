@@ -75,6 +75,9 @@ export const Header = ({ backgroundColor }: HeaderProps) => {
             textDecoration: "none"
           }
         }}
+        onClick={() => {
+          window.location.href = "/";
+        }}
       >
         SIMONA
       </Button>
@@ -123,6 +126,9 @@ export const Header = ({ backgroundColor }: HeaderProps) => {
                 "&:hover": {
                   textDecoration: "none"
                 }
+              }}
+              onClick={() => {
+                window.location.href = "/";
               }}
             >
               SIMONA
