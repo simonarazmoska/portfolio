@@ -1,51 +1,23 @@
-import { Button } from "@mui/material";
+import { ButtonProps, Button as MuiButton } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import { useState } from "react";
 
-interface StyledButtonProps {
-  children: React.ReactNode;
-  className?: string;
-  style?: React.CSSProperties;
-}
+// Custom styled MUI Button: defaults to theme.typography.button, but sx can override
+const StyledButton = styled(MuiButton)(({ theme }) => ({
+  ...theme.typography.button,
+  textTransform: "none",
+  borderRadius: theme.shape?.borderRadius || 4,
+  transition: "all 0.15s",
+  boxShadow: "none",
 
-interface StyledMuiButtonProps {
-  theme: any;
-  isClicked: boolean;
-}
-
-const _StyledButton = styled(Button)<{ isClicked: boolean }>(({ theme, isClicked }: StyledMuiButtonProps) => ({
-  padding: "8px 24px",
-  backgroundColor: "transparent",
-
-  fontWeight: "400",
   "&:hover": {
     textDecoration: "underline",
-    backgroundColor: "transparent",
-    textUnderlineOffset: "4px",
-    textDecorationThickness: "1.25px"
+    backgroundColor: "transparent"
   },
-  "&:active": {
-    boxShadow: "none"
-  },
-  "&:focus": {},
-  ...(isClicked && {
-    fontWeight: "700",
-    textDecoration: "underline",
-    textUnderlineOffset: "4px",
-    textDecorationThickness: "1.25px"
-  })
+  "&.Mui-selected, &:active": {
+    fontWeight: 700 // Bold on select/active
+  }
 }));
 
-export const StyledButton = ({ children, className, style }: StyledButtonProps) => {
-  const [isClicked, setIsClicked] = useState(false);
-
-  const handleClick = () => {
-    setIsClicked(!isClicked);
-  };
-
-  return (
-    <_StyledButton disableRipple color="inherit" className={className} onClick={handleClick} isClicked={isClicked} style={style}>
-      {children}
-    </_StyledButton>
-  );
+export const Button = (props: ButtonProps) => {
+  return <StyledButton disableRipple {...props} />;
 };

@@ -1,6 +1,7 @@
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { theme } from "@/theme";
+import { Box, Toolbar } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
 
 export const AppLayout = ({ backgroundColor, children }: { backgroundColor: string; children: React.ReactNode }) => {
@@ -48,22 +49,6 @@ export const AppLayout = ({ backgroundColor, children }: { backgroundColor: stri
 
   return (
     <>
-      {/* <Alert
-        icon={false}
-        sx={{
-          backgroundColor: "#231F21",
-          color: "#ffffff",
-          fontWeight: "regular",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          textAlign: "center",
-          borderRadius: "0px",
-          borderBottom: "0.5px solid #575757"
-        }}
-      >
-        New website coming soon - Learning to code along the way!
-      </Alert> */}
       {/* Set textClassOverride to black text only if background is white or yellow */}
       <Header
         backgroundColor={backgroundColor}
@@ -72,7 +57,10 @@ export const AppLayout = ({ backgroundColor, children }: { backgroundColor: stri
           [theme.palette.white.main, theme.palette.parkvoltYellow.main].includes(backgroundColor) ? "tw-text-textMain" : undefined
         }
       />
-      {children}
+      <Box component="main">
+        <Toolbar />
+        {children}
+      </Box>
       <Footer />
     </>
   );

@@ -58,13 +58,20 @@ export default {
             fontWeight: "700"
           }
         ],
-
         body: [
           "1.125rem",
           {
             lineHeight: "normal",
             letterSpacing: "0",
             fontWeight: "400"
+          }
+        ],
+        button: [
+          "1.125rem", // 18px
+          {
+            lineHeight: "1.25", // 125%
+            letterSpacing: "-0.06em", // -6%
+            fontWeight: "600" // semi bold
           }
         ]
       }
