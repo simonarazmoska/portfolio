@@ -19,7 +19,7 @@ const designLinks = [
 
 const photographyLinks = [
   { label: "Editorials", href: "/photography/editorials" },
-  { label: "Campains", href: "/photography/campaigns" },
+  { label: "Campaigns", href: "/photography/campaigns" },
   { label: "Motion", href: "/photography/motion" }
 ];
 

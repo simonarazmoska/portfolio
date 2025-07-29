@@ -1,5 +1,7 @@
 import { ContentBlock } from "@/components/ContentBlock";
-import { Box, Typography } from "@mui/material";
+import { ArrowForward as ArrowForwardIcon } from "@mui/icons-material";
+import { Box, Link, Typography } from "@mui/material";
+import { useState } from "react";
 
 const data = {
   title: "Photography",
@@ -16,7 +18,7 @@ const data = {
       </Typography>
     </Box>
   ),
-  imgSrc: "/photography/landing/hero.svg",
+  imgSrc: "/photography/editorials/landingHero.svg",
   imgAlt: "photography-hero"
 };
 
@@ -33,6 +35,44 @@ export const PhotographyLandingPage = () => {
         subtitleTextColour="tw-text-primary"
         backgroundColour="tw-bg-textMain"
       />
+      {/* Sections */}
+      <PhotographyImageSection src={"/photography/editorials/landing.svg"} alt={"Editorials"} url={"/photography/editorials"} />
+      <PhotographyImageSection src={"/photography/campaigns/landing.svg"} alt={"Campaigns"} url={"/photography/campaigns"} />
+      <PhotographyImageSection src={"/photography/motion/landing.svg"} alt={"Motion"} url={"/photography/motion"} />
+    </Box>
+  );
+};
+
+interface PhotographyImageSectionProps {
+  src: string;
+  alt: string;
+  url: string;
+}
+
+const PhotographyImageSection = ({ src, alt, url }: PhotographyImageSectionProps) => {
+  const [loaded, setLoaded] = useState(false);
+
+  return (
+    <Box className="tw-flex tw-flex-col tw-gap-[90px] tw-px-12 tw-py-20 tw-items-center">
+      <Link href={url} underline="hover">
+        <Box className="tw-relative">
+          <img
+            src={src}
+            alt={alt}
+            loading="lazy"
+            style={{ maxHeight: "1056px" }}
+            className="tw-h-auto tw-object-contain"
+            onLoad={() => setLoaded(true)}
+          />
+          {loaded && (
+            <Box className="tw-absolute tw-bottom-0 tw-left-0 tw-p-4 tw-rounded-tr-lg">
+              <Typography variant="h1" className="tw-text-primary">
+                {alt} <ArrowForwardIcon fontSize="inherit" className="tw-ml-2" />
+              </Typography>
+            </Box>
+          )}
+        </Box>
+      </Link>
     </Box>
   );
 };

@@ -15,7 +15,7 @@ export const HeroBlurb = () => {
       "Built a reusable, scalable design system to support future Sanitarium brands"
     ],
     linkText: "See the live site",
-    linkUrl: "https://plantwellliving.com/", // TODO redirects to Sanitarium homepage
+    linkUrl: "https://plantwellliving.com/products/oat-milk",
     textColour: "tw-text-primary"
   };
 

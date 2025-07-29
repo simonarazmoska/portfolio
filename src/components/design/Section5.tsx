@@ -12,7 +12,7 @@ export const Section5Content = ({ data }: { data: ImageSectionData | BeforeAfter
           src={data.imgSrc}
           alt={data.imgAlt}
           loading="lazy"
-          style={{ maxWidth: "1344px" }}
+          style={{ maxHeight: "1028px" }}
         />
       </Box>
     );

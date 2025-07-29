@@ -1,6 +1,5 @@
 import { CardProps } from "@/dtypes";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import { ArrowBack as ArrowBackIcon, ArrowForward as ArrowForwardIcon } from "@mui/icons-material";
 import { IconButton } from "@mui/material";
 import { useState } from "react";
 

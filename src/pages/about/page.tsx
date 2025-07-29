@@ -16,20 +16,116 @@ const data = {
       </Typography>
     </Box>
   ),
-  imgSrc: "/design/up-and-go/hero.svg",
-  imgAlt: "placeholder" // TODO
+  imgSrc: "/about/hero.svg",
+  imgAlt: "About-Hero"
 };
 
 export const AboutPage = () => {
   return (
     <Box>
+      {/* Hero Section */}
       <ContentBlock
         title={data.title}
         subtitle={data.subtitle}
         blurb={data.blurb}
+        imgSrc={data.imgSrc}
+        imgAlt={data.imgAlt}
         titleTextColour="tw-text-secondary"
         subtitleTextColour="tw-text-primary"
         backgroundColour="tw-bg-textMain"
+      />
+
+      {/* Section 1*/}
+      <ContentBlock
+        title="01"
+        subtitle="Product Designer"
+        blurb={
+          <Box>
+            <Typography variant="body" className="tw-text-textMain" paragraph>
+              I'm a UX and Product Designer with over four years of experience delivering end-to-end digital experiences across sectors
+              including EV, EdTech, healthtech, construction, lawtech, marketing, accounting, eCommerce, mining, and travel.
+            </Typography>
+            <Typography variant="body" className="tw-text-textMain" paragraph>
+              I've had the opportunity to work with brands such as Sanitarium, Intrepid, Michael Hill, Scenic, Sandvik, and more - designing
+              accessible, user-first interfaces and thoughtful, scalable systems that solve real business and user problems.
+            </Typography>
+            <Typography variant="body" className="tw-text-textMain" paragraph>
+              My process is rooted in user research, cross-functional collaboration, and a strong understanding of technical constraints.
+              I'm comfortable working across the entire UX/UI lifecycle - from discovery workshops and design sprints to prototyping,
+              developer handoff, and ongoing iteration.
+            </Typography>
+          </Box>
+        }
+        imgSrc="/about/1.svg"
+        imgAlt="About-Product Designer"
+        titleTextColour="tw-text-secondary"
+        subtitleTextColour="tw-text-secondary"
+      />
+
+      {/* Section 2 */}
+      <ContentBlock
+        title="02"
+        subtitle="Photographer"
+        blurb={
+          <Box>
+            <Typography variant="body" className="tw-text-textMain" paragraph>
+              Before moving into Design, I spent eight years as a fashion and lifestyle photographer and videographer, running my own
+              freelance business.
+            </Typography>
+            <Typography variant="body" className="tw-text-textMain" paragraph>
+              I worked end-to-end on projects - scouting locations, casting models, developing creative concepts, styling shoots, directing
+              talent, and handling all post-production work including editing, retouching, and colour grading.
+            </Typography>
+            <Typography variant="body" className="tw-text-textMain" paragraph>
+              I produced editorial content, commercial campaigns, and eCommerce imagery, collaborating closely with stylists, marketing
+              teams, and clients to bring brand stories to life through compelling visuals. My work includes campaign shoots for Canberra
+              Outlet Centre, and projects with clients such as Diakrit, QT Hotel, and Mercedes Benz Fashion Week.
+            </Typography>
+          </Box>
+        }
+        imgSrc="/about/2.svg"
+        imgAlt="About-Photographer"
+        titleTextColour="tw-text-secondary"
+        subtitleTextColour="tw-text-secondary"
+        showTextFirst={false}
+      />
+
+      {/* Section 3 */}
+      <ContentBlock
+        title="03"
+        subtitle="More about me"
+        blurb={
+          <Box>
+            <Typography variant="title" className="tw-text-textMain">
+              Learning
+            </Typography>
+            <Typography variant="body" className="tw-text-textMain" paragraph>
+              I love learning and constantly expanding my skills - currently building my portfolio site from scratch using TypeScript
+              (React) framework, Material UI and TailwindCSS, while also exploring ways to integrate AI into my workflow for smarter, more
+              efficient design.
+            </Typography>
+
+            <Typography variant="title" className="tw-text-textMain">
+              Giving back
+            </Typography>
+            <Typography variant="body" className="tw-text-textMain" paragraph>
+              I mentor design students at UNSW as part of their industry engagement programs - offering feedback on portfolios, guiding
+              career pathways, and helping them build confidence in their design practice.
+            </Typography>
+
+            <Typography variant="title" className="tw-text-textMain">
+              Beyond the screen
+            </Typography>
+            <Typography variant="body" className="tw-text-textMain" paragraph>
+              Outside of work, I'm immersing myself in salsa dancing and learning Spanish - two passions that keep me energised and curious.
+              I also love exploring new places and cultures through travel, which continually inspires my creativity.
+            </Typography>
+          </Box>
+        }
+        imgSrc="/about/3.svg"
+        imgAlt="About-More"
+        titleTextColour="tw-text-secondary"
+        subtitleTextColour="tw-text-secondary"
       />
     </Box>
   );

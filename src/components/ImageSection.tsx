@@ -7,15 +7,20 @@ import "react-before-after-slider-component/dist/build.css";
 interface ImageSectionProps {
   src: string;
   alt?: string;
-  maxHeight?: number;
+  maxHeight?: number | string | null;
 }
 
-export const ImageSection = ({ src, alt, maxHeight = 697 }: ImageSectionProps) => {
+export const ImageSection = ({ src, alt, maxHeight = "697px" }: ImageSectionProps) => {
+  const style = maxHeight != null ? { maxHeight } : undefined;
   return (
     <Box className="tw-w-full tw-flex tw-justify-center">
-      <img src={src} alt={alt} loading="lazy" style={{ maxHeight }} className="tw-h-auto tw-object-contain" />
+      <img src={src} alt={alt} loading="lazy" style={style} className="tw-h-auto tw-object-contain" />
     </Box>
   );
+};
+
+export const FullWidthImageSection = ({ src, alt }: ImageSectionProps) => {
+  return <ImageSection src={src} alt={alt} maxHeight={null} />;
 };
 
 const delimiterIconStyles = {
@@ -42,7 +47,6 @@ export const BeforeAfterImageSection = ({
   alt,
   maxHeight = 697
 }: BeforeAfterImageSectionProps) => {
-  // TODO Overlay images over iPad slider is limited to the true width of the images.
   const [sliderPosition, setSliderPosition] = useState<number>(50); // Default to the center
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {

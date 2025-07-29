@@ -1,4 +1,5 @@
 import { ContentBlock } from "@/components/ContentBlock";
+import { ArrowForward as ArrowForwardIcon } from "@mui/icons-material";
 import { Box, Link, Typography } from "@mui/material";
 import { useState } from "react";
 
@@ -38,9 +39,9 @@ export const DesignLandingPage = () => {
       />
       {/* Sections */}
       <DesignImageSection src={"/design/up-and-go/1.svg"} alt={"Up&Go"} url={"/design/up-and-go"} />
-      <DesignImageSection src={"/design/plantwell/5.svg"} alt={"PlantWell"} url={"/design/plantwell"} />
-      <DesignImageSection src={"/design/parkvolt/hero.svg"} alt={"ParkVolt"} url={"/design/parkvolt"} />
-      <DesignImageSection src={"/design/dr-wallet/4.svg"} alt={"Dr. Wallet"} url={"/design/dr-wallet"} />
+      <DesignImageSection src={"/design/plantwell/6.svg"} alt={"PlantWell"} url={"/design/plantwell"} />
+      <DesignImageSection src={"/design/parkvolt/1.svg"} alt={"ParkVolt"} url={"/design/parkvolt"} />
+      <DesignImageSection src={"/design/dr-wallet/6.svg"} alt={"Dr. Wallet"} url={"/design/dr-wallet"} />
     </Box>
   );
 };
@@ -62,15 +63,15 @@ const DesignImageSection = ({ src, alt, url }: DesignImageSectionProps) => {
             src={src}
             alt={alt}
             loading="lazy"
-            style={{ maxHeight: "745px" }}
+            style={{ maxHeight: "1056px" }}
             className="tw-h-auto tw-object-contain"
             onLoad={() => setLoaded(true)}
           />
           {loaded && (
             <Box className="tw-absolute tw-bottom-0 tw-left-0 tw-p-4 tw-rounded-tr-lg">
-              <Typography variant="h1" className="tw-text-textMain">
+              <Typography variant="h1" className={alt === "ParkVolt" ? "tw-text-primary" : "tw-text-textMain"}>
                 {/* TODO fix font style */}
-                {alt}
+                {alt} <ArrowForwardIcon fontSize="inherit" className="tw-ml-2" />
               </Typography>
             </Box>
           )}

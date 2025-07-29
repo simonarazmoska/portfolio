@@ -7,7 +7,10 @@ import { PlantwellPage } from "@/pages/design/plantwell/page";
 import { UpAndGoPage } from "@/pages/design/up_and_go/page";
 import { GlobalErrorPage } from "@/pages/error/global";
 import { HomePage } from "@/pages/home/page";
+import { CampaignsPage } from "@/pages/photography/campaigns/page";
+import { EditorialsPage } from "@/pages/photography/editorials/page";
 import { PhotographyLandingPage } from "@/pages/photography/landing/page";
+import { MotionPage } from "@/pages/photography/motion/page";
 import { theme } from "@/theme";
 import { createBrowserRouter } from "react-router-dom";
 
@@ -20,7 +23,20 @@ export const router = createBrowserRouter([
       </AppLayout>
     ),
     errorElement: (
-      <AppLayout backgroundColor={theme.palette.black.main}>
+      <AppLayout backgroundColor={theme.palette.textMain.main}>
+        <GlobalErrorPage />
+      </AppLayout>
+    )
+  },
+  {
+    path: "about",
+    element: (
+      <AppLayout backgroundColor={theme.palette.textMain.main}>
+        <AboutPage />
+      </AppLayout>
+    ),
+    errorElement: (
+      <AppLayout backgroundColor={theme.palette.textMain.main}>
         <GlobalErrorPage />
       </AppLayout>
     )
@@ -33,7 +49,7 @@ export const router = createBrowserRouter([
       </AppLayout>
     ),
     errorElement: (
-      <AppLayout backgroundColor={theme.palette.black.main}>
+      <AppLayout backgroundColor={theme.palette.textMain.main}>
         <GlobalErrorPage />
       </AppLayout>
     )
@@ -46,7 +62,7 @@ export const router = createBrowserRouter([
       </AppLayout>
     ),
     errorElement: (
-      <AppLayout backgroundColor={theme.palette.black.main}>
+      <AppLayout backgroundColor={theme.palette.textMain.main}>
         <GlobalErrorPage />
       </AppLayout>
     )
@@ -59,7 +75,7 @@ export const router = createBrowserRouter([
       </AppLayout>
     ),
     errorElement: (
-      <AppLayout backgroundColor={theme.palette.black.main}>
+      <AppLayout backgroundColor={theme.palette.textMain.main}>
         <GlobalErrorPage />
       </AppLayout>
     )
@@ -72,7 +88,7 @@ export const router = createBrowserRouter([
       </AppLayout>
     ),
     errorElement: (
-      <AppLayout backgroundColor={theme.palette.black.main}>
+      <AppLayout backgroundColor={theme.palette.textMain.main}>
         <GlobalErrorPage />
       </AppLayout>
     )
@@ -85,7 +101,7 @@ export const router = createBrowserRouter([
       </AppLayout>
     ),
     errorElement: (
-      <AppLayout backgroundColor={theme.palette.black.main}>
+      <AppLayout backgroundColor={theme.palette.textMain.main}>
         <GlobalErrorPage />
       </AppLayout>
     )
@@ -98,21 +114,46 @@ export const router = createBrowserRouter([
       </AppLayout>
     ),
     errorElement: (
-      <AppLayout backgroundColor={theme.palette.black.main}>
+      <AppLayout backgroundColor={theme.palette.textMain.main}>
         <GlobalErrorPage />
       </AppLayout>
     )
   },
-  //  TODO photography pages
   {
-    path: "about",
+    path: "photography/campaigns",
     element: (
       <AppLayout backgroundColor={theme.palette.textMain.main}>
-        <AboutPage />
+        <CampaignsPage />
       </AppLayout>
     ),
     errorElement: (
-      <AppLayout backgroundColor={theme.palette.black.main}>
+      <AppLayout backgroundColor={theme.palette.textMain.main}>
+        <GlobalErrorPage />
+      </AppLayout>
+    )
+  },
+  {
+    path: "photography/editorials",
+    element: (
+      <AppLayout backgroundColor={theme.palette.textMain.main}>
+        <EditorialsPage />
+      </AppLayout>
+    ),
+    errorElement: (
+      <AppLayout backgroundColor={theme.palette.textMain.main}>
+        <GlobalErrorPage />
+      </AppLayout>
+    )
+  },
+  {
+    path: "photography/motion",
+    element: (
+      <AppLayout backgroundColor={theme.palette.textMain.main}>
+        <MotionPage />
+      </AppLayout>
+    ),
+    errorElement: (
+      <AppLayout backgroundColor={theme.palette.textMain.main}>
         <GlobalErrorPage />
       </AppLayout>
     )

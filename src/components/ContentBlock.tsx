@@ -27,7 +27,7 @@ export const ContentBlock = ({
   const TextSection = (
     <Box className="tw-h-full tw-w-[1085px] tw-flex tw-flex-col tw-justify-between tw-pb-20">
       {/* Header */}
-      <Box>
+      <Box className="tw-flex tw-flex-col tw-gap-4">
         <Typography variant="h1" className={titleTextColour}>
           {title}
         </Typography>
