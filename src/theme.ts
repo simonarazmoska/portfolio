@@ -23,6 +23,29 @@ declare module "@mui/material/styles" {
     secondary?: PaletteOptions["primary"];
     textMain?: PaletteOptions["primary"];
   }
+
+  interface TypographyVariants {
+    mainHeading: React.CSSProperties;
+    title: React.CSSProperties;
+    body: React.CSSProperties;
+    button: React.CSSProperties;
+  }
+  interface TypographyVariantsOptions {
+    mainHeading?: React.CSSProperties;
+    title?: React.CSSProperties;
+    body?: React.CSSProperties;
+    button?: React.CSSProperties;
+  }
+}
+
+// Allow usage of custom variants in Typography's `variant` prop
+declare module "@mui/material/Typography" {
+  interface TypographyPropsVariantOverrides {
+    mainHeading: true;
+    title: true;
+    body: true;
+    button: true;
+  }
 }
 
 export const theme = createTheme({

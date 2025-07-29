@@ -63,7 +63,14 @@ export const DesignProjectsSection = ({}) => {
   );
 };
 
-const ProjectCard = ({ imgSrc, imgAlt, text, link }) => {
+interface ProjectCardProps {
+  imgSrc: string;
+  imgAlt: string;
+  text: string;
+  link: string;
+}
+
+const ProjectCard = ({ imgSrc, imgAlt, text, link }: ProjectCardProps) => {
   return (
     <Link href={link} underline="none" className="tw-cursor-pointer tw-gap-1 tw-py-2">
       <Box className="tw-flex tw-flex-col tw-gap-4" style={{ minWidth: 0, flex: 1 }}>
