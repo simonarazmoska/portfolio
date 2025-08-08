@@ -22,43 +22,43 @@ const data: PageData = {
     ],
     imgSrc: "/design/parkvolt/1.svg",
     imgAlt: "ParkVolt Overview Image",
-    borderColour: "tw-border-yellow-parkvolt"
+    borderColour: "tw-text-textMain"
   },
   section1: {
-    title: "01",
-    subtitle: "The Challenge",
+    title: "THE CHALLENGE",
+    subtitle: "/01",
     blurb: <Section1Blurb />,
     imgSrc: "/design/parkvolt/2.svg",
     imgAlt: "ParkVolt Image 1",
-    titleTextColour: "tw-text-yellow-parkvolt",
-    subtitleTextColour: "tw-text-yellow-parkvolt"
+    titleTextColour: "tw-text-textMain",
+    subtitleTextColour: "tw-text-textMain"
   },
   section2: {
-    title: "02",
-    subtitle: "The Process",
+    title: "THE PROCESS",
+    subtitle: "/02",
     blurb: <Section2Blurb />,
     imgSrc: "/design/parkvolt/3.svg",
     imgAlt: "ParkVolt Image 2",
-    titleTextColour: "tw-text-yellow-parkvolt",
-    subtitleTextColour: "tw-text-yellow-parkvolt"
+    titleTextColour: "tw-text-textMain",
+    subtitleTextColour: "tw-text-textMain"
   },
   section3: {
-    title: "03",
-    subtitle: "The Outcome",
+    title: "THE OUTCOME",
+    subtitle: "/03",
     blurb: <Section3Blurb />,
     imgSrc: "/design/parkvolt/4.svg",
     imgAlt: "ParkVolt Image 3",
-    titleTextColour: "tw-text-yellow-parkvolt",
-    subtitleTextColour: "tw-text-yellow-parkvolt"
+    titleTextColour: "tw-text-textMain",
+    subtitleTextColour: "tw-text-textMain"
   },
   section4: {
-    title: "04",
-    subtitle: "The Reflection",
+    title: "THE REFLECTION",
+    subtitle: "/04",
     blurb: <Section4Blurb />,
     imgSrc: "/design/parkvolt/5.svg",
     imgAlt: "ParkVolt Image 4",
-    titleTextColour: "tw-text-yellow-parkvolt",
-    subtitleTextColour: "tw-text-yellow-parkvolt"
+    titleTextColour: "tw-text-textMain",
+    subtitleTextColour: "tw-text-textMain"
   },
   section5: {
     beforeAfterImages: ["/design/parkvolt/6-before.svg", "/design/parkvolt/6-after.svg"],

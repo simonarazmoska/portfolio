@@ -25,8 +25,8 @@ const data: PageData = {
     borderColour: "tw-border-navy-drWallet"
   },
   section1: {
-    title: "01",
-    subtitle: "The Challenge",
+    title: "THE CHALLENGE",
+    subtitle: "/01",
     blurb: <Section1Blurb />,
     imgSrc: "/design/dr-wallet/2.svg",
     imgAlt: "Dr. Wallet Image 1",
@@ -34,8 +34,8 @@ const data: PageData = {
     subtitleTextColour: "tw-text-navy-drWallet"
   },
   section2: {
-    title: "02",
-    subtitle: "The Process",
+    title: "THE PROCESS",
+    subtitle: "/02",
     blurb: <Section2Blurb />,
     imgSrc: "/design/dr-wallet/3.svg",
     imgAlt: "Dr. Wallet Image 2",
@@ -43,8 +43,8 @@ const data: PageData = {
     subtitleTextColour: "tw-text-navy-drWallet"
   },
   section3: {
-    title: "03",
-    subtitle: "The Outcome",
+    title: "THE OUTCOME",
+    subtitle: "/03",
     blurb: <Section3Blurb />,
     imgSrc: "/design/dr-wallet/4.svg",
     imgAlt: "Dr. Wallet Image 3",
@@ -52,8 +52,8 @@ const data: PageData = {
     subtitleTextColour: "tw-text-navy-drWallet"
   },
   section4: {
-    title: "04",
-    subtitle: "The Reflection",
+    title: "THE REFLECTION",
+    subtitle: "/04",
     blurb: <Section4Blurb />,
     imgSrc: "/design/dr-wallet/5.svg",
     imgAlt: "Dr. Wallet Image 4",

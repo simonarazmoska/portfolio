@@ -30,6 +30,7 @@ export const CampaignsPage = () => {
         titleTextColour="tw-text-secondary"
         subtitleTextColour="tw-text-primary"
         backgroundColour="tw-bg-textMain"
+        showTitleBeforeSubtitle={true}
       />
 
       {/* Image Section 1*/}

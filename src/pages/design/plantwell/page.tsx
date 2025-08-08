@@ -28,8 +28,8 @@ const data: PageData = {
     borderColour: "tw-border-green-plantwell"
   },
   section1: {
-    title: "01",
-    subtitle: "The Challenge",
+    title: "THE CHALLENGE",
+    subtitle: "/01",
     blurb: <Section1Blurb />,
     imgSrc: "/design/plantwell/2.svg",
     imgAlt: "Plantwell Image 1",
@@ -37,8 +37,8 @@ const data: PageData = {
     subtitleTextColour: "tw-text-green-plantwell"
   },
   section2: {
-    title: "02",
-    subtitle: "The Process",
+    title: "THE PROCESS",
+    subtitle: "/02",
     blurb: <Section2Blurb />,
     imgSrc: "/design/plantwell/3.svg",
     imgAlt: "Plantwell Image 2",
@@ -46,8 +46,8 @@ const data: PageData = {
     subtitleTextColour: "tw-text-green-plantwell"
   },
   section3: {
-    title: "03",
-    subtitle: "The Outcome",
+    title: "THE OUTCOME",
+    subtitle: "/03",
     blurb: <Section3Blurb />,
     imgSrc: "/design/plantwell/4.svg",
     imgAlt: "Plantwell Image 3",
@@ -55,8 +55,8 @@ const data: PageData = {
     subtitleTextColour: "tw-text-green-plantwell"
   },
   section4: {
-    title: "04",
-    subtitle: "The Reflection",
+    title: "THE REFLECTION",
+    subtitle: "/04",
     blurb: <Section4Blurb />,
     imgSrc: "/design/plantwell/5.svg",
     imgAlt: "Plantwell Image 4",

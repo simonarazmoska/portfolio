@@ -5,7 +5,7 @@ import { HeroBlurb, Section1Blurb, Section2Blurb, Section3Blurb, Section4Blurb }
 const data: PageData = {
   hero: {
     title: "UP&GO",
-    subtitle: "Website redesign and re-platforming",
+    subtitle: "Website Redesign & Replatforming",
     blurb: <HeroBlurb />,
     imgSrc: "/design/up-and-go/hero.svg",
     imgAlt: "Up & Go Hero",
@@ -25,8 +25,8 @@ const data: PageData = {
     borderColour: "tw-border-blue-sanitarium"
   },
   section1: {
-    title: "01",
-    subtitle: "The Challenge",
+    title: "THE CHALLENGE",
+    subtitle: "/01",
     blurb: <Section1Blurb />,
     imgSrc: "/design/up-and-go/2.svg",
     imgAlt: "Up & Go Image 1",
@@ -34,8 +34,8 @@ const data: PageData = {
     subtitleTextColour: "tw-text-blue-sanitarium"
   },
   section2: {
-    title: "02",
-    subtitle: "The Process",
+    title: "THE PROCESS",
+    subtitle: "/02",
     blurb: <Section2Blurb />,
     imgSrc: "/design/up-and-go/3.svg",
     imgAlt: "Up & Go Image 2",
@@ -43,8 +43,8 @@ const data: PageData = {
     subtitleTextColour: "tw-text-blue-sanitarium"
   },
   section3: {
-    title: "03",
-    subtitle: "The Outcome",
+    title: "THE OUTCOME",
+    subtitle: "/03",
     blurb: <Section3Blurb />,
     imgSrc: "/design/up-and-go/4.svg",
     imgAlt: "Up & Go Image 3",
@@ -52,8 +52,8 @@ const data: PageData = {
     subtitleTextColour: "tw-text-blue-sanitarium"
   },
   section4: {
-    title: "04",
-    subtitle: "The Reflection",
+    title: "THE REFLECTION",
+    subtitle: "/04",
     blurb: <Section4Blurb />,
     imgSrc: "/design/up-and-go/5.svg",
     imgAlt: "Up & Go Image 4",

@@ -30,6 +30,7 @@ export const EditorialsPage = () => {
         titleTextColour="tw-text-secondary"
         subtitleTextColour="tw-text-primary"
         backgroundColour="tw-bg-textMain"
+        showTitleBeforeSubtitle={true}
       />
       {/* Image Section */}
       <Box className="tw-w-full tw-bg-primary tw-p-0">

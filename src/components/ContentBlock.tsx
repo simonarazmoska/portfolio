@@ -11,29 +11,44 @@ interface ContentBlockProps {
   subtitleTextColour: string;
   backgroundColour?: string;
   showTextFirst?: boolean;
+  showTitleBeforeSubtitle?: boolean;
 }
 
 export const ContentBlock = ({
-  title,
   subtitle,
+  title,
   blurb,
   imgSrc,
   imgAlt,
   titleTextColour,
   subtitleTextColour,
   backgroundColour = "tw-bg-primary",
-  showTextFirst = true
+  showTextFirst = true,
+  showTitleBeforeSubtitle = true
 }: ContentBlockProps) => {
   const TextSection = (
     <Box className="tw-h-full tw-w-[1085px] tw-flex tw-flex-col tw-justify-between tw-pb-20">
       {/* Header */}
       <Box className="tw-flex tw-flex-col tw-gap-4">
-        <Typography variant="h1" className={titleTextColour}>
-          {title}
-        </Typography>
-        <Typography variant="h2" className={subtitleTextColour}>
-          {subtitle}
-        </Typography>
+        {showTitleBeforeSubtitle ? (
+          <>
+            <Typography variant="h1" className={titleTextColour}>
+              {title}
+            </Typography>
+            <Typography variant="h2" className={subtitleTextColour}>
+              {subtitle}
+            </Typography>
+          </>
+        ) : (
+          <>
+            <Typography variant="h2" className={subtitleTextColour}>
+              {subtitle}
+            </Typography>
+            <Typography variant="h1" className={titleTextColour}>
+              {title}
+            </Typography>
+          </>
+        )}
       </Box>
 
       {/* Footer */}
