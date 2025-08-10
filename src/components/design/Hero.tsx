@@ -1,5 +1,8 @@
+import { Button } from "@/components/Button";
+import { theme } from "@/theme";
+import { tailwindToMuiColor } from "@/utils/colorConverter";
 import { Icon } from "@iconify/react";
-import { Box, Link, List, ListItem, Typography } from "@mui/material";
+import { Box, List, ListItem, Typography } from "@mui/material";
 import clsx from "clsx";
 
 interface HeroBlurbProps {
@@ -19,7 +22,7 @@ export const GenericHeroContent = ({
   linkUrl,
   textColour = "tw-text-textMain"
 }: HeroBlurbProps) => (
-  <Box className={clsx("tw-flex tw-flex-col tw-gap-6", textColour)}>
+  <Box className={clsx("tw-flex tw-flex-col tw-items-start tw-gap-6 tw-px-6 tw-py-12", textColour)}>
     <Box className="tw-flex tw-flex-col tw-gap-6">
       <Typography variant="body">{mainText}</Typography>
       <Typography variant="body" className="tw-font-bold" component="span">
@@ -33,11 +36,30 @@ export const GenericHeroContent = ({
         ))}
       </List>
     </Box>
-    <Link href={linkUrl} underline="none" className="tw-cursor-pointer tw-gap-1 tw-py-2 tw-flex tw-items-center">
-      <Typography variant="body" className={textColour}>
+
+    <Button
+      variant="text"
+      href={linkUrl}
+      sx={{
+        "&:hover": {
+          textDecorationColor: tailwindToMuiColor(textColour) || theme.palette.textMain.main
+        }
+      }}
+      className="tw-flex tw-items-center tw-gap-1"
+    >
+      <Typography variant="h2" className={textColour}>
         {linkText}
       </Typography>
-      <Icon icon="material-symbols:arrow-forward" className={textColour} style={{ fontVariationSettings: "'wght' 700" }} />
-    </Link>
+      <Icon
+        icon="material-symbols:arrow-forward"
+        className={textColour}
+        style={{
+          fontVariationSettings: "'wght' 700",
+          fontSize: "2rem",
+          width: "2rem",
+          height: "2rem"
+        }}
+      />
+    </Button>
   </Box>
 );

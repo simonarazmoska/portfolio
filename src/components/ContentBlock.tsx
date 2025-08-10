@@ -27,7 +27,7 @@ export const ContentBlock = ({
   showTitleBeforeSubtitle = true
 }: ContentBlockProps) => {
   const TextSection = (
-    <Box className="tw-h-full tw-w-[1085px] tw-flex tw-flex-col tw-justify-between tw-pb-20">
+    <Box className="tw-h-full tw-max-w-[1085px] tw-flex tw-flex-col tw-justify-between tw-px-8">
       {/* Header */}
       <Box className="tw-flex tw-flex-col tw-gap-4">
         {showTitleBeforeSubtitle ? (
@@ -57,20 +57,21 @@ export const ContentBlock = ({
   );
 
   const ImageSection = (
-    <img
-      src={imgSrc}
-      alt={imgAlt}
-      style={{ maxHeight: "1056px" }}
-      className="tw-h-full tw-object-cover"
-      // className="tw-w-full tw-h-auto tw-object-cover"
-      loading="lazy"
-    />
+    <Box className="tw-h-full tw-w-[80vw]">
+      <img
+        src={imgSrc}
+        alt={imgAlt}
+        className="tw-object-cover"
+        style={{ height: "100%", width: "100%", display: "block" }}
+        loading="lazy"
+      />
+    </Box>
   );
 
   return (
     <Box className={clsx("tw-h-[1290px]", backgroundColour)}>
-      <Box className="tw-h-full tw-flex tw-flex-col tw-px-8 tw-pb-24 tw-gap-24">
-        <Box></Box>
+      <Box className="tw-h-full tw-flex tw-flex-col tw-pb-24 tw-gap-24">
+        <Box />
         <Box className="tw-h-full tw-flex tw-flex-row tw-justify-start tw-gap-48">
           {showTextFirst ? TextSection : ImageSection}
           {showTextFirst ? ImageSection : TextSection}

@@ -134,7 +134,11 @@ export const Header = ({ backgroundColor }: HeaderProps) => {
         </Toolbar>
       </AppBar>
       <NavModal open={modalOpen === "design"} onClose={() => setModalOpen(false)} links={designLinks} />
-      <NavModal open={modalOpen === "photography"} onClose={() => setModalOpen(false)} links={photographyLinks.filter((l) => l.href)} />
+      <NavModal
+        open={modalOpen === "photography"}
+        onClose={() => setModalOpen(false)}
+        links={photographyLinks.filter((link) => link.href)}
+      />
       <nav>
         <Drawer
           container={container}
