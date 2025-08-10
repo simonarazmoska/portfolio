@@ -34,6 +34,7 @@ export const PhotographyLandingPage = () => {
         titleTextColour="tw-text-secondary"
         subtitleTextColour="tw-text-primary"
         backgroundColour="tw-bg-textMain"
+        loadImageStyle="eager"
       />
       {/* Sections */}
       <PhotographyImageSection src={"/photography/editorials/landing.svg"} alt={"Editorials"} url={"/photography/editorials"} />
@@ -59,7 +60,7 @@ const PhotographyImageSection = ({ src, alt, url }: PhotographyImageSectionProps
           <img
             src={src}
             alt={alt}
-            loading="lazy"
+            loading="eager"
             style={{ maxHeight: "1056px" }}
             className="tw-h-auto tw-object-contain"
             onLoad={() => setLoaded(true)}

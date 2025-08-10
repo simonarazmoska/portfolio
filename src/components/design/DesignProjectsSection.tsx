@@ -1,6 +1,8 @@
+import { Button } from "@/components/Button";
 import { CardProps } from "@/dtypes";
+import { tailwindToMuiColor } from "@/utils/colorConverter";
 import { Icon } from "@iconify/react";
-import { Box, Link, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
 const cards: CardProps[] = [
   {
@@ -72,7 +74,15 @@ interface ProjectCardProps {
 
 const ProjectCard = ({ imgSrc, imgAlt, text, link }: ProjectCardProps) => {
   return (
-    <Link href={link} underline="none" className="tw-cursor-pointer tw-gap-1 tw-py-2">
+    <Button
+      variant="text"
+      href={link}
+      sx={{
+        "&:hover": {
+          textDecorationColor: tailwindToMuiColor("tw-text-textMain")
+        }
+      }}
+    >
       <Box className="tw-flex tw-flex-col tw-gap-4" style={{ minWidth: 0, flex: 1 }}>
         <img
           src={imgSrc}
@@ -119,6 +129,6 @@ const ProjectCard = ({ imgSrc, imgAlt, text, link }: ProjectCardProps) => {
           </Box>
         </Box>
       </Box>
-    </Link>
+    </Button>
   );
 };

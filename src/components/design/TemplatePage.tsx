@@ -20,6 +20,7 @@ export const TemplatePage = ({ data }: { data: PageData }) => {
           subtitleTextColour={data.hero.subtitleTextColour}
           backgroundColour={data.hero.backgroundColour}
           showTitleBeforeSubtitle={true}
+          loadImageStyle="eager"
         />
       </Box>
       {/* Overview Section */}

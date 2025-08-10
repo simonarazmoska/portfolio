@@ -133,6 +133,7 @@ export const AboutPage = () => {
         titleTextColour={data.hero.titleTextColour}
         subtitleTextColour={data.hero.subtitleTextColour}
         backgroundColour={data.hero.backgroundColour}
+        loadImageStyle="eager"
       />
 
       {/* Section 1*/}

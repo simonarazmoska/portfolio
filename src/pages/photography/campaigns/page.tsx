@@ -31,6 +31,7 @@ export const CampaignsPage = () => {
         subtitleTextColour="tw-text-primary"
         backgroundColour="tw-bg-textMain"
         showTitleBeforeSubtitle={true}
+        loadImageStyle="eager"
       />
 
       {/* Image Section 1*/}

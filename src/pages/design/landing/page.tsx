@@ -36,6 +36,7 @@ export const DesignLandingPage = () => {
         titleTextColour="tw-text-secondary"
         subtitleTextColour="tw-text-primary"
         backgroundColour="tw-bg-textMain"
+        loadImageStyle="eager"
       />
       {/* Sections */}
       <DesignImageSection src={"/design/up-and-go/1.svg"} alt={"Up&Go"} url={"/design/up-and-go"} />

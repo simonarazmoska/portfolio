@@ -12,6 +12,7 @@ interface ContentBlockProps {
   backgroundColour?: string;
   showTextFirst?: boolean;
   showTitleBeforeSubtitle?: boolean;
+  loadImageStyle?: "lazy" | "eager";
 }
 
 export const ContentBlock = ({
@@ -24,7 +25,8 @@ export const ContentBlock = ({
   subtitleTextColour,
   backgroundColour = "tw-bg-primary",
   showTextFirst = true,
-  showTitleBeforeSubtitle = true
+  showTitleBeforeSubtitle = true,
+  loadImageStyle = "lazy"
 }: ContentBlockProps) => {
   const TextSection = (
     <Box className="tw-h-full tw-max-w-[1085px] tw-flex tw-flex-col tw-justify-between tw-px-8">
@@ -63,7 +65,7 @@ export const ContentBlock = ({
         alt={imgAlt}
         className="tw-object-cover"
         style={{ height: "100%", width: "100%", display: "block" }}
-        loading="lazy"
+        loading={loadImageStyle}
       />
     </Box>
   );

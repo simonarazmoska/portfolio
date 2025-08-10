@@ -1,5 +1,7 @@
+import { Button } from "@/components/Button";
+import { tailwindToMuiColor } from "@/utils/colorConverter";
 import { Icon } from "@iconify/react";
-import { Box, Link, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
 export const Footer = () => {
   return (
@@ -36,22 +38,40 @@ interface FooterColumnProps {
 }
 
 const FooterColumn = ({ mainText, linkText, linkUrl }: FooterColumnProps) => {
+  const footerContentTextColor = "tw-text-primary";
+
   return (
     <Box className="tw-w-[224px] tw-flex tw-flex-col tw-gap-4 tw-items-start">
       <Box>
-        <Typography variant="title" className="tw-text-primary">
+        <Typography variant="title" className={footerContentTextColor}>
           {mainText}
         </Typography>
       </Box>
       <Box className="tw-flex tw-flex-col tw-gap-2">
-        <Link href={linkUrl} underline="none" className="tw-cursor-pointer tw-gap-1 tw-py-2 tw-flex tw-justify-center tw-items-center">
-          <Typography variant="title" className="tw-text-primary">
-            {/* TODO set font to semi-bold, 18 */}
+        <Button
+          variant="text"
+          href={linkUrl}
+          sx={{
+            "&:hover": {
+              textDecorationColor: tailwindToMuiColor(footerContentTextColor)
+            }
+          }}
+          className="tw-flex tw-items-center tw-gap-1"
+        >
+          <Typography variant="title" className={footerContentTextColor}>
             {linkText}
           </Typography>
-          <Icon icon="material-symbols:arrow-forward" className="tw-text-primary" />
-          {/* TODO thickness of arrow */}
-        </Link>
+          <Icon
+            icon="material-symbols:arrow-forward"
+            className={footerContentTextColor}
+            style={{
+              fontVariationSettings: "'wght' 700",
+              fontSize: "2rem",
+              width: "1rem",
+              height: "1rem"
+            }}
+          />
+        </Button>
       </Box>
     </Box>
   );
