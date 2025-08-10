@@ -63,7 +63,8 @@ const data: PageData = {
   section5: {
     beforeAfterImages: ["/design/up-and-go/6-before.png", "/design/up-and-go/6-after.png"],
     imgAlt: "Up & Go Image 5",
-    beforeAfterBackground: "/design/up-and-go/6-background.jpg"
+    beforeAfterBackground: "/design/up-and-go/6-background.jpg",
+    showDevice: true
   }
 };
 
