@@ -44,6 +44,13 @@ export interface PageData {
   section5: ImageSectionData | BeforeAfterImageSectionData;
 }
 
+export interface AboutPageData {
+  hero: ContentBlockData;
+  section1: ContentBlockData;
+  section2: ContentBlockData;
+  section3: ContentBlockData;
+}
+
 export interface CardProps {
   title: string;
   subHeading?: string;

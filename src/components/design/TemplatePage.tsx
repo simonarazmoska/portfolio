@@ -8,7 +8,7 @@ import { Box } from "@mui/material";
 export const TemplatePage = ({ data }: { data: PageData }) => {
   return (
     <>
-      <Box data-header-bg={data.hero.backgroundColour ? "dark" : "light"} className="tw-h-full">
+      <Box className="tw-h-full">
         {/* Hero Section */}
         <ContentBlock
           title={data.hero.title}
@@ -23,7 +23,7 @@ export const TemplatePage = ({ data }: { data: PageData }) => {
         />
       </Box>
       {/* Overview Section */}
-      <Box data-header-bg="light">
+      <Box>
         <OverviewSection
           columns={data.overview.columns}
           imgSrc={data.overview.imgSrc}
@@ -89,7 +89,7 @@ export const TemplatePage = ({ data }: { data: PageData }) => {
       <Section5Content data={data.section5} />
 
       {/* Design Projects Section */}
-      <Box data-header-bg="light" className="tw-bg-textMain tw-space-y-0">
+      <Box className="tw-bg-textMain tw-space-y-0">
         <DesignProjectsSection />
       </Box>
     </>

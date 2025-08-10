@@ -1,12 +1,12 @@
 import { ContentBlock } from "@/components/ContentBlock";
-import { PageData } from "@/dtypes";
+import { AboutPageData } from "@/dtypes";
 import { Box, Typography } from "@mui/material";
 
 const secondaryTextColour = "tw-text-secondary";
 const primaryTextColour = "tw-text-primary";
 const backgroundColour = "tw-bg-textMain";
 
-const data: PageData = {
+const data: AboutPageData = {
   hero: {
     title: "About me",
     subtitle: "Product designer with a creative edge",
