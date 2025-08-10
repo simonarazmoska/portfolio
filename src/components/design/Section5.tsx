@@ -33,7 +33,7 @@ export const Section5Content = ({ data }: { data: ImageSectionData | BeforeAfter
       <Box className="tw-relative tw-flex tw-flex-row tw-gap-16 tw-items-center tw-justify-center">
         {/* iPad device mockup with before/after images inside */}
         <Box className="tw-relative tw-flex tw-justify-center tw-items-center">
-          <img src="/design/shared/device-ipad.svg" alt="iPad Mockup" className="tw-w-auto tw-drop-shadow-2xl" style={{ zIndex: 2 }} />
+          <img src="/design/shared/device-ipad.png" alt="iPad Mockup" className="tw-w-auto tw-drop-shadow-2xl" style={{ zIndex: 2 }} />
           {/* Absolutely center the before/after images inside the iPad mockup */}
           <Box
             className="tw-absolute"

@@ -8,7 +8,7 @@ const cards: CardProps[] = [
   {
     title: "Up&Go",
     text: "Website re-design and re-platforming.",
-    imageSource: "/design/up-and-go/card.svg",
+    imageSource: "/design/up-and-go/card.png",
     imgAlt: "Up&Go",
     link: "/design/up-and-go"
   },
@@ -16,21 +16,21 @@ const cards: CardProps[] = [
   {
     title: "Plantwell",
     text: "Website design and re-platforming.",
-    imageSource: "/design/plantwell/hero.svg",
+    imageSource: "/design/plantwell/card.png",
     imgAlt: "Plantwell",
     link: "/design/plantwell"
   },
   {
     title: "ParkVolt",
     text: "Mobile app design & branding.",
-    imageSource: "/design/parkvolt/hero.svg",
+    imageSource: "/design/parkvolt/card.png",
     imgAlt: "ParkVolt",
     link: "/design/parkvolt"
   },
   {
     title: "Dr. Wallet",
     text: "Responsive web design.",
-    imageSource: "/design/dr-wallet/hero.svg",
+    imageSource: "/design/dr-wallet/card.png",
     imgAlt: "Dr. Wallet",
     link: "/design/dr-wallet"
   }
@@ -54,10 +54,10 @@ export const DesignProjectsSection = ({}) => {
               margin: "0 auto"
             }}
           >
-            <ProjectCard imgSrc="/design/up-and-go/card.svg" imgAlt="Up&Go Card" text="Up&Go" link="/design/up-and-go" />
-            <ProjectCard imgSrc="/design/plantwell/card.svg" imgAlt="Plantwell Card" text="Plantwell" link="/design/plantwell" />
-            <ProjectCard imgSrc="/design/parkvolt/card.svg" imgAlt="ParkVolt Card" text="ParkVolt" link="/design/parkvolt" />
-            <ProjectCard imgSrc="/design/dr-wallet/card.svg" imgAlt="Dr. Wallet Card" text="Dr. Wallet" link="/design/dr-wallet" />
+            <ProjectCard imgSrc="/design/up-and-go/card.png" imgAlt="Up&Go Card" text="Up&Go" link="/design/up-and-go" />
+            <ProjectCard imgSrc="/design/plantwell/card.png" imgAlt="Plantwell Card" text="Plantwell" link="/design/plantwell" />
+            <ProjectCard imgSrc="/design/parkvolt/card.png" imgAlt="ParkVolt Card" text="ParkVolt" link="/design/parkvolt" />
+            <ProjectCard imgSrc="/design/dr-wallet/card.png" imgAlt="Dr. Wallet Card" text="Dr. Wallet" link="/design/dr-wallet" />
           </Box>
         </Box>
       </Box>

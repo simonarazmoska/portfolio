@@ -34,7 +34,7 @@ export const HeroSection = () => {
           <Box></Box>
         </Box>
         <img
-          src="/home/simona.svg"
+          src="/home/simona.png"
           alt="Me"
           loading="eager"
           height={617}

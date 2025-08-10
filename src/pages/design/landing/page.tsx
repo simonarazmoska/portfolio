@@ -20,7 +20,7 @@ const data = {
       </Typography>
     </Box>
   ),
-  imgSrc: "/design/up-and-go/hero.svg",
+  imgSrc: "/design/up-and-go/hero.png",
   imgAlt: "up-and-go-hero"
 };
 
@@ -39,10 +39,10 @@ export const DesignLandingPage = () => {
         loadImageStyle="eager"
       />
       {/* Sections */}
-      <DesignImageSection src={"/design/up-and-go/1.svg"} alt={"Up&Go"} url={"/design/up-and-go"} />
-      <DesignImageSection src={"/design/plantwell/6.svg"} alt={"PlantWell"} url={"/design/plantwell"} />
-      <DesignImageSection src={"/design/parkvolt/1.svg"} alt={"ParkVolt"} url={"/design/parkvolt"} />
-      <DesignImageSection src={"/design/dr-wallet/6.svg"} alt={"Dr. Wallet"} url={"/design/dr-wallet"} />
+      <DesignImageSection src={"/design/up-and-go/1.png"} alt={"Up&Go"} url={"/design/up-and-go"} />
+      <DesignImageSection src={"/design/plantwell/6.png"} alt={"PlantWell"} url={"/design/plantwell"} />
+      <DesignImageSection src={"/design/parkvolt/1.png"} alt={"ParkVolt"} url={"/design/parkvolt"} />
+      <DesignImageSection src={"/design/dr-wallet/6.png"} alt={"Dr. Wallet"} url={"/design/dr-wallet"} />
     </Box>
   );
 };

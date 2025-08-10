@@ -51,7 +51,7 @@ const contentData = {
       </Box>
     ),
 
-    imgSrc: "/home/design-background.svg",
+    imgSrc: "/home/design.png",
     imgAlt: "Design Portfolio",
     titleTextColour: titleTextColour,
     subtitleTextColour: titleTextColour,
@@ -100,7 +100,7 @@ const contentData = {
       </Box>
     ),
 
-    imgSrc: "/home/photography-background.svg",
+    imgSrc: "/home/photography.png",
     imgAlt: "Photography Portfolio",
     titleTextColour: titleTextColour,
     subtitleTextColour: titleTextColour,
