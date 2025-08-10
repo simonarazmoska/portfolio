@@ -20,6 +20,7 @@ export interface BeforeAfterImageSectionData {
   beforeAfterImages: string[];
   imgAlt: string;
   beforeAfterBackground?: string;
+  showDevice?: boolean;
 }
 
 export interface OverviewColumnData {

@@ -22,7 +22,7 @@ const data: AboutPageData = {
         </Typography>
       </Box>
     ),
-    imgSrc: "/about/hero.png",
+    imgSrc: "/about/hero.jpg",
     imgAlt: "About-Hero",
     titleTextColour: secondaryTextColour,
     subtitleTextColour: primaryTextColour,
@@ -48,7 +48,7 @@ const data: AboutPageData = {
         </Typography>
       </Box>
     ),
-    imgSrc: "/about/1.png",
+    imgSrc: "/about/1.jpg",
     imgAlt: "About: Product Designer",
     titleTextColour: secondaryTextColour,
     subtitleTextColour: secondaryTextColour
@@ -73,7 +73,7 @@ const data: AboutPageData = {
         </Typography>
       </Box>
     ),
-    imgSrc: "/about/2.png",
+    imgSrc: "/about/2.jpg",
     imgAlt: "About: Photographer",
     titleTextColour: secondaryTextColour,
     subtitleTextColour: secondaryTextColour
@@ -113,7 +113,7 @@ const data: AboutPageData = {
         </Typography>
       </Box>
     ),
-    imgSrc: "/about/3.png",
+    imgSrc: "/about/3.jpg",
     imgAlt: "About-More",
     titleTextColour: secondaryTextColour,
     subtitleTextColour: secondaryTextColour

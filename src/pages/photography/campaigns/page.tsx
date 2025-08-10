@@ -13,7 +13,7 @@ const data = {
       </Typography>
     </Box>
   ),
-  imgSrc: "/photography/campaigns/hero.png",
+  imgSrc: "/photography/campaigns/hero.jpg",
   imgAlt: "Campaigns Hero"
 };
 
@@ -45,9 +45,9 @@ export const CampaignsPage = () => {
               Spring/Summer 2020
             </Typography>
           </Box>
-          <FullWidthImageSection src="/photography/campaigns/1-A.png" alt="Campaigns" />
+          <FullWidthImageSection src="/photography/campaigns/1-A.jpg" alt="Campaigns" />
         </Box>
-        <FullWidthImageSection src="/photography/campaigns/1-B.png" alt="Campaigns" />
+        <FullWidthImageSection src="/photography/campaigns/1-B.jpg" alt="Campaigns" />
       </Box>
 
       {/* Image Section 2*/}
@@ -61,9 +61,9 @@ export const CampaignsPage = () => {
               2022
             </Typography>
           </Box>
-          <FullWidthImageSection src="/photography/campaigns/2-A.png" alt="Campaigns" />
+          <FullWidthImageSection src="/photography/campaigns/2-A.jpg" alt="Campaigns" />
         </Box>
-        <FullWidthImageSection src="/photography/campaigns/2-B.png" alt="Campaigns" />
+        <FullWidthImageSection src="/photography/campaigns/2-B.jpg" alt="Campaigns" />
       </Box>
 
       {/* Image Section 3*/}
@@ -77,9 +77,9 @@ export const CampaignsPage = () => {
               Autumn/Winter 2021
             </Typography>
           </Box>
-          <FullWidthImageSection src="/photography/campaigns/3-A.png" alt="Campaigns" />
+          <FullWidthImageSection src="/photography/campaigns/3-A.jpg" alt="Campaigns" />
         </Box>
-        <FullWidthImageSection src="/photography/campaigns/3-B.png" alt="Campaigns" />
+        <FullWidthImageSection src="/photography/campaigns/3-B.jpg" alt="Campaigns" />
       </Box>
 
       {/* Image Section 4*/}
@@ -93,9 +93,9 @@ export const CampaignsPage = () => {
               Autumn/Winter 2020
             </Typography>
           </Box>
-          <FullWidthImageSection src="/photography/campaigns/4-A.png" alt="Campaigns" />
+          <FullWidthImageSection src="/photography/campaigns/4-A.jpg" alt="Campaigns" />
         </Box>
-        <FullWidthImageSection src="/photography/campaigns/4-B.png" alt="Campaigns" />
+        <FullWidthImageSection src="/photography/campaigns/4-B.jpg" alt="Campaigns" />
       </Box>
     </Box>
   );

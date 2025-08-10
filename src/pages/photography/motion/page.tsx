@@ -11,7 +11,7 @@ const data = {
       </Typography>
     </Box>
   ),
-  imgSrc: "/photography/motion/hero.png",
+  imgSrc: "/photography/motion/hero.jpg",
   imgAlt: "Motion Hero"
 };
 

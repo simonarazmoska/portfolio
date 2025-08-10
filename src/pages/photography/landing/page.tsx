@@ -18,7 +18,7 @@ const data = {
       </Typography>
     </Box>
   ),
-  imgSrc: "/photography/editorials/landingHero.png",
+  imgSrc: "/photography/editorials/landing-hero.jpg",
   imgAlt: "photography-hero"
 };
 
@@ -37,9 +37,9 @@ export const PhotographyLandingPage = () => {
         loadImageStyle="eager"
       />
       {/* Sections */}
-      <PhotographyImageSection src={"/photography/editorials/landing.png"} alt={"Editorials"} url={"/photography/editorials"} />
-      <PhotographyImageSection src={"/photography/campaigns/landing.png"} alt={"Campaigns"} url={"/photography/campaigns"} />
-      <PhotographyImageSection src={"/photography/motion/landing.png"} alt={"Motion"} url={"/photography/motion"} />
+      <PhotographyImageSection src={"/photography/editorials/landing.jpg"} alt={"Editorials"} url={"/photography/editorials"} />
+      <PhotographyImageSection src={"/photography/campaigns/landing.jpg"} alt={"Campaigns"} url={"/photography/campaigns"} />
+      <PhotographyImageSection src={"/photography/motion/landing.jpg"} alt={"Motion"} url={"/photography/motion"} />
     </Box>
   );
 };

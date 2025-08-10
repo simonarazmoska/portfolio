@@ -20,7 +20,7 @@ const data = {
       </Typography>
     </Box>
   ),
-  imgSrc: "/design/up-and-go/hero.png",
+  imgSrc: "/design/up-and-go/hero.jpg",
   imgAlt: "up-and-go-hero"
 };
 
@@ -39,10 +39,15 @@ export const DesignLandingPage = () => {
         loadImageStyle="eager"
       />
       {/* Sections */}
-      <DesignImageSection src={"/design/up-and-go/1.png"} alt={"Up&Go"} url={"/design/up-and-go"} />
-      <DesignImageSection src={"/design/plantwell/6.png"} alt={"PlantWell"} url={"/design/plantwell"} />
-      <DesignImageSection src={"/design/parkvolt/1.png"} alt={"ParkVolt"} url={"/design/parkvolt"} />
-      <DesignImageSection src={"/design/dr-wallet/6.png"} alt={"Dr. Wallet"} url={"/design/dr-wallet"} />
+      <DesignImageSection src={"/design/up-and-go/1.jpg"} alt={"Up&Go"} url={"/design/up-and-go"} />
+      <DesignImageSection src={"/design/plantwell/6.jpg"} alt={"PlantWell"} url={"/design/plantwell"} />
+      <DesignImageSection src={"/design/parkvolt/1.jpg"} alt={"ParkVolt"} url={"/design/parkvolt"} textColor={"tw-text-primary"} />
+      <DesignImageSection
+        src={"/design/dr-wallet/4-horizontal.jpg"}
+        alt={"Dr. Wallet"}
+        url={"/design/dr-wallet"}
+        textColor={"tw-text-primary"}
+      />
     </Box>
   );
 };
@@ -51,9 +56,10 @@ interface DesignImageSectionProps {
   src: string;
   alt: string;
   url: string;
+  textColor?: string;
 }
 
-const DesignImageSection = ({ src, alt, url }: DesignImageSectionProps) => {
+const DesignImageSection = ({ src, alt, url, textColor = "tw-text-textMain" }: DesignImageSectionProps) => {
   const [loaded, setLoaded] = useState(false);
 
   return (
@@ -70,7 +76,7 @@ const DesignImageSection = ({ src, alt, url }: DesignImageSectionProps) => {
           />
           {loaded && (
             <Box className="tw-absolute tw-bottom-0 tw-left-0 tw-p-4 tw-rounded-tr-lg">
-              <Typography variant="h1" className={alt === "ParkVolt" ? "tw-text-primary" : "tw-text-textMain"}>
+              <Typography variant="h1" className={`${textColor}`}>
                 {/* TODO fix font style */}
                 {alt} <ArrowForwardIcon fontSize="inherit" className="tw-ml-2" />
               </Typography>
