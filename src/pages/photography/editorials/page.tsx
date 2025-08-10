@@ -13,7 +13,7 @@ const data = {
       </Typography>
     </Box>
   ),
-  imgSrc: "/photography/editorials/hero.svg",
+  imgSrc: "/photography/editorials/hero.jpg",
   imgAlt: "Editorials Hero"
 };
 
@@ -30,24 +30,26 @@ export const EditorialsPage = () => {
         titleTextColour="tw-text-secondary"
         subtitleTextColour="tw-text-primary"
         backgroundColour="tw-bg-textMain"
+        showTitleBeforeSubtitle={true}
+        loadImageStyle="eager"
       />
       {/* Image Section */}
       <Box className="tw-w-full tw-bg-primary tw-p-0">
         {[
-          "/photography/editorials/1.svg",
-          "/photography/editorials/2.svg",
-          "/photography/editorials/3.svg",
-          "/photography/editorials/4.svg",
-          "/photography/editorials/5.svg",
-          "/photography/editorials/6.svg",
-          "/photography/editorials/7.svg",
-          "/photography/editorials/8.svg",
-          "/photography/editorials/9.svg",
-          "/photography/editorials/10.svg",
-          "/photography/editorials/11.svg",
-          "/photography/editorials/12.svg",
-          "/photography/editorials/13.svg",
-          "/photography/editorials/14.svg"
+          "/photography/editorials/1.jpg",
+          "/photography/editorials/2.jpg",
+          "/photography/editorials/3.jpg",
+          "/photography/editorials/4.jpg",
+          "/photography/editorials/5.jpg",
+          "/photography/editorials/6.jpg",
+          "/photography/editorials/7.jpg",
+          "/photography/editorials/8.jpg",
+          "/photography/editorials/9.jpg",
+          "/photography/editorials/10.jpg",
+          "/photography/editorials/11.jpg",
+          "/photography/editorials/12.jpg",
+          "/photography/editorials/13.jpg",
+          "/photography/editorials/14.jpg"
         ].map((src) => (
           <FullWidthImageSection key={src} src={src} alt="Editorials" maxHeight={null} />
         ))}

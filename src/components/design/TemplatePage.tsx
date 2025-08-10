@@ -8,7 +8,7 @@ import { Box } from "@mui/material";
 export const TemplatePage = ({ data }: { data: PageData }) => {
   return (
     <>
-      <Box data-header-bg={data.hero.backgroundColour ? "dark" : "light"} className="tw-h-full">
+      <Box className="tw-h-full">
         {/* Hero Section */}
         <ContentBlock
           title={data.hero.title}
@@ -19,10 +19,12 @@ export const TemplatePage = ({ data }: { data: PageData }) => {
           titleTextColour={data.hero.titleTextColour}
           subtitleTextColour={data.hero.subtitleTextColour}
           backgroundColour={data.hero.backgroundColour}
+          showTitleBeforeSubtitle={true}
+          loadImageStyle="eager"
         />
       </Box>
       {/* Overview Section */}
-      <Box data-header-bg="light">
+      <Box>
         <OverviewSection
           columns={data.overview.columns}
           imgSrc={data.overview.imgSrc}
@@ -41,6 +43,8 @@ export const TemplatePage = ({ data }: { data: PageData }) => {
         imgAlt={data.section1.imgAlt}
         titleTextColour={data.section1.titleTextColour}
         subtitleTextColour={data.section1.subtitleTextColour}
+        showTextFirst={true}
+        showTitleBeforeSubtitle={false}
       />
 
       {/* Section 2 */}
@@ -53,6 +57,7 @@ export const TemplatePage = ({ data }: { data: PageData }) => {
         titleTextColour={data.section2.titleTextColour}
         subtitleTextColour={data.section2.subtitleTextColour}
         showTextFirst={false}
+        showTitleBeforeSubtitle={false}
       />
 
       {/* Section 3 */}
@@ -64,6 +69,8 @@ export const TemplatePage = ({ data }: { data: PageData }) => {
         imgAlt={data.section3.imgAlt}
         titleTextColour={data.section3.titleTextColour}
         subtitleTextColour={data.section3.subtitleTextColour}
+        showTextFirst={true}
+        showTitleBeforeSubtitle={false}
       />
 
       {/* Section 4 */}
@@ -76,13 +83,14 @@ export const TemplatePage = ({ data }: { data: PageData }) => {
         titleTextColour={data.section4.titleTextColour}
         subtitleTextColour={data.section4.subtitleTextColour}
         showTextFirst={false}
+        showTitleBeforeSubtitle={false}
       />
 
       {/* Section 5 with background image */}
       <Section5Content data={data.section5} />
 
       {/* Design Projects Section */}
-      <Box data-header-bg="light" className="tw-bg-textMain tw-space-y-0">
+      <Box className="tw-bg-textMain tw-space-y-0">
         <DesignProjectsSection />
       </Box>
     </>

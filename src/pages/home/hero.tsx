@@ -34,9 +34,9 @@ export const HeroSection = () => {
           <Box></Box>
         </Box>
         <img
-          src="/home/simona.svg"
+          src="/home/simona.png"
           alt="Me"
-          loading="lazy"
+          loading="eager"
           height={617}
           width={617}
           style={{ borderRadius: 100 }}

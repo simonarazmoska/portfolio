@@ -18,7 +18,7 @@ const data = {
       </Typography>
     </Box>
   ),
-  imgSrc: "/photography/editorials/landingHero.svg",
+  imgSrc: "/photography/editorials/landing-hero.jpg",
   imgAlt: "photography-hero"
 };
 
@@ -34,11 +34,12 @@ export const PhotographyLandingPage = () => {
         titleTextColour="tw-text-secondary"
         subtitleTextColour="tw-text-primary"
         backgroundColour="tw-bg-textMain"
+        loadImageStyle="eager"
       />
       {/* Sections */}
-      <PhotographyImageSection src={"/photography/editorials/landing.svg"} alt={"Editorials"} url={"/photography/editorials"} />
-      <PhotographyImageSection src={"/photography/campaigns/landing.svg"} alt={"Campaigns"} url={"/photography/campaigns"} />
-      <PhotographyImageSection src={"/photography/motion/landing.svg"} alt={"Motion"} url={"/photography/motion"} />
+      <PhotographyImageSection src={"/photography/editorials/landing.jpg"} alt={"Editorials"} url={"/photography/editorials"} />
+      <PhotographyImageSection src={"/photography/campaigns/landing.jpg"} alt={"Campaigns"} url={"/photography/campaigns"} />
+      <PhotographyImageSection src={"/photography/motion/landing.jpg"} alt={"Motion"} url={"/photography/motion"} />
     </Box>
   );
 };
@@ -59,7 +60,7 @@ const PhotographyImageSection = ({ src, alt, url }: PhotographyImageSectionProps
           <img
             src={src}
             alt={alt}
-            loading="lazy"
+            loading="eager"
             style={{ maxHeight: "1056px" }}
             className="tw-h-auto tw-object-contain"
             onLoad={() => setLoaded(true)}

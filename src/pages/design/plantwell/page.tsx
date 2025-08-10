@@ -7,7 +7,7 @@ const data: PageData = {
     title: "PLANTWELL",
     subtitle: "Website design and platforming",
     blurb: <HeroBlurb />,
-    imgSrc: "/design/plantwell/hero.svg",
+    imgSrc: "/design/plantwell/hero.jpg",
     imgAlt: "Plantwell Hero",
     titleTextColour: "tw-text-primary",
     subtitleTextColour: "tw-text-primary",
@@ -23,48 +23,48 @@ const data: PageData = {
         contentArray: ["UX Designer", "Product Manager", "Lead Engineer", "Sanitarium MarTech Manager", "Plantwell brand team"]
       }
     ],
-    imgSrc: "/design/plantwell/1.svg",
+    imgSrc: "/design/plantwell/1.jpg",
     imgAlt: "Plantwell Overview Image",
     borderColour: "tw-border-green-plantwell"
   },
   section1: {
-    title: "01",
-    subtitle: "The Challenge",
+    title: "THE CHALLENGE",
+    subtitle: "/01",
     blurb: <Section1Blurb />,
-    imgSrc: "/design/plantwell/2.svg",
+    imgSrc: "/design/plantwell/2.jpg",
     imgAlt: "Plantwell Image 1",
     titleTextColour: "tw-text-green-plantwell",
     subtitleTextColour: "tw-text-green-plantwell"
   },
   section2: {
-    title: "02",
-    subtitle: "The Process",
+    title: "THE PROCESS",
+    subtitle: "/02",
     blurb: <Section2Blurb />,
-    imgSrc: "/design/plantwell/3.svg",
+    imgSrc: "/design/plantwell/3.jpg",
     imgAlt: "Plantwell Image 2",
     titleTextColour: "tw-text-green-plantwell",
     subtitleTextColour: "tw-text-green-plantwell"
   },
   section3: {
-    title: "03",
-    subtitle: "The Outcome",
+    title: "THE OUTCOME",
+    subtitle: "/03",
     blurb: <Section3Blurb />,
-    imgSrc: "/design/plantwell/4.svg",
+    imgSrc: "/design/plantwell/4.jpg",
     imgAlt: "Plantwell Image 3",
     titleTextColour: "tw-text-green-plantwell",
     subtitleTextColour: "tw-text-green-plantwell"
   },
   section4: {
-    title: "04",
-    subtitle: "The Reflection",
+    title: "THE REFLECTION",
+    subtitle: "/04",
     blurb: <Section4Blurb />,
-    imgSrc: "/design/plantwell/5.svg",
+    imgSrc: "/design/plantwell/5.jpg",
     imgAlt: "Plantwell Image 4",
     titleTextColour: "tw-text-green-plantwell",
     subtitleTextColour: "tw-text-green-plantwell"
   },
   section5: {
-    imgSrc: "/design/plantwell/6.svg",
+    imgSrc: "/design/plantwell/6.jpg",
     imgAlt: "Plantwell Image 5"
   }
 };

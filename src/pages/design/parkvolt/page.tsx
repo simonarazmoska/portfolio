@@ -7,7 +7,7 @@ const data: PageData = {
     title: "PARKVOLT",
     subtitle: "Mobile app UX design & rebranding",
     blurb: <HeroBlurb />,
-    imgSrc: "/design/parkvolt/hero.svg",
+    imgSrc: "/design/parkvolt/hero.jpg",
     imgAlt: "ParkVolt Hero",
     titleTextColour: "tw-text-textMain",
     subtitleTextColour: "tw-text-textMain",
@@ -20,50 +20,51 @@ const data: PageData = {
       { title: "TOOLS", contentArray: ["Figma", "Adobe Photoshop", "Miro", "Dovetail"] },
       { title: "TEAM", contentArray: ["UX Designer", "Product Manager", "Lead Engineer", "ParkVolt CEO"] }
     ],
-    imgSrc: "/design/parkvolt/1.svg",
+    imgSrc: "/design/parkvolt/1.jpg",
     imgAlt: "ParkVolt Overview Image",
-    borderColour: "tw-border-yellow-parkvolt"
+    borderColour: "tw-text-textMain"
   },
   section1: {
-    title: "01",
-    subtitle: "The Challenge",
+    title: "THE CHALLENGE",
+    subtitle: "/01",
     blurb: <Section1Blurb />,
-    imgSrc: "/design/parkvolt/2.svg",
+    imgSrc: "/design/parkvolt/2.jpg",
     imgAlt: "ParkVolt Image 1",
-    titleTextColour: "tw-text-yellow-parkvolt",
-    subtitleTextColour: "tw-text-yellow-parkvolt"
+    titleTextColour: "tw-text-textMain",
+    subtitleTextColour: "tw-text-textMain"
   },
   section2: {
-    title: "02",
-    subtitle: "The Process",
+    title: "THE PROCESS",
+    subtitle: "/02",
     blurb: <Section2Blurb />,
-    imgSrc: "/design/parkvolt/3.svg",
+    imgSrc: "/design/parkvolt/3.jpg",
     imgAlt: "ParkVolt Image 2",
-    titleTextColour: "tw-text-yellow-parkvolt",
-    subtitleTextColour: "tw-text-yellow-parkvolt"
+    titleTextColour: "tw-text-textMain",
+    subtitleTextColour: "tw-text-textMain"
   },
   section3: {
-    title: "03",
-    subtitle: "The Outcome",
+    title: "THE OUTCOME",
+    subtitle: "/03",
     blurb: <Section3Blurb />,
-    imgSrc: "/design/parkvolt/4.svg",
+    imgSrc: "/design/parkvolt/4.jpg",
     imgAlt: "ParkVolt Image 3",
-    titleTextColour: "tw-text-yellow-parkvolt",
-    subtitleTextColour: "tw-text-yellow-parkvolt"
+    titleTextColour: "tw-text-textMain",
+    subtitleTextColour: "tw-text-textMain"
   },
   section4: {
-    title: "04",
-    subtitle: "The Reflection",
+    title: "THE REFLECTION",
+    subtitle: "/04",
     blurb: <Section4Blurb />,
-    imgSrc: "/design/parkvolt/5.svg",
+    imgSrc: "/design/parkvolt/5.jpg",
     imgAlt: "ParkVolt Image 4",
-    titleTextColour: "tw-text-yellow-parkvolt",
-    subtitleTextColour: "tw-text-yellow-parkvolt"
+    titleTextColour: "tw-text-textMain",
+    subtitleTextColour: "tw-text-textMain"
   },
   section5: {
-    beforeAfterImages: ["/design/parkvolt/6-before.svg", "/design/parkvolt/6-after.svg"],
+    beforeAfterImages: ["/design/parkvolt/6-before.png", "/design/parkvolt/6-after.png"],
     imgAlt: "Parkvolt Image 5",
-    beforeAfterBackground: "/design/parkvolt/6-background.svg"
+    beforeAfterBackground: "/design/parkvolt/6-background.jpg",
+    showDevice: false
   }
 };
 

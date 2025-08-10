@@ -20,6 +20,7 @@ export interface BeforeAfterImageSectionData {
   beforeAfterImages: string[];
   imgAlt: string;
   beforeAfterBackground?: string;
+  showDevice?: boolean;
 }
 
 export interface OverviewColumnData {
@@ -42,6 +43,13 @@ export interface PageData {
   section3: ContentBlockData;
   section4: ContentBlockData;
   section5: ImageSectionData | BeforeAfterImageSectionData;
+}
+
+export interface AboutPageData {
+  hero: ContentBlockData;
+  section1: ContentBlockData;
+  section2: ContentBlockData;
+  section3: ContentBlockData;
 }
 
 export interface CardProps {

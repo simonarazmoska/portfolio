@@ -1,25 +1,110 @@
+import { Button } from "@/components/Button";
+import { ContentBlock } from "@/components/ContentBlock";
 import { HeroSection } from "@/pages/home/hero";
-import { Section } from "@/pages/home/section";
-import { Box } from "@mui/material";
+import { theme } from "@/theme";
+import { Icon } from "@iconify/react";
+import { Box, Typography } from "@mui/material";
 
-const HomePageContent = {
+const titleTextColour = "tw-text-textMain";
+const backgroundColour = "tw-bg-primary";
+
+const contentData = {
   design: {
-    title: "Design Work",
-    content:
-      "I'm a UX/UI designer with 4 years of end-to-end product experience across industries like mining, health, EdTech, eCommerce, and travel. I've worked with brands including Sanitarium, Intrepid, Michael Hill, Scenic, and Sandvik. Some of my work is confidential, but I'd love to walk you through it in person.",
-    imgSrc: "/home/design-background.svg",
+    title: "Design",
+    subtitle: "/01",
+    blurb: (
+      <Box className="tw-flex tw-flex-col tw-gap-6">
+        <Box>
+          <Typography variant="body" className={titleTextColour}>
+            I'm a UX/UI designer with 4 years of end-to-end product experience across industries like mining, health, EdTech, eCommerce, and
+            travel. I've worked with brands including Sanitarium, Intrepid, Michael Hill, Scenic, and Sandvik. Some of my work is
+            confidential, but I'd love to walk you through it in conversation.
+          </Typography>
+        </Box>
+
+        <Box>
+          <Button
+            variant="text"
+            href="/design"
+            sx={{
+              "&:hover": {
+                textDecorationColor: theme.palette.textMain.main
+              }
+            }}
+            className="tw-flex tw-items-center tw-gap-1 tw-py-2"
+          >
+            <Typography variant="h2" className={titleTextColour}>
+              View design work
+            </Typography>
+            <Icon
+              icon="material-symbols:arrow-forward"
+              className={titleTextColour}
+              style={{
+                fontVariationSettings: "'wght' 700",
+                fontSize: "2rem",
+                width: "2rem",
+                height: "2rem"
+              }}
+            />
+          </Button>
+        </Box>
+      </Box>
+    ),
+
+    imgSrc: "/home/design.jpg",
     imgAlt: "Design Portfolio",
-    imageTextColor: "text.primary",
-    imageUrl: "/design"
+    titleTextColour: titleTextColour,
+    subtitleTextColour: titleTextColour,
+    backgroundColour: backgroundColour
   },
+
   photography: {
     title: "Photography",
-    content:
-      "Before moving into design, I spent 8 years as a fashion and lifestyle photographer and videographer, leading shoots from concept to post-production. My work spanned editorial, eCommerce, and campaigns for brands like Canberra Outlet Centre, Diakrit, QT Hotels, and Mercedes Benz Fashion Week, as well as in-house roles at Esther & Co.",
-    imgSrc: "/home/photography-background.svg",
+    subtitle: "/02",
+    blurb: (
+      <Box className="tw-flex tw-flex-col tw-gap-6">
+        <Box>
+          <Typography variant="body" className={titleTextColour}>
+            Before moving into design, I spent 8 years as a fashion and lifestyle photographer and videographer, leading shoots from concept
+            to post-production. My work spanned editorial, eCommerce, and campaigns for brands like Canberra Outlet Centre, Diakrit, QT
+            Hotels, and Mercedes Benz Fashion Week, as well as in-house roles at Esther & Co.
+          </Typography>
+        </Box>
+
+        <Box>
+          <Button
+            variant="text"
+            href="/photography"
+            sx={{
+              "&:hover": {
+                textDecorationColor: theme.palette.textMain.main
+              }
+            }}
+            className="tw-flex tw-items-center tw-gap-1 tw-py-2"
+          >
+            <Typography variant="h2" className={titleTextColour}>
+              View photography
+            </Typography>
+            <Icon
+              icon="material-symbols:arrow-forward"
+              className={titleTextColour}
+              style={{
+                fontVariationSettings: "'wght' 700",
+                fontSize: "2rem",
+                width: "2rem",
+                height: "2rem"
+              }}
+            />
+          </Button>
+        </Box>
+      </Box>
+    ),
+
+    imgSrc: "/home/photography.jpg",
     imgAlt: "Photography Portfolio",
-    imageTextColor: "text.primary",
-    imageUrl: "/photography"
+    titleTextColour: titleTextColour,
+    subtitleTextColour: titleTextColour,
+    backgroundColour: backgroundColour
   }
 };
 
@@ -27,22 +112,8 @@ export const HomePage = () => {
   return (
     <Box>
       <HeroSection />
-      <Section
-        title={HomePageContent.design.title}
-        content={HomePageContent.design.content}
-        imgSrc={HomePageContent.design.imgSrc}
-        imgAlt={HomePageContent.design.imgAlt}
-        imageTextColor={HomePageContent.design.imageTextColor}
-        imageUrl={HomePageContent.design.imageUrl}
-      />
-      <Section
-        title={HomePageContent.photography.title}
-        content={HomePageContent.photography.content}
-        imgSrc={HomePageContent.photography.imgSrc}
-        imgAlt={HomePageContent.photography.imgAlt}
-        imageTextColor={HomePageContent.photography.imageTextColor}
-        imageUrl={HomePageContent.photography.imageUrl}
-      />
+      <ContentBlock showTitleBeforeSubtitle={false} {...contentData.design} />
+      <ContentBlock showTitleBeforeSubtitle={false} showTextFirst={false} {...contentData.photography} />
     </Box>
   );
 };

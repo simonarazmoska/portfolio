@@ -6,8 +6,6 @@ import { useState } from "react";
 
 interface HeaderProps {
   backgroundColor: string;
-  isOverWhite: boolean;
-  textClassOverride?: string;
 }
 
 const designLinks = [
@@ -22,29 +20,6 @@ const photographyLinks = [
   { label: "Campaigns", href: "/photography/campaigns" },
   { label: "Motion", href: "/photography/motion" }
 ];
-
-// export const Header = ({ backgroundColor, isOverWhite, textClassOverride }: HeaderProps) => {
-//   const appBarBg = isOverWhite ? "transparent" : backgroundColor;
-//   const textClass = textClassOverride
-//     ? textClassOverride
-//     : isOverWhite
-//       ? "tw-text-secondary tw-font-title"
-//       : "tw-text-primary tw-font-title tw-text-white";
-
-//   return (
-//     <AppBar component="nav" position="sticky" sx={{ backgroundColor: appBarBg }} elevation={0}>
-//       <Toolbar className="tw-justify-between tw-bg-transparent" style={{ margin: 0 }}>
-//         <Link href="/" underline="none" className="tw-cursor-pointer tw-px-4 tw-py-2 tw-flex tw-items-center">
-//           <Typography className={textClass}>SIMONA</Typography>
-//         </Link>
-//       </Toolbar>
-//     </AppBar>
-//   );
-// };
-
-interface HeaderProps {
-  backgroundColor: string;
-}
 
 const drawerWidth = 240;
 const navItems = ["Design", "Photography", "About"];
@@ -159,7 +134,11 @@ export const Header = ({ backgroundColor }: HeaderProps) => {
         </Toolbar>
       </AppBar>
       <NavModal open={modalOpen === "design"} onClose={() => setModalOpen(false)} links={designLinks} />
-      <NavModal open={modalOpen === "photography"} onClose={() => setModalOpen(false)} links={photographyLinks.filter((l) => l.href)} />
+      <NavModal
+        open={modalOpen === "photography"}
+        onClose={() => setModalOpen(false)}
+        links={photographyLinks.filter((link) => link.href)}
+      />
       <nav>
         <Drawer
           container={container}

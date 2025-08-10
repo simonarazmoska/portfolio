@@ -1,12 +1,14 @@
+import { Button } from "@/components/Button";
 import { CardProps } from "@/dtypes";
+import { tailwindToMuiColor } from "@/utils/colorConverter";
 import { Icon } from "@iconify/react";
-import { Box, Link, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
 const cards: CardProps[] = [
   {
     title: "Up&Go",
     text: "Website re-design and re-platforming.",
-    imageSource: "/design/up-and-go/card.svg",
+    imageSource: "/design/up-and-go/card.jpg",
     imgAlt: "Up&Go",
     link: "/design/up-and-go"
   },
@@ -14,21 +16,21 @@ const cards: CardProps[] = [
   {
     title: "Plantwell",
     text: "Website design and re-platforming.",
-    imageSource: "/design/plantwell/hero.svg",
+    imageSource: "/design/plantwell/card.jpg",
     imgAlt: "Plantwell",
     link: "/design/plantwell"
   },
   {
     title: "ParkVolt",
     text: "Mobile app design & branding.",
-    imageSource: "/design/parkvolt/hero.svg",
+    imageSource: "/design/parkvolt/card.jpg",
     imgAlt: "ParkVolt",
     link: "/design/parkvolt"
   },
   {
     title: "Dr. Wallet",
     text: "Responsive web design.",
-    imageSource: "/design/dr-wallet/hero.svg",
+    imageSource: "/design/dr-wallet/card.jpg",
     imgAlt: "Dr. Wallet",
     link: "/design/dr-wallet"
   }
@@ -52,10 +54,10 @@ export const DesignProjectsSection = ({}) => {
               margin: "0 auto"
             }}
           >
-            <ProjectCard imgSrc="/design/up-and-go/card.svg" imgAlt="Up&Go Card" text="Up&Go" link="/design/up-and-go" />
-            <ProjectCard imgSrc="/design/plantwell/card.svg" imgAlt="Plantwell Card" text="Plantwell" link="/design/plantwell" />
-            <ProjectCard imgSrc="/design/parkvolt/card.svg" imgAlt="ParkVolt Card" text="ParkVolt" link="/design/parkvolt" />
-            <ProjectCard imgSrc="/design/dr-wallet/card.svg" imgAlt="Dr. Wallet Card" text="Dr. Wallet" link="/design/dr-wallet" />
+            <ProjectCard imgSrc="/design/up-and-go/card.jpg" imgAlt="Up&Go Card" text="Up&Go" link="/design/up-and-go" />
+            <ProjectCard imgSrc="/design/plantwell/card.jpg" imgAlt="Plantwell Card" text="Plantwell" link="/design/plantwell" />
+            <ProjectCard imgSrc="/design/parkvolt/card.jpg" imgAlt="ParkVolt Card" text="ParkVolt" link="/design/parkvolt" />
+            <ProjectCard imgSrc="/design/dr-wallet/card.jpg" imgAlt="Dr. Wallet Card" text="Dr. Wallet" link="/design/dr-wallet" />
           </Box>
         </Box>
       </Box>
@@ -63,9 +65,24 @@ export const DesignProjectsSection = ({}) => {
   );
 };
 
-const ProjectCard = ({ imgSrc, imgAlt, text, link }) => {
+interface ProjectCardProps {
+  imgSrc: string;
+  imgAlt: string;
+  text: string;
+  link: string;
+}
+
+const ProjectCard = ({ imgSrc, imgAlt, text, link }: ProjectCardProps) => {
   return (
-    <Link href={link} underline="none" className="tw-cursor-pointer tw-gap-1 tw-py-2">
+    <Button
+      variant="text"
+      href={link}
+      sx={{
+        "&:hover": {
+          textDecorationColor: tailwindToMuiColor("tw-text-textMain")
+        }
+      }}
+    >
       <Box className="tw-flex tw-flex-col tw-gap-4" style={{ minWidth: 0, flex: 1 }}>
         <img
           src={imgSrc}
@@ -112,6 +129,6 @@ const ProjectCard = ({ imgSrc, imgAlt, text, link }) => {
           </Box>
         </Box>
       </Box>
-    </Link>
+    </Button>
   );
 };

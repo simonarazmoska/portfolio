@@ -20,8 +20,6 @@
     "@mui/icons-material": "^5.16.4",
     "@mui/material": "^5.16.4",
     "@tabler/icons-react": "^3.10.0",
-    "caniuse-lite": "^1.0.30001727",
-    "install": "^0.13.0",
     "react": "^18.2.0",
     "react-before-after-slider-component": "^1.1.8",
     "react-dom": "^18.2.0",
