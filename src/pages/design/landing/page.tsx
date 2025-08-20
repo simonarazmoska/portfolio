@@ -42,12 +42,7 @@ export const DesignLandingPage = () => {
       <DesignImageSection src={"/design/up-and-go/1.jpg"} alt={"Up&Go"} url={"/design/up-and-go"} />
       <DesignImageSection src={"/design/plantwell/6.jpg"} alt={"PlantWell"} url={"/design/plantwell"} />
       <DesignImageSection src={"/design/parkvolt/1.jpg"} alt={"ParkVolt"} url={"/design/parkvolt"} textColor={"tw-text-primary"} />
-      <DesignImageSection
-        src={"/design/dr-wallet/4-horizontal.jpg"}
-        alt={"Dr. Wallet"}
-        url={"/design/dr-wallet"}
-        textColor={"tw-text-primary"}
-      />
+      <DesignImageSection src={"/design/dr-wallet/4.jpg"} alt={"Dr. Wallet"} url={"/design/dr-wallet"} textColor={"tw-text-primary"} />
     </Box>
   );
 };

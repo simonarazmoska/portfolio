@@ -61,13 +61,10 @@ const data: PageData = {
     subtitleTextColour: "tw-text-textMain"
   },
   section5: {
-    beforeAfterImages: ["/design/parkvolt/6-before.png", "/design/parkvolt/6-after.png"],
-    imgAlt: "Parkvolt Image 5",
-    beforeAfterBackground: "/design/parkvolt/6-background.jpg",
-    showDevice: false
+    imgSrc: "/design/parkvolt/6.jpg",
+    imgAlt: "ParkVolt Image 6"
   }
 };
-
 export const ParkVoltPage = () => {
   return <TemplatePage data={data} />;
 };
