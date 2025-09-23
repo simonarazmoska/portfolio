@@ -27,7 +27,7 @@ export const Section5Content = ({ data }: { data: ImageSectionData | BeforeAfter
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
-        minHeight: 900
+        minHeight: 300
       }}
     >
       <Box className="tw-relative tw-flex tw-flex-row tw-gap-16 tw-items-center tw-justify-center">

@@ -40,7 +40,7 @@ export const DesignLandingPage = () => {
       />
       {/* Sections */}
       <DesignImageSection src={"/design/up-and-go/1.jpg"} alt={"Up&Go"} url={"/design/up-and-go"} />
-      <DesignImageSection src={"/design/plantwell/6.jpg"} alt={"PlantWell"} url={"/design/plantwell"} />
+      <DesignImageSection src={"/design/plantwell/6.jpg"} alt={"PlantWell"} url={"/design/plantwell"} textColor={"tw-text-primary"} />
       <DesignImageSection src={"/design/parkvolt/1.jpg"} alt={"ParkVolt"} url={"/design/parkvolt"} textColor={"tw-text-primary"} />
       <DesignImageSection src={"/design/dr-wallet/4.jpg"} alt={"Dr. Wallet"} url={"/design/dr-wallet"} textColor={"tw-text-primary"} />
     </Box>
@@ -58,8 +58,21 @@ const DesignImageSection = ({ src, alt, url, textColor = "tw-text-textMain" }: D
   const [loaded, setLoaded] = useState(false);
 
   return (
-    <Box className="tw-flex tw-flex-col tw-gap-[90px] tw-px-12 tw-py-20 tw-items-center">
-      <Link href={url} underline="hover">
+    <Box
+      className="tw-flex tw-flex-col tw-items-center"
+      sx={{
+        px: { xs: 2, md: 12 },
+        py: { xs: 6, md: 20 }
+      }}
+    >
+      <Link
+        href={url}
+        underline="hover"
+        className="tw-group"
+        sx={{
+          textDecoration: "none"
+        }}
+      >
         <Box className="tw-relative">
           <img
             src={src}
@@ -70,10 +83,43 @@ const DesignImageSection = ({ src, alt, url, textColor = "tw-text-textMain" }: D
             onLoad={() => setLoaded(true)}
           />
           {loaded && (
-            <Box className="tw-absolute tw-bottom-0 tw-left-0 tw-p-4 tw-rounded-tr-lg">
-              <Typography variant="h1" className={`${textColor}`}>
-                {/* TODO fix font style */}
-                {alt} <ArrowForwardIcon fontSize="inherit" className="tw-ml-2" />
+            <Box
+              className="tw-absolute tw-bottom-0 tw-left-0 tw-p-4 tw-rounded-tr-lg"
+              sx={{
+                width: { xs: "100%", sm: "auto" },
+                display: "flex",
+                alignItems: "center",
+                justifyContent: { xs: "center", sm: "flex-start" },
+                minHeight: { xs: 56, sm: "unset" },
+                borderTopRightRadius: 0,
+                borderTopLeftRadius: 0,
+                px: { xs: 2, sm: 4 },
+                py: { xs: 1, sm: 4 },
+                transition: "background 0.2s"
+              }}
+            >
+              <Typography
+                variant="h1"
+                className={`${textColor} group-hover:tw-underline`}
+                sx={{
+                  fontSize: { xs: "2rem", sm: "3rem", md: "5rem" },
+                  textAlign: { xs: "center", sm: "left" },
+                  width: "100%",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: { xs: "left", sm: "flex-start" },
+                  transition: "color 0.2s"
+                }}
+              >
+                {alt}
+                <ArrowForwardIcon
+                  fontSize="inherit"
+                  className="tw-ml-2 group-hover:tw-translate-x-1"
+                  sx={{
+                    color: textColor === "tw-text-white" ? "#FFFFFF" : undefined,
+                    transition: "transform 0.2s"
+                  }}
+                />
               </Typography>
             </Box>
           )}

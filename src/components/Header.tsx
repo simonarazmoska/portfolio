@@ -1,7 +1,7 @@
 import { Button } from "@/components/Button";
 import { theme } from "@/theme";
 import { Close as CloseIcon, Menu as MenuIcon } from "@mui/icons-material";
-import { AppBar, Box, Divider, Drawer, IconButton, List, ListItem, ListItemButton, ListItemText, Modal, Toolbar } from "@mui/material";
+import { AppBar, Box, Divider, Drawer, IconButton, Modal, Toolbar } from "@mui/material";
 import { useState } from "react";
 
 interface HeaderProps {
@@ -21,7 +21,7 @@ const photographyLinks = [
   { label: "Motion", href: "/photography/motion" }
 ];
 
-const drawerWidth = 240;
+const drawerWidth = "100vw";
 const navItems = ["Design", "Photography", "About"];
 
 export const Header = ({ backgroundColor }: HeaderProps) => {
@@ -35,40 +35,116 @@ export const Header = ({ backgroundColor }: HeaderProps) => {
     setMobileOpen((prevState) => !prevState);
   };
 
+  // --- MOBILE DRAWER ---
   const mobileDrawer = (
-    <Box onClick={handleMobileDrawerToggle} sx={{ textAlign: "center" }}>
+    <Box sx={{ textAlign: "left", height: "100%", px: 2, pt: 2 }}>
+      {/* Top Row with SIMONA + Close Button */}
+      <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mb: 2 }}>
+        <Button
+          sx={{
+            fontSize: theme.typography.title.fontSize,
+            fontWeight: theme.typography.title.fontWeight || 700,
+            color: theme.palette.primary.main,
+            "&:hover": { textDecoration: "none" }
+          }}
+          onClick={() => (window.location.href = "/")}
+        >
+          SIMONA
+        </Button>
+        <IconButton onClick={handleMobileDrawerToggle} sx={{ color: theme.palette.primary.main }}>
+          <CloseIcon />
+        </IconButton>
+      </Box>
+      <Divider />
+
+      {/* Design Section */}
       <Button
         sx={{
-          fontSize: "1.25rem",
-          lineHeight: 0.24,
-          letterSpacing: "0",
-          fontWeight: 700,
-          my: 2,
-          py: 2,
-          color: textColor,
-          "&:hover": {
-            textDecoration: "none"
-          }
+          fontSize: "54px",
+          fontWeight: theme.typography.h2.fontWeight || 700,
+          color: theme.palette.secondary.main,
+          textAlign: "left",
+          width: "100%",
+          justifyContent: "flex-start",
+          mt: 3,
+          mb: 1,
+          lineHeight: 1.1
         }}
-        onClick={() => {
-          window.location.href = "/";
-        }}
+        onClick={() => (window.location.href = "/design")}
       >
-        SIMONA
+        Design
       </Button>
-      <Divider />
-      <List>
-        {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText
-                sx={{ fontSize: "1.25rem", lineHeight: 0.24, letterSpacing: "0", fontWeight: 700, my: 2, py: 2, color: textColor }}
-                primary={item}
-              />
-            </ListItemButton>
-          </ListItem>
+      <Box sx={{ pl: 2, display: "flex", flexDirection: "column", gap: 2 }}>
+        {designLinks.map((link) => (
+          <Button
+            key={link.label}
+            sx={{
+              fontSize: theme.typography.h2.fontSize,
+              fontWeight: theme.typography.h2.fontWeight || 700,
+              color: theme.palette.primary.main,
+              textAlign: "left",
+              width: "100%",
+              justifyContent: "flex-start"
+            }}
+            onClick={() => (window.location.href = link.href)}
+          >
+            {link.label}
+          </Button>
         ))}
-      </List>
+      </Box>
+
+      {/* Photography Section */}
+      <Button
+        sx={{
+          fontSize: "54px",
+          fontWeight: theme.typography.h2.fontWeight || 700,
+          color: theme.palette.secondary.main,
+          textAlign: "left",
+          width: "100%",
+          justifyContent: "flex-start",
+          mt: 3,
+          mb: 1,
+          lineHeight: 1.1
+        }}
+        onClick={() => (window.location.href = "/photography")}
+      >
+        Photography
+      </Button>
+      <Box sx={{ pl: 2, display: "flex", flexDirection: "column", gap: 2 }}>
+        {photographyLinks.map((link) => (
+          <Button
+            key={link.label}
+            sx={{
+              fontSize: theme.typography.h2.fontSize,
+              fontWeight: theme.typography.h2.fontWeight || 700,
+              color: theme.palette.primary.main, // Always use primary colour in drawer
+              textAlign: "left",
+              width: "100%",
+              justifyContent: "flex-start"
+            }}
+            onClick={() => (window.location.href = link.href)}
+          >
+            {link.label}
+          </Button>
+        ))}
+      </Box>
+
+      {/* About Section */}
+      <Button
+        sx={{
+          fontSize: "54px",
+          fontWeight: theme.typography.h2.fontWeight || 700,
+          color: theme.palette.secondary.main,
+          textAlign: "left",
+          width: "100%",
+          justifyContent: "flex-start",
+          mt: 3,
+          lineHeight: 1.1
+        }}
+        onClick={() => (window.location.href = "/about")}
+      >
+        About
+      </Button>
     </Box>
   );
 
@@ -76,54 +152,43 @@ export const Header = ({ backgroundColor }: HeaderProps) => {
 
   return (
     <Box sx={{ display: "flex" }}>
-      <AppBar component="nav" sx={{ backgroundColor: backgroundColor }} elevation={0}>
+      <AppBar component="nav" sx={{ backgroundColor }} elevation={0}>
         <Toolbar sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-          <Box sx={{ display: "flex", alignItems: "center" }}>
-            <IconButton
-              color="inherit"
-              aria-label="open drawer"
-              edge="start"
-              onClick={handleMobileDrawerToggle}
-              sx={{ mr: 2, display: { sm: "none" } }}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Button
-              sx={{
-                fontSize: "1.25rem",
-                lineHeight: 0.24,
-                letterSpacing: "0",
-                fontWeight: 700,
-                my: 2,
-                py: 2,
-                display: { xs: "none", sm: "block" },
-                color: textColor,
-                "&:hover": {
-                  textDecoration: "none"
-                }
-              }}
-              onClick={() => {
-                window.location.href = "/";
-              }}
-            >
-              SIMONA
-            </Button>
-          </Box>
+          <Button
+            sx={{
+              fontSize: "1.25rem",
+              fontWeight: 700,
+              color: textColor,
+              "&:hover": { textDecoration: "none" }
+            }}
+            onClick={() => (window.location.href = "/")}
+          >
+            SIMONA
+          </Button>
+
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            onClick={handleMobileDrawerToggle}
+            sx={{ display: { sm: "none" }, color: textColor }}
+          >
+            <MenuIcon />
+          </IconButton>
+
+          {/* Desktop Navigation */}
           <Box sx={{ display: { xs: "none", sm: "flex" }, gap: 2, alignItems: "center", paddingX: 3 }}>
             {navItems.map((item) => (
               <Button
                 key={item}
                 variant="text"
-                sx={{ fontSize: "1.25rem", lineHeight: 0.24, letterSpacing: "0", fontWeight: 700, color: textColor, py: 4 }}
+                sx={{ fontSize: "1.25rem", fontWeight: 700, color: textColor, py: 4 }}
                 onClick={
-                  item === "Design Work" || item === "Design"
+                  item === "Design"
                     ? () => setModalOpen("design")
                     : item === "Photography"
                       ? () => setModalOpen("photography")
                       : item === "About"
-                        ? () => {
-                            window.location.href = "/about";
-                          }
+                        ? () => (window.location.href = "/about")
                         : undefined
                 }
               >
@@ -133,24 +198,28 @@ export const Header = ({ backgroundColor }: HeaderProps) => {
           </Box>
         </Toolbar>
       </AppBar>
+
+      {/* Modals */}
       <NavModal open={modalOpen === "design"} onClose={() => setModalOpen(false)} links={designLinks} />
-      <NavModal
-        open={modalOpen === "photography"}
-        onClose={() => setModalOpen(false)}
-        links={photographyLinks.filter((link) => link.href)}
-      />
+      <NavModal open={modalOpen === "photography"} onClose={() => setModalOpen(false)} links={photographyLinks} />
+
+      {/* Mobile Drawer */}
       <nav>
         <Drawer
           container={container}
           variant="temporary"
           open={mobileOpen}
           onClose={handleMobileDrawerToggle}
-          ModalProps={{
-            keepMounted: true // Better open performance on mobile.
-          }}
+          anchor="right"
+          ModalProps={{ keepMounted: true }}
           sx={{
             display: { xs: "block", sm: "none" },
-            "& .MuiDrawer-paper": { boxSizing: "border-box", width: drawerWidth }
+            "& .MuiDrawer-paper": {
+              boxSizing: "border-box",
+              width: drawerWidth,
+              backgroundColor: "rgba(43,30,26,0.4)",
+              backdropFilter: "blur(8px)"
+            }
           }}
         >
           {mobileDrawer}
@@ -160,19 +229,17 @@ export const Header = ({ backgroundColor }: HeaderProps) => {
   );
 };
 
-// Abstracted modal
 const NavModal = ({ open, onClose, links }: { open: boolean; onClose: () => void; links: { label: string; href: string | null }[] }) => {
-  // Modal styles
   const modalStyle = {
     position: "fixed",
     top: 0,
     left: 0,
     width: "100vw",
     height: "100vh",
-    bgcolor: "rgba(43,30,26,0.4)", // textMain with 40% opacity
+    bgcolor: "rgba(43,30,26,0.4)",
     backdropFilter: "blur(8px)",
     zIndex: 1300,
-    pt: "64px", // below header
+    pt: "64px",
     p: 0,
     m: 0
   };
@@ -183,7 +250,7 @@ const NavModal = ({ open, onClose, links }: { open: boolean; onClose: () => void
         <Box
           sx={{
             position: "absolute",
-            top: 80, // header height + spacing
+            top: 80,
             right: 0,
             minWidth: 320,
             display: "flex",
@@ -198,11 +265,7 @@ const NavModal = ({ open, onClose, links }: { open: boolean; onClose: () => void
             {/* Links column */}
             <Box>
               {links.map((link) => (
-                <Box
-                  key={link.href}
-                  sx={{ width: "100%", display: "flex", alignItems: "center", mb: 2 }}
-                  className="tw-flex tw-flex-row tw-gap-6"
-                >
+                <Box key={link.href} sx={{ width: "100%", display: "flex", alignItems: "center", mb: 2 }}>
                   <Button
                     sx={{
                       ...theme.typography.h1,
@@ -221,7 +284,7 @@ const NavModal = ({ open, onClose, links }: { open: boolean; onClose: () => void
               ))}
             </Box>
             {/* Close button column */}
-            <Box sx={{ width: "100%", display: "flex", justifyContent: "flex-end", alignItems: "start", mb: 0 }}>
+            <Box sx={{ display: "flex", justifyContent: "flex-end", alignItems: "start" }}>
               <IconButton aria-label="close" onClick={onClose} sx={{ color: "#fff", ml: 4, p: 2 }}>
                 <CloseIcon fontSize="large" />
               </IconButton>

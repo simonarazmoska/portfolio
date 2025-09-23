@@ -91,7 +91,7 @@ export const theme = createTheme({
   palette: {
     white: { main: "#FFFFFF" },
     primary: { main: "#FFFFFF" },
-    secondary: { main: "#B9C3E7" },
+    secondary: { main: "#D8532F" },
     tertiary: {
       light: "#E0785B",
       dark: "#B14021"

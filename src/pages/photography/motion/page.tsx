@@ -18,41 +18,47 @@ const data = {
 export const MotionPage = () => {
   return (
     <Box>
-      {/* Hero Section  */}
-      <Box className="tw-h-[1290px] tw-bg-textMain">
-        <Box className="tw-h-full tw-flex tw-flex-col tw-px-8 tw-pb-24 tw-gap-24">
+      {/* Hero Section */}
+      <Box className="tw-bg-textMain" sx={{ height: { xs: "auto", lg: "1290px" } }}>
+        <Box className="tw-flex tw-flex-col tw-px-4 md:tw-px-8 tw-pb-12 md:tw-pb-24 tw-gap-12 md:tw-gap-24">
+          {/* Keeps spacing at top */}
           <Box />
-          <Box className="tw-h-full tw-flex tw-flex-row tw-justify-start tw-gap-48">
+
+          {/* Main Row / Column Layout */}
+          <Box className="tw-flex tw-flex-col lg:tw-flex-row tw-gap-12 lg:tw-gap-48" sx={{ height: { xs: "auto", lg: "100%" } }}>
             {/* Text Section */}
-            <Box className="tw-h-full tw-w-[1085px] tw-flex tw-flex-col tw-justify-between tw-pb-20">
+            <Box
+              className="tw-flex tw-flex-col tw-justify-between tw-gap-8"
+              sx={{
+                width: { xs: "100%", lg: "1085px" },
+                paddingBottom: { xs: 0, lg: "5rem" }
+              }}
+            >
               <Box className="tw-flex tw-flex-col tw-gap-4">
-                <Typography variant="h1" className="tw-text-secondary">
+                <Typography variant="h1" className="tw-text-secondary" sx={{ fontSize: { xs: "48px", md: "80px" } }}>
                   {data.title}
                 </Typography>
-                <Typography variant="h2" className="tw-text-primary">
+                <Typography variant="h2" className="tw-text-primary" sx={{ fontSize: { xs: "24px", md: "32px" } }}>
                   {data.subtitle}
                 </Typography>
               </Box>
               {data.blurb}
             </Box>
+
             {/* Video Section */}
             <Box
-              className="tw-h-full"
+              className="tw-flex tw-justify-center tw-items-center"
               sx={{
-                width: "1155px",
-                maxWidth: "100%",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center"
+                width: { xs: "100%", lg: "1155px" },
+                maxWidth: "100%"
               }}
             >
               <Box
                 sx={{
-                  height: "100%",
+                  width: "100%",
                   aspectRatio: "16/9",
-                  maxHeight: "1056px",
-                  overflow: "hidden",
-                  background: "#textMain"
+                  maxHeight: { lg: "1056px" },
+                  overflow: "hidden"
                 }}
               >
                 <iframe
@@ -62,11 +68,7 @@ export const MotionPage = () => {
                   title="Motion Hero Video"
                   allow="autoplay; encrypted-media"
                   allowFullScreen
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover"
-                  }}
+                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
                 />
               </Box>
             </Box>
@@ -74,119 +76,40 @@ export const MotionPage = () => {
         </Box>
       </Box>
 
-      {/* Video Section 1 */}
-      <Box className="tw-w-full tw-bg-primary tw-p-0">
-        <Box className="tw-flex tw-flex-col tw-px-20 tw-py-20 tw-items-center">
-          <Box className="tw-flex tw-flex-row tw-justify-between tw-items-center tw-w-full tw-mb-3">
-            <Typography variant="h2" className="tw-text-secondary">
-              Canberra Outlet Centre
-            </Typography>
-            <Typography variant="h2" className="tw-text-secondary">
-              Autumn/Winter 2021
-            </Typography>
-          </Box>
-          <Box sx={{ width: "100%", aspectRatio: "16/9" }}>
-            <iframe
-              width="100%"
-              height="100%"
-              src="https://www.youtube.com/embed/Y4huzRIxriE"
-              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-          </Box>
-        </Box>
-        {["igylY39xKzA", "8ynNO10kMi0"].map((id) => (
-          <Box key={id} sx={{ width: "100%", aspectRatio: "16/9" }}>
-            <iframe
-              width="100%"
-              height="100%"
-              src={`https://www.youtube.com/embed/${id}`}
-              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-          </Box>
-        ))}
-      </Box>
+      {/* Video Sections - Shared styles for spacing & responsiveness */}
+      {[
+        { title: "Canberra Outlet Centre", season: "Autumn/Winter 2021", videos: ["Y4huzRIxriE", "igylY39xKzA", "8ynNO10kMi0"] },
+        { title: "DOS Emporium", season: "Spring/Summer 2020", videos: ["cyTpKFBzhHY"] },
+        { title: "Fashion Week", season: "2021", videos: ["JQQdzLHSujo"] },
+        { title: "Stylist Sessions", season: "2021", videos: ["gbeScymnCnw", "MCaUq0sJmGw", "ptkuMzfuSM4"] }
+      ].map((section, idx) => (
+        <Box key={idx} className="tw-w-full tw-bg-primary tw-p-0">
+          <Box className="tw-flex tw-flex-col tw-px-4 md:tw-px-20 tw-py-12 md:tw-py-20 tw-items-center">
+            {/* Section Heading */}
+            <Box className="tw-flex tw-flex-col sm:tw-flex-row tw-justify-between tw-items-start sm:tw-items-center tw-w-full tw-mb-3 tw-gap-2">
+              <Typography variant="h2" className="tw-text-secondary" sx={{ fontSize: { xs: "24px", md: "36px" } }}>
+                {section.title}
+              </Typography>
+              <Typography variant="h2" className="tw-text-secondary" sx={{ fontSize: { xs: "18px", md: "24px" } }}>
+                {section.season}
+              </Typography>
+            </Box>
 
-      {/* Video Section 2 */}
-      <Box className="tw-w-full tw-bg-primary tw-p-0">
-        <Box className="tw-flex tw-flex-col tw-px-20 tw-py-20 tw-items-center">
-          <Box className="tw-flex tw-flex-row tw-justify-between tw-items-center tw-w-full tw-mb-3">
-            <Typography variant="h2" className="tw-text-secondary">
-              DOS Emporium
-            </Typography>
-            <Typography variant="h2" className="tw-text-secondary">
-              Spring/Summer 2020
-            </Typography>
-          </Box>
-          <Box sx={{ width: "100%", aspectRatio: "16/9" }}>
-            <iframe
-              width="100%"
-              height="100%"
-              src="https://www.youtube.com/embed/cyTpKFBzhHY"
-              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
+            {/* Videos */}
+            {section.videos.map((id) => (
+              <Box key={id} sx={{ width: "100%", aspectRatio: "16/9", marginBottom: "1rem" }}>
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src={`https://www.youtube.com/embed/${id}`}
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </Box>
+            ))}
           </Box>
         </Box>
-      </Box>
-
-      {/* Video Section 3 */}
-      <Box className="tw-w-full tw-bg-primary tw-p-0">
-        <Box className="tw-flex tw-flex-col tw-px-20 tw-py-20 tw-items-center">
-          <Box className="tw-flex tw-flex-row tw-justify-between tw-items-center tw-w-full tw-mb-3">
-            <Typography variant="h2" className="tw-text-secondary">
-              Fashion Week
-            </Typography>
-            <Typography variant="h2" className="tw-text-secondary">
-              2021
-            </Typography>
-          </Box>
-          <Box sx={{ width: "100%", aspectRatio: "16/9" }}>
-            <iframe
-              width="100%"
-              height="100%"
-              src="https://www.youtube.com/embed/JQQdzLHSujo"
-              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-          </Box>
-        </Box>
-      </Box>
-
-      {/* Video Section 4 */}
-      <Box className="tw-w-full tw-bg-primary tw-p-0">
-        <Box className="tw-flex tw-flex-col tw-px-20 tw-py-20 tw-items-center">
-          <Box className="tw-flex tw-flex-row tw-justify-between tw-items-center tw-w-full tw-mb-3">
-            <Typography variant="h2" className="tw-text-secondary">
-              Stylist Sessions
-            </Typography>
-            <Typography variant="h2" className="tw-text-secondary">
-              2021
-            </Typography>
-          </Box>
-          <Box sx={{ width: "100%", aspectRatio: "16/9" }}>
-            <iframe
-              width="100%"
-              height="100%"
-              src="https://www.youtube.com/embed/gbeScymnCnw"
-              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-          </Box>
-        </Box>
-        {["MCaUq0sJmGw", "ptkuMzfuSM4"].map((id) => (
-          <Box key={id} sx={{ width: "100%", aspectRatio: "16/9" }}>
-            <iframe
-              width="100%"
-              height="100%"
-              src={`https://www.youtube.com/embed/${id}`}
-              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-          </Box>
-        ))}
-      </Box>
+      ))}
     </Box>
   );
 };
