@@ -1,12 +1,14 @@
 import { Box, Typography } from "@mui/material";
 import clsx from "clsx";
+import React from "react";
 
 interface ContentBlockProps {
   title: string;
   subtitle: string;
   blurb?: React.ReactNode;
-  imgSrc: string;
-  imgAlt: string;
+  imgComponent?: React.ReactNode;
+  imgSrc?: string;
+  imgAlt?: string;
   titleTextColour: string;
   subtitleTextColour: string;
   backgroundColour?: string;
@@ -19,6 +21,7 @@ export const ContentBlock = ({
   subtitle,
   title,
   blurb,
+  imgComponent,
   imgSrc,
   imgAlt,
   titleTextColour,
@@ -76,16 +79,20 @@ export const ContentBlock = ({
 
   const ImageSection = (
     <Box className="tw-flex-1 tw-flex tw-items-center tw-justify-center tw-px-4 md:tw-px-0">
-      <img
-        src={imgSrc}
-        alt={imgAlt}
-        className="tw-object-cover tw-w-full tw-h-auto tw-max-h-[960px] md:tw-max-h-[1000px]"
-        style={{
-          display: "block",
-          width: "100%"
-        }}
-        loading={loadImageStyle}
-      />
+      {imgComponent ? (
+        imgComponent
+      ) : imgSrc ? (
+        <img
+          src={imgSrc}
+          alt={imgAlt}
+          className="tw-object-cover tw-w-full tw-h-auto tw-max-h-[960px] md:tw-max-h-[1000px]"
+          style={{
+            display: "block",
+            width: "100%"
+          }}
+          loading={loadImageStyle}
+        />
+      ) : null}
     </Box>
   );
 

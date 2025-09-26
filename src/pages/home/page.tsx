@@ -112,8 +112,35 @@ export const HomePage = () => {
   return (
     <Box>
       <HeroSection />
-      <ContentBlock showTitleBeforeSubtitle={false} {...contentData.design} />
-      <ContentBlock showTitleBeforeSubtitle={false} showTextFirst={false} {...contentData.photography} />
+      <ContentBlock
+        showTitleBeforeSubtitle={false}
+        {...contentData.design}
+        imgComponent={
+          <a href="/design" style={{ display: "block" }}>
+            <img
+              src={contentData.design.imgSrc}
+              alt={contentData.design.imgAlt}
+              className="tw-cursor-pointer tw-transition-opacity hover:tw-opacity-80"
+              style={{ width: "100%", height: "auto" }}
+            />
+          </a>
+        }
+      />
+      <ContentBlock
+        showTitleBeforeSubtitle={false}
+        showTextFirst={false}
+        {...contentData.photography}
+        imgComponent={
+          <a href="/photography" style={{ display: "block" }}>
+            <img
+              src={contentData.photography.imgSrc}
+              alt={contentData.photography.imgAlt}
+              className="tw-cursor-pointer tw-transition-opacity hover:tw-opacity-80"
+              style={{ width: "100%", height: "auto" }}
+            />
+          </a>
+        }
+      />
     </Box>
   );
 };
