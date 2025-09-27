@@ -3,7 +3,7 @@ import { ContentBlock } from "@/components/ContentBlock";
 import { HeroSection } from "@/pages/home/hero";
 import { theme } from "@/theme";
 import { Icon } from "@iconify/react";
-import { Box, Typography } from "@mui/material";
+import { Box, Link, Typography } from "@mui/material";
 
 const titleTextColour = "tw-text-textMain";
 const backgroundColour = "tw-bg-primary";
@@ -112,8 +112,35 @@ export const HomePage = () => {
   return (
     <Box>
       <HeroSection />
-      <ContentBlock showTitleBeforeSubtitle={false} {...contentData.design} />
-      <ContentBlock showTitleBeforeSubtitle={false} showTextFirst={false} {...contentData.photography} />
+      <ContentBlock
+        showTitleBeforeSubtitle={false}
+        {...contentData.design}
+        imgComponent={
+          <a href="/design" style={{ display: "block" }}>
+            <img
+              src={contentData.design.imgSrc}
+              alt={contentData.design.imgAlt}
+              className="tw-cursor-pointer tw-transition-opacity hover:tw-opacity-80"
+              style={{ width: "100%", height: "auto" }}
+            />
+          </a>
+        }
+      />
+      <ContentBlock
+        showTitleBeforeSubtitle={false}
+        showTextFirst={false}
+        {...contentData.photography}
+        imgComponent={
+          <Link href="/photography" style={{ display: "block" }}>
+            <img
+              src={contentData.photography.imgSrc}
+              alt={contentData.photography.imgAlt}
+              className="tw-cursor-pointer tw-transition-opacity hover:tw-opacity-80"
+              style={{ width: "100%", height: "auto" }}
+            />
+          </Link>
+        }
+      />
     </Box>
   );
 };
