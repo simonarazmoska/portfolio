@@ -3,7 +3,7 @@ import { ContentBlock } from "@/components/ContentBlock";
 import { HeroSection } from "@/pages/home/hero";
 import { theme } from "@/theme";
 import { Icon } from "@iconify/react";
-import { Box, Typography } from "@mui/material";
+import { Box, Link, Typography } from "@mui/material";
 
 const titleTextColour = "tw-text-textMain";
 const backgroundColour = "tw-bg-primary";
@@ -131,14 +131,14 @@ export const HomePage = () => {
         showTextFirst={false}
         {...contentData.photography}
         imgComponent={
-          <a href="/photography" style={{ display: "block" }}>
+          <Link href="/photography" style={{ display: "block" }}>
             <img
               src={contentData.photography.imgSrc}
               alt={contentData.photography.imgAlt}
               className="tw-cursor-pointer tw-transition-opacity hover:tw-opacity-80"
               style={{ width: "100%", height: "auto" }}
             />
-          </a>
+          </Link>
         }
       />
     </Box>
